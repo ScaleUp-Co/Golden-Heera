@@ -57,11 +57,11 @@
         <p class="text-on-surface-variant text-xs font-body-md">Refined fashion & imitation jewellery pieces selected for you.</p>
     </header>
 
-    <!-- 65% / 35% Layout -->
+    <!-- 70% / 30% Layout -->
     <div class="flex flex-col lg:flex-row gap-8 items-start">
         
-        <!-- Left Side: Cart Items & Progress (65%) -->
-        <div class="w-full lg:w-[65%] space-y-6">
+        <!-- Left Side: Cart Items & Progress (70%) -->
+        <div class="w-full lg:w-[70%] space-y-6">
             
             <!-- Free Shipping Progress Bar -->
             <div class="bg-white border border-outline-variant/30 p-5 shadow-xs luxury-shadow rounded-sm">
@@ -88,8 +88,8 @@
             </section>
         </div>
 
-        <!-- Right Side: Order Summary Sticky Card (35%) -->
-        <aside class="w-full lg:w-[35%] sticky top-28">
+        <!-- Right Side: Order Summary Sticky Card (30%) -->
+        <aside class="w-full lg:w-[30%] sticky top-28">
             <div class="bg-white p-6 border border-outline-variant/30 shadow-md luxury-shadow rounded-sm">
                 <h2 class="font-headline-sm text-sm uppercase tracking-widest font-bold mb-6 pb-3 border-b border-outline-variant/20">Order Summary</h2>
                 
@@ -194,10 +194,11 @@
 
         if (cart.length === 0) {
             container.innerHTML = `
-                <div class="py-20 text-center border border-outline-variant/30 bg-white luxury-shadow rounded-sm">
-                    <span class="material-symbols-outlined text-5xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
-                    <p class="font-display-lg text-headline-sm text-on-surface-variant italic mb-6">Your shopping bag is currently empty.</p>
-                    <a href="collections.html" class="bg-primary text-white px-10 py-4 uppercase font-label-sm text-xs tracking-widest hover:opacity-90 transition-all inline-block font-semibold">Explore Collections</a>
+                <div class="py-20 text-center border border-outline-variant/30 bg-white luxury-shadow rounded-sm col-span-full">
+                    <span class="material-symbols-outlined text-7xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+                    <h3 class="font-headline-sm text-lg font-bold text-on-surface mb-2">Your cart is currently empty</h3>
+                    <p class="text-xs text-on-surface-variant/80 mb-6">Explore our curated collections to find your next favorite piece.</p>
+                    <a href="collections.html" class="bg-primary text-white px-10 py-4 uppercase font-label-sm text-xs tracking-widest hover:opacity-90 transition-all inline-block font-semibold">Continue Shopping</a>
                 </div>
             `;
             updateSummary(0);
@@ -219,8 +220,8 @@
             const card = document.createElement('div');
             card.className = 'bg-white border border-outline-variant/30 p-5 shadow-xs luxury-shadow rounded-sm flex gap-4 md:gap-6 relative group';
             card.innerHTML = `
-                <!-- Product Image -->
-                <div class="w-24 h-24 md:w-32 md:h-32 overflow-hidden bg-surface-container border border-outline-variant/20 flex-shrink-0">
+                <!-- Product Image (120px) -->
+                <div class="w-[120px] h-[120px] overflow-hidden bg-surface-container border border-outline-variant/20 flex-shrink-0">
                     <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="${productName}" src="${item.image}"/>
                 </div>
                 
@@ -263,7 +264,7 @@
                     </div>
                 </div>
             `;
-            container.appendChild(row);
+            container.appendChild(card);
         });
 
         const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
