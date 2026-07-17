@@ -420,8 +420,8 @@
             const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
             container.innerHTML += `
                 <div class="bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-all rounded-sm" onclick="window.location.href='product-detail.html?product_id=${p.id}'">
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
-                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                    <div class="relative w-full h-0 pb-[100%] overflow-hidden bg-surface-container mb-4">
+                        <img class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                         <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                     </div>
                     <div>

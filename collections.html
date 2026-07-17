@@ -382,13 +382,17 @@
             }
 
             card.innerHTML = `
-                <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
-                    <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                <div class="relative w-full h-0 pb-[100%] overflow-hidden bg-surface-container mb-4">
+                    <img class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                     <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                     
-                    ${badgeHtml}
+                    <div class="z-10 absolute inset-0 pointer-events-none">
+                        <div class="relative w-full h-full">
+                            ${badgeHtml}
+                        </div>
+                    </div>
                     
-                    <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                    <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform z-10" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
                         <span class="material-symbols-outlined text-base">favorite</span>
                     </button>
                 </div>

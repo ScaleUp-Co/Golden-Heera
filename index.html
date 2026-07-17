@@ -395,13 +395,13 @@
                 card.className = 'min-w-[240px] md:min-w-[310px] flex-shrink-0 bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow rounded-sm';
                 card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
                 card.innerHTML = `
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
-                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                    <div class="relative w-full h-0 pb-[100%] overflow-hidden bg-surface-container mb-4">
+                        <img class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                         <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                         
                         <!-- Badges -->
-                        <span class="absolute top-2 left-2 bg-[#A67C2E] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">Bestseller</span>
-                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                        <span class="absolute top-2 left-2 bg-[#A67C2E] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest z-10">Bestseller</span>
+                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform z-10" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
                             <span class="material-symbols-outlined text-base">favorite</span>
                         </button>
                     </div>
@@ -453,13 +453,13 @@
                 card.className = 'bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow rounded-sm';
                 card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
                 card.innerHTML = `
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
-                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                    <div class="relative w-full h-0 pb-[100%] overflow-hidden bg-surface-container mb-4">
+                        <img class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                         <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                         
                         <!-- Badges -->
-                        <span class="absolute top-2 left-2 bg-[#1A1A1A] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">New</span>
-                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                        <span class="absolute top-2 left-2 bg-[#1A1A1A] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest z-10">New</span>
+                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform z-10" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
                             <span class="material-symbols-outlined text-base">favorite</span>
                         </button>
                     </div>
