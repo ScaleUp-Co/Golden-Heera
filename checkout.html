@@ -5,8 +5,34 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Checkout | Golden Heera Fashion Jewellery</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#A67C2E',
+              background: '#FAF7F2',
+              'surface-container': '#F4EEE6',
+              'on-surface': '#1A1A1A',
+              'on-surface-variant': '#666666',
+              'outline-variant': '#E8E1D8'
+            },
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Inter', 'sans-serif']
+            },
+            spacing: {
+              'margin-mobile': '20px',
+              'gutter': '24px',
+              'container-max': '1440px',
+              'margin-desktop': '80px'
+            }
+          }
+        }
+      }
+    </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
@@ -15,7 +41,7 @@
         /* Refined Input Fields: Bottom-Border Only */
         input[type="text"], input[type="email"], input[type="tel"], select {
             border: none !important;
-            border-bottom: 1px solid #1b1c1c !important;
+            border-bottom: 1px solid #E8E1D8 !important;
             background-color: transparent !important;
             border-radius: 0 !important;
             padding-left: 0 !important;
@@ -23,240 +49,191 @@
             outline: none !important;
             box-shadow: none !important;
             transition: border-color 0.3s ease;
+            font-size: 13px !important;
+            color: #1A1A1A !important;
         }
         
-        input:focus {
-            border-bottom-color: #7b5900 !important;
+        input:focus, select:focus {
+            border-bottom-color: #A67C2E !important;
         }
-
-        .step-transition {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
+        
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-out;
+            transition: max-height 0.4s ease-out;
         }
 
         .accordion-active .accordion-content {
             max-height: 800px;
         }
         
-        .gold-underline-hover::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 50%;
-            background-color: #7b5900;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        
-        .gold-underline-hover:hover::after {
-            width: 100%;
+        .luxury-shadow {
+            box-shadow: 0 20px 40px -15px rgba(166, 124, 46, 0.06);
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<body class="bg-background text-on-surface font-sans selection:bg-primary/20 pb-[60px] md:pb-0">
 
 <!-- Global Header placeholder -->
 <div id="global-header"></div>
 
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 lg:grid lg:grid-cols-12 lg:gap-gutter">
-    <!-- Left Column: Checkout Steps -->
-    <form class="lg:col-span-7 space-y-12" id="checkout-form" onsubmit="handlePayment(event)">
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 lg:grid lg:grid-cols-12 lg:gap-12">
+    <!-- Left Column: Checkout Steps (70%) -->
+    <form class="lg:col-span-8 space-y-8" id="checkout-form" onsubmit="handlePayment(event)">
+        
         <!-- Step 1: Contact Information -->
-        <section class="accordion-active" id="step-1">
-            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
-                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4">
-                    <span class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary text-sm font-bold">1</span>
+        <section class="accordion-active bg-white p-6 border border-[#E8E1D8] rounded-sm" id="step-1">
+            <div class="flex items-center justify-between border-b border-[#E8E1D8]/60 pb-4 mb-6">
+                <h2 class="font-serif text-lg font-bold flex items-center gap-3 text-on-surface">
+                    <span class="w-7 h-7 rounded-full border border-primary flex items-center justify-center text-primary text-xs font-bold font-sans">1</span>
                     Contact Information
                 </h2>
-                <button type="button" class="text-primary font-label-sm text-label-sm uppercase tracking-widest hover:opacity-70 transition-opacity" onclick="toggleStep(1)">Edit</button>
+                <button type="button" class="text-primary text-[10px] font-bold uppercase tracking-widest hover:opacity-75" onclick="toggleStep(1)">Edit</button>
             </div>
-            <div class="accordion-content space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Email Address</label>
-                        <input id="email-field" class="w-full py-2" placeholder="email@example.com" type="email" required/>
+            <div class="accordion-content space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Email Address</label>
+                        <input id="email-field" class="w-full py-1.5" placeholder="email@example.com" type="email" required/>
                     </div>
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Phone Number</label>
-                        <input id="phone-field" class="w-full py-2" placeholder="+91 98765 43210" type="tel" required/>
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Phone Number</label>
+                        <input id="phone-field" class="w-full py-1.5" placeholder="+91 98444 42225" type="tel" required/>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <input class="rounded-none border-on-background focus:ring-0 text-primary" id="marketing" type="checkbox"/>
-                    <label class="text-body-md text-on-surface-variant" for="marketing">Email me with exclusive offers and personalized news.</label>
+                <div class="flex items-center gap-3 pt-2">
+                    <input class="rounded-none border-[#E8E1D8] focus:ring-0 text-primary w-4 h-4" id="marketing" type="checkbox"/>
+                    <label class="text-xs text-[#666666] font-medium" for="marketing">Email me with exclusive offers and personalized news.</label>
                 </div>
-                <button type="button" class="bg-on-background text-white px-12 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors" onclick="validateStep1()">Continue to Shipping</button>
+                <button type="button" class="bg-primary text-white px-10 py-3 uppercase font-sans text-[10px] font-bold tracking-widest hover:opacity-90 transition-colors" onclick="validateStep1()">Continue to Shipping</button>
             </div>
         </section>
 
         <!-- Step 2: Shipping Address -->
-        <section id="step-2">
-            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
-                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4 text-on-surface-variant/50">
-                    <span class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline text-sm font-bold">2</span>
+        <section class="bg-white p-6 border border-[#E8E1D8] rounded-sm" id="step-2">
+            <div class="flex items-center justify-between border-b border-[#E8E1D8]/60 pb-4 mb-6">
+                <h2 class="font-serif text-lg font-bold flex items-center gap-3 text-[#666666]/50">
+                    <span class="w-7 h-7 rounded-full border border-[#E8E1D8] flex items-center justify-center text-[#666666]/50 text-xs font-bold font-sans">2</span>
                     Shipping Address
                 </h2>
-                <button type="button" class="text-primary font-label-sm text-label-sm uppercase tracking-widest hover:opacity-70 transition-opacity hidden" id="edit-step-2" onclick="toggleStep(2)">Edit</button>
+                <button type="button" class="text-primary text-[10px] font-bold uppercase tracking-widest hover:opacity-75 hidden" id="edit-step-2" onclick="toggleStep(2)">Edit</button>
             </div>
-            <div class="accordion-content space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">First Name</label>
-                        <input id="fname" class="w-full py-2" placeholder="Enter first name" type="text"/>
+            <div class="accordion-content space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">First Name</label>
+                        <input id="fname" class="w-full py-1.5" placeholder="First Name" type="text"/>
                     </div>
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Last Name</label>
-                        <input id="lname" class="w-full py-2" placeholder="Enter last name" type="text"/>
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Last Name</label>
+                        <input id="lname" class="w-full py-1.5" placeholder="Last Name" type="text"/>
                     </div>
                 </div>
-                <div class="space-y-2">
-                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Address Line 1</label>
-                    <input id="address" class="w-full py-2" placeholder="Suite, House No, Building" type="text"/>
+                <div class="space-y-1.5 flex flex-col">
+                    <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Address Line 1</label>
+                    <input id="address" class="w-full py-1.5" placeholder="Suite, House No, Building, Street Name" type="text"/>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">City</label>
-                        <input id="city" class="w-full py-2" placeholder="Mumbai" type="text"/>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">City</label>
+                        <input id="city" class="w-full py-1.5" placeholder="City" type="text"/>
                     </div>
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">State</label>
-                        <select id="state" class="w-full py-2 bg-transparent border-none">
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">State</label>
+                        <select id="state" class="w-full py-1.5 bg-transparent border-none">
+                            <option>Karnataka</option>
                             <option>Maharashtra</option>
                             <option>Delhi</option>
-                            <option>Karnataka</option>
                             <option>Tamil Nadu</option>
-                            <option>Uttar Pradesh</option>
+                            <option>Telangana</option>
+                            <option>Andhra Pradesh</option>
                         </select>
                     </div>
-                    <div class="space-y-2">
-                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">PIN Code</label>
-                        <input id="pincode" class="w-full py-2" placeholder="400001" type="text"/>
+                    <div class="space-y-1.5 flex flex-col">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">PIN Code</label>
+                        <input id="pincode" class="w-full py-1.5" placeholder="Pincode" type="text"/>
                     </div>
                 </div>
-                <button type="button" class="bg-on-background text-white px-12 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors" onclick="validateStep2()">Continue to Payment</button>
+                <button type="button" class="bg-primary text-white px-10 py-3 uppercase font-sans text-[10px] font-bold tracking-widest hover:opacity-90 transition-colors" onclick="validateStep2()">Continue to Payment</button>
             </div>
         </section>
 
         <!-- Step 3: Payment Method -->
-        <section id="step-3">
-            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
-                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4 text-on-surface-variant/50">
-                    <span class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline text-sm font-bold">3</span>
+        <section class="bg-white p-6 border border-[#E8E1D8] rounded-sm" id="step-3">
+            <div class="flex items-center justify-between border-b border-[#E8E1D8]/60 pb-4 mb-6">
+                <h2 class="font-serif text-lg font-bold flex items-center gap-3 text-[#666666]/50">
+                    <span class="w-7 h-7 rounded-full border border-[#E8E1D8] flex items-center justify-center text-[#666666]/50 text-xs font-bold font-sans">3</span>
                     Payment Method
                 </h2>
             </div>
-            <div class="accordion-content space-y-10">
-                <p class="text-body-md text-on-surface-variant">All transactions are secure and encrypted. Powered by <span class="font-bold text-[#3395FF]">Razorpay</span>.</p>
-                <div class="space-y-4">
-                    <!-- UPI -->
-                    <label class="group cursor-pointer block border border-outline-variant p-6 transition-all hover:border-primary">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <input class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="upi" onchange="switchPaymentTab('upi')"/>
-                                <span class="font-body-lg text-body-lg font-medium">UPI (GPay, PhonePe, Paytm)</span>
-                            </div>
-                            <div class="flex gap-2">
-                                <span class="material-symbols-outlined text-on-surface-variant/50">payments</span>
-                            </div>
-                        </div>
+            <div class="accordion-content space-y-6">
+                <div class="flex flex-col gap-4">
+                    <!-- UPI / Netbanking selector -->
+                    <label id="upi-label" class="border border-primary bg-[#F4EEE6]/20 p-4 flex items-center gap-3 cursor-pointer">
+                        <input type="radio" name="payment" value="upi" checked onchange="switchPaymentTab('upi')" class="text-primary focus:ring-0 w-4 h-4"/>
+                        <span class="text-xs font-bold uppercase tracking-wider text-on-surface">UPI / Netbanking (Razorpay)</span>
                     </label>
-                    <!-- Credit/Debit -->
-                    <label class="group cursor-pointer block border border-primary p-6 bg-surface-container-low" id="card-label">
-                        <div class="flex items-center justify-between mb-8">
-                            <div class="flex items-center gap-4">
-                                <input checked class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="card" onchange="switchPaymentTab('card')"/>
-                                <span class="font-body-lg text-body-lg font-medium">Credit / Debit Card</span>
-                            </div>
-                            <div class="flex gap-2 grayscale">
-                                <span class="material-symbols-outlined">credit_card</span>
-                            </div>
-                        </div>
-                        <div class="space-y-6 animate-in fade-in duration-500" id="card-inputs">
-                            <div class="space-y-2">
-                                <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Card Number</label>
-                                <input class="w-full py-2" placeholder="0000 0000 0000 0000" type="text" id="card-num"/>
-                            </div>
-                            <div class="grid grid-cols-2 gap-8">
-                                <div class="space-y-2">
-                                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Expiry Date</label>
-                                    <input class="w-full py-2" placeholder="MM / YY" type="text" id="card-exp"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">CVV</label>
-                                    <input class="w-full py-2" placeholder="***" type="text" id="card-cvv"/>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <!-- Credit/Debit Card selector -->
+                    <label id="card-label" class="border border-[#E8E1D8] p-4 flex items-center gap-3 cursor-pointer">
+                        <input type="radio" name="payment" value="card" onchange="switchPaymentTab('card')" class="text-primary focus:ring-0 w-4 h-4"/>
+                        <span class="text-xs font-bold uppercase tracking-wider text-on-surface">Credit / Debit Card</span>
                     </label>
-                    <!-- Net Banking -->
-                    <label class="group cursor-pointer block border border-outline-variant p-6 transition-all hover:border-primary">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <input class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="netbanking" onchange="switchPaymentTab('netbanking')"/>
-                                <span class="font-body-lg text-body-lg font-medium">Net Banking</span>
-                            </div>
-                            <span class="material-symbols-outlined text-on-surface-variant/50">account_balance</span>
+                    
+                    <div id="card-inputs" class="hidden space-y-4 pt-4 border-t border-[#E8E1D8]/45">
+                        <div class="space-y-1.5 flex flex-col">
+                            <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Card Number</label>
+                            <input class="w-full py-1.5" placeholder="1234 5678 9876 5432" type="text"/>
                         </div>
-                    </label>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-1.5 flex flex-col">
+                                <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">Expiry Date</label>
+                                <input class="w-full py-1.5" placeholder="MM/YY" type="text"/>
+                            </div>
+                            <div class="space-y-1.5 flex flex-col">
+                                <label class="text-[9px] font-bold uppercase tracking-wider text-[#666666]">CVV</label>
+                                <input class="w-full py-1.5" placeholder="123" type="text"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="w-full bg-on-background text-white py-5 font-label-sm text-label-sm uppercase tracking-[0.2em] font-bold hover:bg-primary transition-all shadow-xl flex items-center justify-center gap-3">
-                    Pay <span id="pay-btn-amount">₹0</span>
-                    <span class="material-symbols-outlined">arrow_forward</span>
+
+                <button type="submit" class="w-full bg-[#A67C2E] text-white py-4 uppercase font-sans text-xs font-bold tracking-widest hover:opacity-90 flex items-center justify-center gap-2 shadow-md rounded-none">
+                    Complete Order <span id="pay-btn-amount">₹0</span>
                 </button>
-                <div class="flex justify-center items-center gap-8 pt-4 grayscale opacity-60">
-                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified</span> SECURE</div>
-                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">diamond</span> AUTHENTIC</div>
-                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">local_shipping</span> INSURED</div>
-                </div>
             </div>
         </section>
     </form>
 
-    <!-- Right Column: Order Summary -->
-    <aside class="lg:col-span-5 mt-16 lg:mt-0">
-        <div class="bg-surface-container-lowest p-8 lg:p-12 sticky top-24 border border-outline-variant/30">
-            <h3 class="font-headline-sm text-headline-sm mb-10 pb-4 border-b border-outline-variant">Order Summary</h3>
-            <div class="space-y-8 mb-10" id="summary-items-container">
-                <!-- Dynamically loaded -->
+    <!-- Right Column: Sticky Order Summary (30%) -->
+    <aside class="lg:col-span-4 mt-12 lg:mt-0 sticky top-28">
+        <div class="bg-white p-6 border border-[#E8E1D8] shadow-md luxury-shadow rounded-sm">
+            <h3 class="font-serif text-sm uppercase tracking-widest font-bold mb-6 pb-3 border-b border-[#E8E1D8]/60">Items Summary</h3>
+            
+            <div class="space-y-6 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar" id="summary-items-container">
+                <!-- Loaded dynamically -->
             </div>
-            <div class="space-y-4 pt-8 border-t border-outline-variant">
-                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+            
+            <div class="space-y-3.5 mt-8 border-t border-[#E8E1D8]/60 pt-6 text-xs font-semibold text-[#666666]">
+                <div class="flex justify-between">
                     <span>Subtotal</span>
-                    <span id="summary-subtotal">₹0</span>
+                    <span id="summary-subtotal" class="text-on-surface">₹0</span>
                 </div>
-                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+                <div class="flex justify-between">
                     <span>Shipping</span>
                     <span id="summary-shipping">FREE</span>
                 </div>
-                <div class="flex justify-between text-on-surface-variant text-xs font-semibold hidden" id="summary-discount-row">
+                <div class="flex justify-between hidden" id="summary-discount-row">
                     <span>Discount</span>
-                    <span id="summary-discount">-₹0</span>
+                    <span id="summary-discount" class="text-primary">-₹0</span>
                 </div>
-                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+                <div class="flex justify-between">
                     <span>Taxes (GST 3%)</span>
-                    <span id="summary-tax">₹0</span>
+                    <span id="summary-tax" class="text-on-surface">₹0</span>
                 </div>
-                <div class="flex justify-between pt-6 mt-6 border-t border-on-background">
-                    <span class="font-headline-sm text-headline-sm">Total</span>
-                    <div class="text-right">
-                        <span class="text-xs text-on-surface-variant uppercase tracking-widest block mb-1">INR</span>
-                        <span class="font-headline-sm text-headline-sm" id="summary-total">₹0</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Loyalty / Trust -->
-            <div class="mt-12 p-6 bg-surface-container-low flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-                <div>
-                    <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1">Elite Concierge</p>
-                    <p class="text-[13px] text-on-surface-variant leading-relaxed">As a valued client, your order will be delivered via our secure white-glove service within 3-5 business days.</p>
+                <div class="flex justify-between border-t border-[#E8E1D8] pt-4 mt-4 items-baseline">
+                    <span class="font-serif text-sm font-bold text-on-surface uppercase tracking-wider">Estimated Total</span>
+                    <span class="text-xl font-bold text-primary" id="summary-total">₹0</span>
                 </div>
             </div>
         </div>
@@ -266,11 +243,13 @@
 <!-- Success Modal -->
 <div id="success-modal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
     <div class="bg-white max-w-lg w-full p-12 text-center border border-primary relative luxury-shadow">
-        <span class="material-symbols-outlined text-7xl text-primary mb-6 animate-bounce">verified</span>
-        <h2 class="font-display-lg text-headline-md mb-4">Masterpiece Secured</h2>
-        <p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">Thank you for choosing Golden Heera. Your payment was processed successfully. A confirmation email and certificate details have been sent to you.</p>
-        <button onclick="closeSuccessModal()" class="w-full bg-primary text-white py-4 uppercase font-body-md tracking-widest hover:opacity-90 transition-all font-semibold">
-            Return to Atelier
+        <span class="material-symbols-outlined text-6xl text-primary mb-6 animate-bounce">verified</span>
+        <h2 class="font-serif text-2xl mb-4 font-medium">Order Placed Successfully</h2>
+        <p class="font-sans text-xs text-[#666666] mb-8 leading-relaxed">
+            Thank you for shopping at Golden Heera. Your payment has been processed successfully. A confirmation email and tracking ID details will be sent to you shortly.
+        </p>
+        <button onclick="closeSuccessModal()" class="w-full bg-[#A67C2E] text-white py-3.5 uppercase font-sans text-xs font-bold tracking-widest hover:opacity-90 transition-all rounded-none">
+            Return to Homepage
         </button>
     </div>
 </div>
@@ -287,7 +266,7 @@
         container.innerHTML = '';
 
         if (cart.length === 0) {
-            container.innerHTML = `<p class="italic text-on-surface-variant">Your shopping bag is empty.</p>`;
+            container.innerHTML = `<p class="italic text-[#666666] text-xs">Your shopping bag is empty.</p>`;
             return;
         }
 
@@ -295,17 +274,17 @@
         cart.forEach(item => {
             subtotal += item.price * item.qty;
             container.innerHTML += `
-                <div class="flex gap-6 group">
-                    <div class="relative w-20 h-20 overflow-hidden border border-outline-variant/20 flex-shrink-0">
-                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="${item.name}" src="${item.image}"/>
-                        <span class="absolute -top-2 -right-2 bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold">${item.qty}</span>
+                <div class="flex gap-4 group">
+                    <div class="relative w-16 h-16 overflow-hidden border border-[#E8E1D8]/40 flex-shrink-0 bg-surface-container">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="${item.name}" src="${item.image}"/>
+                        <span class="absolute -top-1.5 -right-1.5 bg-[#A67C2E] text-white w-4.5 h-4.5 rounded-full flex items-center justify-center text-[9px] font-bold font-sans">${item.qty}</span>
                     </div>
-                    <div class="flex-1 flex flex-col justify-between py-1 text-xs">
+                    <div class="flex-1 flex flex-col justify-between py-0.5 text-xs">
                         <div>
-                            <h4 class="font-body-lg text-xs font-semibold text-on-background line-clamp-1">${item.name}</h4>
-                            <p class="text-[10px] text-on-surface-variant mt-1 uppercase tracking-wider">Premium Finish</p>
+                            <h4 class="font-serif text-xs font-bold text-on-surface line-clamp-1">${item.name}</h4>
+                            <p class="text-[9px] text-[#666666] mt-0.5 uppercase font-bold tracking-wider">Premium Finish</p>
                         </div>
-                        <span class="font-body-md text-on-background font-bold">₹ ${(item.price * item.qty).toLocaleString()}</span>
+                        <span class="font-bold text-primary">₹${(item.price * item.qty).toLocaleString()}</span>
                     </div>
                 </div>
             `;
@@ -343,27 +322,25 @@
             section.classList.remove('accordion-active');
             
             if (i < stepNumber) {
-                header.classList.remove('text-on-surface-variant/50');
-                header.classList.add('text-on-background');
-                badge.classList.remove('border-outline-variant', 'text-outline');
+                header.classList.remove('text-[#666666]/50');
+                header.classList.add('text-on-surface');
+                badge.classList.remove('border-[#E8E1D8]', 'text-[#666666]/50');
                 badge.classList.add('border-primary', 'text-primary');
-                badge.innerHTML = '<span class="material-symbols-outlined text-xs">check</span>';
+                badge.innerHTML = '<span class="material-symbols-outlined text-[10px] font-bold">check</span>';
             } else if (i === stepNumber) {
                 section.classList.add('accordion-active');
-                header.classList.remove('text-on-surface-variant/50');
-                header.classList.add('text-on-background');
-                badge.classList.remove('border-outline-variant', 'text-outline');
+                header.classList.remove('text-[#666666]/50');
+                header.classList.add('text-on-surface');
+                badge.classList.remove('border-[#E8E1D8]', 'text-[#666666]/50');
                 badge.classList.add('border-primary', 'text-primary');
                 badge.innerText = i;
             } else {
-                header.classList.add('text-on-surface-variant/50');
+                header.classList.add('text-[#666666]/50');
                 badge.classList.remove('border-primary', 'text-primary');
-                badge.classList.add('border-outline-variant', 'text-outline');
+                badge.classList.add('border-[#E8E1D8]', 'text-[#666666]/50');
                 badge.innerText = i;
             }
         }
-        
-        document.getElementById('step-' + stepNumber).scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     function validateStep1() {
@@ -391,16 +368,25 @@
     }
 
     function switchPaymentTab(type) {
+        const upiLabel = document.getElementById('upi-label');
         const cardLabel = document.getElementById('card-label');
         const cardInputs = document.getElementById('card-inputs');
 
         if (type === 'card') {
-            cardLabel.classList.add('bg-surface-container-low', 'border-primary');
-            cardLabel.classList.remove('border-outline-variant');
+            cardLabel.classList.add('bg-[#F4EEE6]/20', 'border-primary');
+            cardLabel.classList.remove('border-[#E8E1D8]');
+            
+            upiLabel.classList.remove('bg-[#F4EEE6]/20', 'border-primary');
+            upiLabel.classList.add('border-[#E8E1D8]');
+            
             cardInputs.classList.remove('hidden');
         } else {
-            cardLabel.classList.remove('bg-surface-container-low', 'border-primary');
-            cardLabel.classList.add('border-outline-variant');
+            upiLabel.classList.add('bg-[#F4EEE6]/20', 'border-primary');
+            upiLabel.classList.remove('border-[#E8E1D8]');
+            
+            cardLabel.classList.remove('bg-[#F4EEE6]/20', 'border-primary');
+            cardLabel.classList.add('border-[#E8E1D8]');
+            
             cardInputs.classList.add('hidden');
         }
     }
@@ -419,16 +405,6 @@
         localStorage.removeItem('gh_discount');
         window.location.href = 'index.html';
     }
-
-    // Input highlight effects
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.querySelector('label')?.classList.add('text-primary');
-        });
-        input.addEventListener('blur', () => {
-            input.parentElement.querySelector('label')?.classList.remove('text-primary');
-        });
-    });
 
     renderSummary();
 </script>

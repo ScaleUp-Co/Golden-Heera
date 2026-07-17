@@ -5,96 +5,33 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Golden Heera | Premium Fashion & Imitation Jewellery Online Store</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     
     <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface-container": "#efeded",
-                    "tertiary-fixed": "#e5e2e1",
-                    "on-primary-fixed": "#261900",
-                    "secondary-fixed": "#e5e2dd",
-                    "surface-tint": "#7b5900",
-                    "on-tertiary-fixed-variant": "#474746",
-                    "on-primary": "#ffffff",
-                    "primary-fixed": "#ffdea4",
-                    "secondary": "#5f5e5b",
-                    "on-background": "#1b1c1c",
-                    "on-surface-variant": "#4e4637",
-                    "primary": "#7b5900",
-                    "surface-dim": "#dbdad9",
-                    "secondary-fixed-dim": "#c8c6c2",
-                    "error": "#ba1a1a",
-                    "on-secondary-fixed": "#1c1c19",
-                    "on-secondary-fixed-variant": "#474743",
-                    "surface-container-highest": "#e3e2e2",
-                    "surface-variant": "#e3e2e2",
-                    "inverse-on-surface": "#f2f0f0",
-                    "on-secondary": "#ffffff",
-                    "tertiary-container": "#a3a1a1",
-                    "primary-container": "#c89b3c",
-                    "inverse-primary": "#f0bf5c",
-                    "tertiary": "#5f5e5e",
-                    "on-error-container": "#93000a",
-                    "primary-fixed-dim": "#f0bf5c",
-                    "surface-container-high": "#e9e8e8",
-                    "inverse-surface": "#2f3031",
-                    "on-tertiary-container": "#383838",
-                    "on-error": "#ffffff",
-                    "on-secondary-container": "#656461",
-                    "on-primary-fixed-variant": "#5d4200",
-                    "outline-variant": "#d2c5b1",
-                    "secondary-container": "#e5e2dd",
-                    "on-surface": "#1b1c1c",
-                    "on-tertiary": "#ffffff",
-                    "on-primary-container": "#4b3500",
-                    "tertiary-fixed-dim": "#c8c6c5",
-                    "surface-bright": "#faf9f9",
-                    "surface-container-lowest": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "surface": "#faf9f9",
-                    "surface-container-low": "#f4f3f3",
-                    "outline": "#807665",
-                    "background": "#faf9f9"
+            colors: {
+              primary: '#A67C2E',
+              background: '#FAF7F2',
+              'surface-container': '#F4EEE6',
+              'on-surface': '#1A1A1A',
+              'on-surface-variant': '#666666',
+              'outline-variant': '#E8E1D8'
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Inter', 'sans-serif']
             },
-            "spacing": {
-                    "margin-mobile": "20px",
-                    "gutter": "24px",
-                    "container-max": "1440px",
-                    "margin-desktop": "80px",
-                    "section-gap": "120px"
-            },
-            "fontFamily": {
-                    "display-lg-mobile": ["Playfair Display"],
-                    "body-lg": ["Montserrat"],
-                    "headline-sm": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "label-sm": ["Montserrat"],
-                    "body-md": ["Montserrat"],
-                    "display-lg": ["Playfair Display"]
-            },
-            "fontSize": {
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            spacing: {
+              'margin-mobile': '20px',
+              'gutter': '24px',
+              'container-max': '1440px',
+              'margin-desktop': '80px'
             }
-          },
-        },
+          }
+        }
       }
     </script>
     <style>
@@ -108,240 +45,247 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        .category-circle-img {
-            transition: transform 0.4s ease;
-        }
-        .category-circle:hover .category-circle-img {
-            transform: scale(1.08);
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -15px rgba(166, 124, 46, 0.08);
         }
     </style>
 </head>
-<body class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<body class="bg-background text-on-surface font-sans selection:bg-primary/20 pb-[60px] md:pb-0">
 
 <!-- Global Header placeholder -->
 <div id="global-header"></div>
 
 <!-- Hero Section -->
-<section class="relative h-[480px] md:h-[620px] overflow-hidden bg-[#faf7f2]">
+<section class="relative h-[520px] md:h-[680px] overflow-hidden bg-[#F4EEE6]">
     <div class="absolute inset-0 z-0">
-        <img class="w-full h-full object-cover object-center md:object-right-top" alt="Golden Heera Premium Fashion Jewellery Hero" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZEA3WxWN3CU-80JBn4AH6wYbf3p1zs1QmKAh81sr7rzStuy7nmxOMisCDn_yWaS3XpqmebH3cXUdiNh5fiOz4Ka7oIKL-KhoHLeF119IuX5OZBF9ZwAOoRTdunIXWm-S8UrHIOEgR7b_w7yh0P7I5KuT6I4IUboEo1o-H2wJ9soRdAroU0ZRjHuOkg0PE-6OOzbJo-OBmjJOi5vOLiqmpyrIRKYyQpCBGpdFONEdWUhdQDw56gYidQ"/>
-        <div class="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent"></div>
+        <!-- Premium cinematic banner image -->
+        <img class="w-full h-full object-cover object-center md:object-[50%_35%] filter brightness-[0.93]" alt="Golden Heera Premium D2C Fashion Jewellery Hero" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZEA3WxWN3CU-80JBn4AH6wYbf3p1zs1QmKAh81sr7rzStuy7nmxOMisCDn_yWaS3XpqmebH3cXUdiNh5fiOz4Ka7oIKL-KhoHLeF119IuX5OZBF9ZwAOoRTdunIXWm-S8UrHIOEgR7b_w7yh0P7I5KuT6I4IUboEo1o-H2wJ9soRdAroU0ZRjHuOkg0PE-6OOzbJo-OBmjJOi5vOLiqmpyrIRKYyQpCBGpdFONEdWUhdQDw56gYidQ"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
     </div>
-    <div class="relative z-10 h-full flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <h1 class="font-display-lg text-display-lg-mobile md:text-5xl max-w-xl mb-4 font-bold text-on-surface">Elevate Every Look with Golden Heera</h1>
-        <p class="font-body-md text-base md:text-lg text-on-surface-variant max-w-lg mb-8">Premium Fashion & Wedding Jewellery Designed for Every Occasion. Affordable Luxury Handcrafted for You.</p>
+    <div class="relative z-10 h-full flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <span class="text-primary text-xs font-bold uppercase tracking-[0.25em] mb-3 block">Luxury Within Reach</span>
+        <h1 class="font-serif text-4xl md:text-6xl max-w-2xl mb-4 leading-[1.1] text-on-surface font-medium">Jewellery That Completes Every Look</h1>
+        <p class="font-sans text-xs md:text-sm text-on-surface-variant max-w-md mb-10 leading-relaxed">
+            Premium imitation jewellery designed for celebrations, weddings, and everyday elegance. Elevate your presence with curated gold and diamond-finish masterpieces.
+        </p>
         <div class="flex flex-wrap gap-4">
-            <a class="bg-primary text-white px-8 py-3.5 uppercase font-label-sm tracking-widest hover:opacity-90 transition-all inline-block shadow-lg" href="collections.html">Shop Now</a>
-            <a class="border border-primary text-primary px-8 py-3.5 uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all inline-block bg-white/40 backdrop-blur-xs" href="collections.html">Explore Collections</a>
+            <a class="bg-primary text-white px-8 py-3.5 uppercase font-sans text-[11px] font-bold tracking-widest hover:opacity-90 transition-all inline-block shadow-md" href="collections.html">Shop Collection</a>
+            <a class="border border-[#A67C2E] text-primary px-8 py-3.5 uppercase font-sans text-[11px] font-bold tracking-widest hover:bg-primary hover:text-white transition-all inline-block bg-transparent" href="collections.html?tag=new">New Arrivals</a>
         </div>
         
-        <!-- Trust Badges (Minimal/Elegant) -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 mt-12 max-w-2xl border-t border-outline-variant/30 pt-4">
-            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 mt-16 max-w-xl border-t border-[#E8E1D8] pt-6">
+            <div class="flex items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">
                 <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
-                <span>Free Shipping above ₹999</span>
+                <span>Free Shipping > ₹999</span>
             </div>
-            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+            <div class="flex items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">
                 <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
-                <span>Easy 7-Day Returns</span>
+                <span>Easy Returns</span>
             </div>
-            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+            <div class="flex items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">
                 <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
-                <span>Secure Payments</span>
+                <span>Secure UPI Pay</span>
             </div>
-            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+            <div class="flex items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">
                 <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
-                <span>Trusted by Thousands</span>
+                <span>Premium Polish</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Category Circles Horizontal Scroll (Inspired by Rubans) -->
-<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-    <div class="flex space-x-6 md:space-x-12 overflow-x-auto no-scrollbar pb-4 justify-start md:justify-center">
-        <!-- Category Item -->
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=earrings">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKADJtdQiqERuDX7Cne7wWvVHYuHi46nuZ2G1JDjsk3Z7Zs4qkrNcmRAqzAJ6ElJijjAtupUQBKzantfq2IpPr7bl9HmkqmYEuYLAIY3HsnIJd3DCq0JAOextZTxnT8_GMX9k5tEvY12e49ocsKmprN4tX7zBrYMq7lEZjxMaaeNgztLlESq7xsY0AfU6ATFVOZAPyuHcUd72U7-TrEZV2r-fSlsXV10un3q2YjL_zl3_6GfS0Ebie4w"/>
+<!-- Categories Section (Large Editorial Cards) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+    <div class="text-center mb-16">
+        <span class="text-primary font-bold text-xs uppercase tracking-[0.25em] mb-2 block">Our Categories</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-on-surface font-medium">Curated Essentials</h2>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+        <!-- Earrings -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?category=earrings">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKADJtdQiqERuDX7Cne7wWvVHYuHi46nuZ2G1JDjsk3Z7Zs4qkrNcmRAqzAJ6ElJijjAtupUQBKzantfq2IpPr7bl9HmkqmYEuYLAIY3HsnIJd3DCq0JAOextZTxnT8_GMX9k5tEvY12e49ocsKmprN4tX7zBrYMq7lEZjxMaaeNgztLlESq7xsY0AfU6ATFVOZAPyuHcUd72U7-TrEZV2r-fSlsXV10un3q2YjL_zl3_6GfS0Ebie4w"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Earrings</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Earrings</span>
         </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=necklaces">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Necklaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLdTCTvttsD3cRSlNb1Oygz19YGYniUWMJJYQ6v7_7KBsJgq8NXV4w-zmQ5-Tr1MslqqoTHNLA2dTGqr_RytR1hOZ4pwhLHliJ0OL1jDdZEMysUZeTwU5gS3O0DG_mH7UNjAKxvyMmNxkH41xKAfgCzqVdQ_cF1G6wn0joUka87IZTZYXqjAsLi_1LrurfzRNx3t9dGIPSUzcBmx-OKnl3kAQ4ZG5EXeUrXg1Jt_Uo0cSYrYMDjqQSQ"/>
+        <!-- Necklaces -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?category=necklaces">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Necklaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLdTCTvttsD3cRSlNb1Oygz19YGYniUWMJJYQ6v7_7KBsJgq8NXV4w-zmQ5-Tr1MslqqoTHNLA2dTGqr_RytR1hOZ4pwhLHliJ0OL1jDdZEMysUZeTwU5gS3O0DG_mH7UNjAKxvyMmNxkH41xKAfgCzqVdQ_cF1G6wn0joUka87IZTZYXqjAsLi_1LrurfzRNx3t9dGIPSUzcBmx-OKnl3kAQ4ZG5EXeUrXg1Jt_Uo0cSYrYMDjqQSQ"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Necklaces</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Necklaces</span>
         </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=rings">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Rings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1S7okuzyBArf0olVWM1ctL0WxI5amwQwAEtjw6bVcNqxIr3uEtmy2A5qY6d9WrUDeNPUVBPw4Dg8MI7uusHA3Fu5rEPesb9pSY3cY7LyPYNKdv0--QkXgpDsnbdwb1upUScSaUOdomaLwe4ogR5eVkaxKg7iSxh65jSzju2q8TYkue181sYiup3FawqTgBdpo-mrZBBzjfJtn5rbB2lXdON9ovBY968W_WO4qikfT9bGeP06J3wnJg"/>
+        <!-- Bangles -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?category=bangles">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bangles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXQgqJeMBw-vCDq3O1M-ix-rVeYlkN2pzSItppjGgpaZx6unZF6ZhChSLX8DfbUXyZHZIuJwAsvGckIcJOXshuxVcJgaJQ2rDBbGeFaPkySPpf-W1gxXlNWm0IbJsZH5VKvQHW9tvsWTbBk6Ux5nYs0C1qFx7SHU2KejJPNmp6V83Jjx-9Nkvz80v0tcmVnw54ZU5M3gOOnfDx4BIajqO3YtGDg7ssVe4j9NlB3nxeavuJQVEjU1wpw"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Bangles & Kada</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Rings</span>
         </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=bangles">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Bangles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXQgqJeMBw-vCDq3O1M-ix-rVeYlkN2pzSItppjGgpaZx6unZF6ZhChSLX8DfbUXyZHZIuJwAsvGckIcJOXshuxVcJgaJQ2rDBbGeFaPkySPpf-W1gxXlNWm0IbJsZH5VKvQHW9tvsWTbBk6Ux5nYs0C1qFx7SHU2KejJPNmp6V83Jjx-9Nkvz80v0tcmVnw54ZU5M3gOOnfDx4BIajqO3YtGDg7ssVe4j9NlB3nxeavuJQVEjU1wpw"/>
+        <!-- Rings -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?category=rings">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Rings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1S7okuzyBArf0olVWM1ctL0WxI5amwQwAEtjw6bVcNqxIr3uEtmy2A5qY6d9WrUDeNPUVBPw4Dg8MI7uusHA3Fu5rEPesb9pSY3cY7LyPYNKdv0--QkXgpDsnbdwb1upUScSaUOdomaLwe4ogR5eVkaxKg7iSxh65jSzju2q8TYkue181sYiup3FawqTgBdpo-mrZBBzjfJtn5rbB2lXdON9ovBY968W_WO4qikfT9bGeP06J3wnJg"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Rings</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Bangles</span>
         </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=bridal">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Bridal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
+        <!-- Bridal Sets -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?collection=bridal">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bridal Sets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Bridal Sets</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Bridal</span>
         </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=temple">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Temple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
+        <!-- Temple Jewellery -->
+        <a class="relative h-80 group overflow-hidden block border border-[#E8E1D8]/40 bg-white" href="collections.html?collection=temple">
+            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Temple Jewellery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="font-serif text-lg mb-1 tracking-wide">Temple Art</h4>
+                <span class="text-[9px] uppercase tracking-widest border-b border-white pb-0.5">Shop Now</span>
             </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Temple</span>
-        </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=kundan">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Kundan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw"/>
-            </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Kundan</span>
-        </a>
-        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?tag=bestseller">
-            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1 bg-surface-container-high flex items-center justify-center">
-                <span class="material-symbols-outlined text-primary text-3xl font-bold">star</span>
-            </div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Best Sellers</span>
         </a>
     </div>
 </section>
 
-<!-- Offer Banner / Flash Sale -->
-<section class="py-8 bg-surface-container-high border-y border-outline-variant/30 px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-        <div>
-            <span class="inline-block bg-primary text-white text-[10px] uppercase tracking-widest px-3 py-1 font-semibold mb-2">Festive Flash Sale</span>
-            <h3 class="font-display-lg text-headline-sm text-on-surface">Flat 50% Off On Kundan & American Diamond Sets</h3>
+<!-- Trending Collections (Large Editorial Cards Grid) -->
+<section class="py-20 bg-[#F4EEE6] border-y border-[#E8E1D8] px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-[1440px] mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.25em] mb-2 block">Curated Series</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-on-surface font-medium">Trending Collections</h2>
         </div>
-        <div class="flex items-center gap-4">
-            <div class="bg-white border border-outline-variant/50 px-4 py-2 text-center shadow-xs">
-                <span class="block font-bold text-primary">10% Off</span>
-                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant font-semibold">Code: WELCOME10</span>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Kundan Crafts -->
+            <div class="bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer overflow-hidden editorial-shadow rounded-sm" onclick="window.location.href='collections.html?collection=kundan'">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw" alt="Kundan Collection"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl font-bold mb-2">Kundan Crafts</h3>
+                    <p class="text-xs text-[#666666] leading-relaxed mb-4">Timeless Rajasthani styles featuring hand-set uncut glass kundan stones with emerald bead hangings.</p>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-[#A67C2E] border-b border-primary/20 pb-0.5">Explore Series</span>
+                </div>
             </div>
-            <a href="collections.html?tag=offers" class="bg-on-background text-white px-8 py-3 uppercase font-label-sm tracking-widest hover:bg-primary transition-colors text-sm font-semibold">Shop Flash Sale</a>
+            
+            <!-- American Diamond -->
+            <div class="bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer overflow-hidden editorial-shadow rounded-sm" onclick="window.location.href='collections.html?collection=ad'">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tElvkQRVMTdajCQZ38Zhn19w5d9uxPfpGaT791cBV2Ifx0bgdPqoDM9z-Bp_jO0t12Cbc2rCq5u99Z67Fmlpiyw_KAlKZRNgwDeT65are75H7WFPsDJvAlr3Mg2U-NrJG0gp8YxyvgZeIk97kiHceH_yws8I-_8udUBJiuOULa_NJ0J5aGQ_sftW0yIXTEZ5Q-pEMsdr4KyOtOl2fjPJFG6XFOC8hPedI5aioFwYUV_mxAWa-jIjDw" alt="American Diamond"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl font-bold mb-2">American Diamond</h3>
+                    <p class="text-xs text-[#666666] leading-relaxed mb-4">AAA Grade Cubic Zirconia finished in bright rhodium silver, sparkling exactly like fine real diamonds.</p>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-[#A67C2E] border-b border-primary/20 pb-0.5">Explore Series</span>
+                </div>
+            </div>
+
+            <!-- Oxidised Silver -->
+            <div class="bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer overflow-hidden editorial-shadow rounded-sm" onclick="window.location.href='collections.html?collection=oxidised'">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-surface-container relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhuKO7ceUIQlczRrGLyWRrGcA3k5RZEgNJ_g6OU9YxAf0AfqFTbK04vrfpKCwPSf_9pADiHfHnN1-cbpde4bC4ZxerPPrHzQkDF54FBYNZfTZeANmKeUEByqNNa_8_5eE7jBQ9ppVM5y_x5XrZYdiF2LPtuEEqFmW8m-GDMrWynR36gSDS00SrAdrkOIhtSlc2XRo3kCk64ibARPWqIL480qtbehgHxj7s-j76j3FIm2dzIDBwOpfIzA" alt="Oxidised Silver"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif text-xl font-bold mb-2">Oxidised Silver</h3>
+                    <p class="text-xs text-[#666666] leading-relaxed mb-4">Bohemian-chic German Silver chokers and tribal drop earrings with dangling ghungroo details.</p>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-[#A67C2E] border-b border-primary/20 pb-0.5">Explore Series</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Best Seller Horizontal Carousel Section -->
-<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<!-- Best Sellers (4 Products Grid) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
     <div class="flex justify-between items-baseline mb-12">
         <div>
-            <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Top Rated</span>
-            <h2 class="font-display-lg text-headline-md">Our Best Sellers</h2>
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.25em] mb-2 block">Highly Coveted</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium">Bestselling Masterpieces</h2>
         </div>
         <div class="flex space-x-4">
-            <button id="best-prev" class="w-10 h-10 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
+            <button id="best-prev" class="w-10 h-10 flex items-center justify-center border border-[#E8E1D8] hover:bg-[#A67C2E] hover:text-white transition-colors duration-300">
                 <span class="material-symbols-outlined text-sm">chevron_left</span>
             </button>
-            <button id="best-next" class="w-10 h-10 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
+            <button id="best-next" class="w-10 h-10 flex items-center justify-center border border-[#E8E1D8] hover:bg-[#A67C2E] hover:text-white transition-colors duration-300">
                 <span class="material-symbols-outlined text-sm">chevron_right</span>
             </button>
         </div>
     </div>
-    <!-- 4 products per row desktop, 2 per row mobile -->
-    <div id="best-sellers-carousel" class="flex space-x-gutter overflow-x-auto no-scrollbar pb-10">
-        <!-- Dynamically loaded bestsellers -->
+    
+    <div id="best-sellers-carousel" class="flex space-x-6 overflow-x-auto no-scrollbar pb-6 scroll-smooth">
+        <!-- Dynamically loaded bestsellers (4 per row desktop) -->
     </div>
 </section>
 
 <!-- Shop By Budget -->
-<section class="py-16 bg-[#faf9f9] px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20">
-    <div class="max-w-container-max mx-auto">
-        <h2 class="font-display-lg text-headline-md text-center mb-16">Shop By Budget</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-gutter">
-            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=499">
-                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
-                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹499</h5>
-                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+<section class="py-20 bg-[#F4EEE6] px-margin-mobile md:px-margin-desktop border-y border-[#E8E1D8]">
+    <div class="max-w-[1440px] mx-auto">
+        <h2 class="font-serif text-3xl md:text-4xl text-center mb-16 font-medium">Shop By Budget</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <a class="border border-[#E8E1D8] bg-white p-8 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block rounded-sm" href="collections.html?price_max=499">
+                <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] mb-2 block font-bold">Everyday Wear</span>
+                <h5 class="font-serif text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹499</h5>
+                <span class="text-[10px] uppercase font-bold text-primary border-b border-primary/20 pb-0.5">Explore</span>
             </a>
-            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=999">
-                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
-                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹999</h5>
-                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            <a class="border border-[#E8E1D8] bg-white p-8 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block rounded-sm" href="collections.html?price_max=999">
+                <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] mb-2 block font-bold">Festive Accents</span>
+                <h5 class="font-serif text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹999</h5>
+                <span class="text-[10px] uppercase font-bold text-primary border-b border-primary/20 pb-0.5">Explore</span>
             </a>
-            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=1499">
-                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
-                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹1,499</h5>
-                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            <a class="border border-[#E8E1D8] bg-white p-8 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block rounded-sm" href="collections.html?price_max=1499">
+                <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] mb-2 block font-bold">Chic Statements</span>
+                <h5 class="font-serif text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹1,499</h5>
+                <span class="text-[10px] uppercase font-bold text-primary border-b border-primary/20 pb-0.5">Explore</span>
             </a>
-            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=2499">
-                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
-                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹2,499</h5>
-                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            <a class="border border-[#E8E1D8] bg-white p-8 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block rounded-sm" href="collections.html?price_max=2499">
+                <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] mb-2 block font-bold">Party Ensembles</span>
+                <h5 class="font-serif text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹2,499</h5>
+                <span class="text-[10px] uppercase font-bold text-primary border-b border-primary/20 pb-0.5">Explore</span>
             </a>
-            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_min=2499">
-                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
-                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹4,999</h5>
-                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            <a class="border border-[#E8E1D8] bg-white p-8 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block rounded-sm" href="collections.html?price_min=2499">
+                <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] mb-2 block font-bold">Grand Bridal</span>
+                <h5 class="font-serif text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹4,999</h5>
+                <span class="text-[10px] uppercase font-bold text-primary border-b border-primary/20 pb-0.5">Explore</span>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Just Dropped (New Arrivals) Section -->
-<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Just Dropped (New Arrivals Grid) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
     <div class="text-center mb-16">
-        <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Just Dropped</span>
-        <h2 class="font-display-lg text-headline-md">New Arrivals</h2>
+        <span class="text-primary font-bold text-xs tracking-[0.25em] uppercase mb-2 block">Just Dropped</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-medium">New Arrivals</h2>
     </div>
-    <!-- 4 columns grid for high density -->
-    <div id="new-arrivals-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-gutter gap-y-16">
-        <!-- Dynamically loaded new arrivals -->
+    
+    <div id="new-arrivals-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Dynamically loaded new arrivals (4 per row desktop) -->
     </div>
+    
     <div class="text-center mt-16">
-        <a href="collections.html?tag=new" class="border border-primary text-primary px-10 py-4 uppercase font-label-sm tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block font-semibold">View All New Arrivals</a>
+        <a href="collections.html?tag=new" class="border border-primary text-primary px-10 py-4 uppercase font-sans text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block font-semibold">View All New Arrivals</a>
     </div>
 </section>
 
-<!-- Collections Showcase - Visual Grid -->
-<section class="py-16 bg-surface-container/40 px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20">
-    <div class="max-w-container-max mx-auto">
-        <h2 class="font-display-lg text-headline-md text-center mb-16">Explore Curated Collections</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            <!-- Bridal -->
-            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=bridal">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bridal Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
-                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
-                <div class="absolute bottom-8 left-8 text-white">
-                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Bridal Collection</h4>
-                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
-                </div>
-            </a>
-            <!-- Temple -->
-            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=temple">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Temple Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
-                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
-                <div class="absolute bottom-8 left-8 text-white">
-                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Temple Art</h4>
-                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
-                </div>
-            </a>
-            <!-- Kundan -->
-            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=kundan">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Kundan Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw"/>
-                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
-                <div class="absolute bottom-8 left-8 text-white">
-                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Kundan Crafts</h4>
-                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Social Proof / Customer Reviews Showcase -->
-<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Testimonials (Luxury Editorial Review Cards) -->
+<section class="py-20 bg-[#FAF7F2] border-t border-[#E8E1D8] px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
     <div class="text-center mb-16">
-        <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Our Customers Say</span>
-        <h2 class="font-display-lg text-headline-md">Trusted by 10,000+ Happy Buyers</h2>
-        <div class="flex items-center justify-center gap-1.5 mt-4 text-primary">
+        <span class="text-primary font-bold text-xs uppercase tracking-[0.25em] mb-2 block">Our Customers Say</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-medium">Trusted Reviews</h2>
+        <div class="flex items-center justify-center gap-1.5 mt-4 text-[#A67C2E]">
             <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
             <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
             <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -350,74 +294,86 @@
             <span class="text-xs font-bold text-on-surface ml-2">4.8 (1,247 Reviews)</span>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
-            <div class="flex text-primary mb-4">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white border border-[#E8E1D8] p-8 shadow-xs rounded-sm">
+            <div class="flex text-[#A67C2E] mb-4">
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
             </div>
-            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+            <p class="font-serif text-sm text-[#1A1A1A] italic mb-6 leading-relaxed">
                 "Absolutely beautiful Kundan earrings! Looks exactly like real gold and the finish is premium. Can't believe the price was under ₹900. Recommending this to all my friends!"
             </p>
             <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Pooja Sharma</span>
-            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+            <span class="text-[9px] text-[#666666] uppercase font-bold tracking-widest">Verified Purchase</span>
         </div>
-        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
-            <div class="flex text-primary mb-4">
+        <div class="bg-white border border-[#E8E1D8] p-8 shadow-xs rounded-sm">
+            <div class="flex text-[#A67C2E] mb-4">
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
             </div>
-            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+            <p class="font-serif text-sm text-[#1A1A1A] italic mb-6 leading-relaxed">
                 "The American Diamond Choker was the highlight of my bridesmaid look. It glistens beautifully under lights and looks extremely expensive. Highly satisfied."
             </p>
             <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Anjali Menon</span>
-            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+            <span class="text-[9px] text-[#666666] uppercase font-bold tracking-widest">Verified Purchase</span>
         </div>
-        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
-            <div class="flex text-primary mb-4">
+        <div class="bg-white border border-[#E8E1D8] p-8 shadow-xs rounded-sm">
+            <div class="flex text-[#A67C2E] mb-4">
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
                 <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
             </div>
-            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+            <p class="font-serif text-sm text-[#1A1A1A] italic mb-6 leading-relaxed">
                 "Got the Temple Jhumkas in Bangalore. The antique finish looks highly authentic. Packed very safely in a luxury box with double-wrap."
             </p>
             <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Deepika R.</span>
-            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+            <span class="text-[9px] text-[#666666] uppercase font-bold tracking-widest">Verified Purchase</span>
         </div>
     </div>
 </section>
 
-<!-- Homepage Trust Section -->
-<section class="py-12 bg-surface-container-low px-margin-mobile md:px-margin-desktop text-center border-t border-outline-variant/20">
-    <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
-        <div>
-            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">10,000+</h4>
-            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Happy Customers</span>
+<!-- Editorial Instagram Gallery -->
+<section class="py-20 border-t border-[#E8E1D8] bg-[#F4EEE6]">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold text-xs tracking-[0.25em] uppercase mb-2 block">Social Gallery</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium">Shared On Instagram</h2>
         </div>
-        <div>
-            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">5,000+</h4>
-            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Stunning Designs</span>
-        </div>
-        <div>
-            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">100%</h4>
-            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Secure Payments</span>
-        </div>
-        <div>
-            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">Free</h4>
-            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Shipping above ₹999</span>
-        </div>
-        <div>
-            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">Easy</h4>
-            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">7-Day Returns</span>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative overflow-hidden aspect-square border border-[#E8E1D8]/60 group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpt1V-5wXNXXtugP9Embqk2zSX_1aNmdK9Dex0ZURGgOKrhaxoy0Jf-l5AhMYUZlVKA6LlpFmvA8wxcmi2yeHy7to6UWQkfo7mldhk-IxUFIYC273jXyw2yjo5fezo_YyAR2rJqUJ-cY58k-awjaSWEQ2qbiMbfIvxFIf4QEGJeFT889if5tpNmoV_P1TDdeQp_WwE1nlP39W9MKvMRYyX9divHj6OsEjfatdsFsj-LU_8x9EpmSUxJw" alt="Insta 1"/>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <span class="font-serif text-sm">@GoldenHeera</span>
+                </div>
+            </div>
+            <div class="relative overflow-hidden aspect-square border border-[#E8E1D8]/60 group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKADJtdQiqERuDX7Cne7wWvVHYuHi46nuZ2G1JDjsk3Z7Zs4qkrNcmRAqzAJ6ElJijjAtupUQBKzantfq2IpPr7bl9HmkqmYEuYLAIY3HsnIJd3DCq0JAOextZTxnT8_GMX9k5tEvY12e49ocsKmprN4tX7zBrYMq7lEZjxMaaeNgztLlESq7xsY0AfU6ATFVOZAPyuHcUd72U7-TrEZV2r-fSlsXV10un3q2YjL_zl3_6GfS0Ebie4w" alt="Insta 2"/>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <span class="font-serif text-sm">@GoldenHeera</span>
+                </div>
+            </div>
+            <div class="relative overflow-hidden aspect-square border border-[#E8E1D8]/60 group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBWRBlD1OBS_IpfWC-0ZkH3GL62Gvmbojt2x3qZOOzYZhjtCvliN9qil4WE7kxxs2W86lUkHyNmE4dmqSsN3ZEoBrreIShKoq-POE5wRi0QcGrSvC3MEdA9ytvk0kLZmol3uZPbGtIvFlWhdtRXvuMDyo06W7QiP2sC5NfGuYMHw3N5uOfJUtbEleYlXwvCXJ2CP4mHcgD9itstIMxGfIJnJBKOBuv1dYXDarNXeH2_IC-GyGW_4OfEw" alt="Insta 3"/>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <span class="font-serif text-sm">@GoldenHeera</span>
+                </div>
+            </div>
+            <div class="relative overflow-hidden aspect-square border border-[#E8E1D8]/60 group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ" alt="Insta 4"/>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                    <span class="font-serif text-sm">@GoldenHeera</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -428,7 +384,6 @@
 <script src="products.js"></script>
 <script src="app.js"></script>
 <script>
-    // Page specific loading logic
     document.addEventListener('DOMContentLoaded', () => {
         // Load Bestsellers into horizontal carousel
         const bestSellers = PRODUCTS_DATA.filter(p => p.isBestseller);
@@ -437,37 +392,34 @@
             bestSellers.forEach(p => {
                 const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
                 const card = document.createElement('div');
-                card.className = 'min-w-[220px] md:min-w-[280px] flex-shrink-0 bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow';
+                card.className = 'min-w-[240px] md:min-w-[310px] flex-shrink-0 bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow rounded-sm';
                 card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
                 card.innerHTML = `
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
                         <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                         <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                         
                         <!-- Badges -->
-                        <span class="absolute top-2 left-2 bg-primary text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">Bestseller</span>
+                        <span class="absolute top-2 left-2 bg-[#A67C2E] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">Bestseller</span>
                         <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
-                            <span class="material-symbols-outlined text-lg">favorite</span>
+                            <span class="material-symbols-outlined text-base">favorite</span>
                         </button>
                     </div>
                     <div>
-                        <div class="flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <div class="flex items-center gap-1 mb-1 text-[#A67C2E]">
+                            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
                             <span class="text-[10px] font-bold text-on-surface-variant">${p.rating} (${p.reviewsCount})</span>
                         </div>
-                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <h4 class="font-serif text-sm font-bold text-on-surface line-clamp-1 mb-2">${p.name}</h4>
                         <div class="flex items-baseline gap-2 mb-3">
-                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
-                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
-                            <span class="text-[10px] text-primary font-bold">${discount}% OFF</span>
+                            <span class="text-xs font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-[#666666]/60 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                            <span class="inline-block bg-[#A67C2E]/10 text-primary text-[8px] font-bold px-1.5 py-0.5 rounded-sm">${discount}% OFF</span>
                         </div>
                     </div>
                     <div class="space-y-2 mt-auto">
-                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-semibold">
-                            <span class="material-symbols-outlined text-xs">shopping_cart</span> Add
-                        </button>
-                        <button onclick="event.stopPropagation(); triggerQuickView(${p.id})" class="w-full border border-primary text-primary py-1.5 text-[10px] uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all text-center font-semibold">
-                            Quick View
+                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-[#A67C2E] text-white py-2.5 text-[10px] uppercase tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-bold">
+                            <span class="material-symbols-outlined text-sm">shopping_cart</span> Add to Bag
                         </button>
                     </div>
                 `;
@@ -485,10 +437,10 @@
         // Bestsellers carousel navigation
         const carousel = document.getElementById('best-sellers-carousel');
         document.getElementById('best-next')?.addEventListener('click', () => {
-            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+            carousel.scrollBy({ left: 320, behavior: 'smooth' });
         });
         document.getElementById('best-prev')?.addEventListener('click', () => {
-            carousel.scrollBy({ left: -300, behavior: 'smooth' });
+            carousel.scrollBy({ left: -320, behavior: 'smooth' });
         });
 
         // Load New Arrivals
@@ -498,37 +450,34 @@
             newArrivals.forEach(p => {
                 const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
                 const card = document.createElement('div');
-                card.className = 'bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow';
+                card.className = 'bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow rounded-sm';
                 card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
                 card.innerHTML = `
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
                         <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                         <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                         
                         <!-- Badges -->
-                        <span class="absolute top-2 left-2 bg-on-background text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">New</span>
+                        <span class="absolute top-2 left-2 bg-[#1A1A1A] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">New</span>
                         <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
-                            <span class="material-symbols-outlined text-lg">favorite</span>
+                            <span class="material-symbols-outlined text-base">favorite</span>
                         </button>
                     </div>
                     <div>
-                        <div class="flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <div class="flex items-center gap-1 mb-1 text-[#A67C2E]">
+                            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
                             <span class="text-[10px] font-bold text-on-surface-variant">${p.rating} (${p.reviewsCount})</span>
                         </div>
-                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <h4 class="font-serif text-sm font-bold text-on-surface line-clamp-1 mb-2">${p.name}</h4>
                         <div class="flex items-baseline gap-2 mb-3">
-                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
-                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
-                            <span class="text-[10px] text-primary font-bold">${discount}% OFF</span>
+                            <span class="text-xs font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-[#666666]/60 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                            <span class="inline-block bg-[#A67C2E]/10 text-primary text-[8px] font-bold px-1.5 py-0.5 rounded-sm">${discount}% OFF</span>
                         </div>
                     </div>
                     <div class="space-y-2 mt-auto">
-                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-semibold">
-                            <span class="material-symbols-outlined text-xs">shopping_cart</span> Add
-                        </button>
-                        <button onclick="event.stopPropagation(); triggerQuickView(${p.id})" class="w-full border border-primary text-primary py-1.5 text-[10px] uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all text-center font-semibold">
-                            Quick View
+                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-[#A67C2E] text-white py-2.5 text-[10px] uppercase tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-bold">
+                            <span class="material-symbols-outlined text-sm">shopping_cart</span> Add to Bag
                         </button>
                     </div>
                 `;

@@ -124,37 +124,37 @@ function renderHeader() {
 
     headerPlaceholder.innerHTML = `
         <!-- Announcement Bar -->
-        <div class="bg-primary text-white text-xs py-2 px-margin-mobile md:px-margin-desktop font-label-sm font-semibold text-center tracking-widest relative overflow-hidden h-8">
-            <div id="announcement-text" class="transition-transform duration-500 transform translate-y-0 text-center flex items-center justify-center h-full">
+        <div class="bg-[#A67C2E] text-white text-[10px] py-2 px-margin-mobile md:px-margin-desktop font-sans font-bold text-center tracking-widest relative overflow-hidden h-8">
+            <div id="announcement-text" class="transition-transform duration-500 transform translate-y-0 text-center flex items-center justify-center h-full uppercase">
                 FREE SHIPPING ON ORDERS ABOVE ₹999
             </div>
         </div>
 
         <!-- Sticky Header Body -->
-        <header class="w-full bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30">
-            <nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex flex-col gap-4">
+        <header class="w-full bg-[#FAF7F2]/90 backdrop-blur-md sticky top-0 z-50 border-b border-[#E8E1D8]/60">
+            <nav class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-4 flex flex-col gap-4">
                 <div class="flex justify-between items-center w-full">
                     
                     <!-- Left: Brand Logo -->
                     <div class="flex items-center gap-4">
-                        <button onclick="toggleMobileMenu()" class="lg:hidden text-primary">
+                        <button onclick="toggleMobileMenu()" class="lg:hidden text-[#A67C2E]">
                             <span class="material-symbols-outlined text-3xl">menu</span>
                         </button>
-                        <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
+                        <a class="font-serif text-2xl text-[#A67C2E] tracking-widest uppercase font-semibold" href="index.html">Golden Heera</a>
                     </div>
 
                     <!-- Center: Search Bar -->
                     <div class="hidden md:flex flex-1 max-w-xl mx-8 relative">
                         <form onsubmit="handleSearch(event)" class="w-full relative">
-                            <input id="header-search-input" class="w-full pl-4 pr-12 py-2.5 bg-surface-container-low border border-outline-variant/60 focus:border-primary focus:ring-0 text-sm placeholder:text-on-surface-variant/50 outline-none" placeholder="Search for Kundan, American Diamond, Earrings, Jhumkas..." type="text"/>
-                            <button type="submit" class="absolute right-3 top-2.5 text-primary">
+                            <input id="header-search-input" class="w-full pl-4 pr-12 py-2.5 bg-[#F4EEE6]/50 border border-[#E8E1D8] focus:border-[#A67C2E] focus:ring-0 text-xs placeholder:text-[#666666]/60 outline-none rounded-none" placeholder="Search for Kundan, American Diamond, Jhumkas..." type="text"/>
+                            <button type="submit" class="absolute right-3 top-2.5 text-[#A67C2E]">
                                 <span class="material-symbols-outlined">search</span>
                             </button>
                         </form>
                     </div>
 
                     <!-- Right: Icons -->
-                    <div class="flex items-center space-x-6 text-primary">
+                    <div class="flex items-center space-x-6 text-[#A67C2E]">
                         <!-- Search Icon for Mobile -->
                         <button onclick="toggleMobileSearch()" class="md:hidden">
                             <span class="material-symbols-outlined">search</span>
@@ -162,11 +162,11 @@ function renderHeader() {
                         
                         <a href="wishlist.html" class="relative group flex items-center">
                             <span class="material-symbols-outlined hover:scale-105 transition-transform">favorite</span>
-                            <span id="wishlist-badge-count" class="absolute -top-2 -right-2 bg-primary text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold hidden">0</span>
+                            <span id="wishlist-badge-count" class="absolute -top-2 -right-2 bg-[#A67C2E] text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold hidden">0</span>
                         </a>
                         <a href="cart.html" class="relative group flex items-center">
                             <span class="material-symbols-outlined hover:scale-105 transition-transform">shopping_bag</span>
-                            <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-primary text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold hidden">0</span>
+                            <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-[#A67C2E] text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold hidden">0</span>
                         </a>
                         <button onclick="alert('My Account feature coming soon!')" class="hover:scale-105 transition-transform">
                             <span class="material-symbols-outlined">person</span>
@@ -177,94 +177,78 @@ function renderHeader() {
                 <!-- Mobile Only Search Box (hidden by default) -->
                 <div id="mobile-search-bar" class="hidden md:hidden w-full relative">
                     <form onsubmit="handleSearch(event)" class="w-full relative">
-                        <input id="mob-search-input" class="w-full pl-4 pr-12 py-2 bg-surface-container-low border border-outline-variant/60 text-sm" placeholder="Search category, collection, etc..."/>
-                        <button type="submit" class="absolute right-3 top-2 text-primary">
+                        <input id="mob-search-input" class="w-full pl-4 pr-12 py-2 bg-[#F4EEE6]/50 border border-[#E8E1D8] text-xs rounded-none" placeholder="Search category, collection, etc..."/>
+                        <button type="submit" class="absolute right-3 top-2 text-[#A67C2E]">
                             <span class="material-symbols-outlined">search</span>
                         </button>
                     </form>
                 </div>
 
                 <!-- Bottom: Main Navigation (Desktop Mega Menu) -->
-                <div class="hidden lg:flex items-center space-x-10 border-t border-outline-variant/10 pt-3 mt-1">
-                    <a class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-semibold" href="collections.html">Shop All</a>
+                <div class="hidden lg:flex items-center justify-center space-x-8 border-t border-[#E8E1D8]/40 pt-3 mt-1 w-full">
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?category=earrings">Earrings</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?category=necklaces">Necklaces</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?category=bangles">Bangles</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?category=rings">Rings</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?category=bracelets">Bracelets</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?collection=bridal">Bridal</a>
                     
-                    <!-- Categories Mega Menu -->
+                    <!-- Collections Dropdown -->
                     <div class="relative group">
-                        <a class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-semibold flex items-center gap-1 cursor-pointer" href="collections.html">
-                            Categories <span class="material-symbols-outlined text-sm">expand_more</span>
+                        <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold flex items-center gap-1 cursor-pointer" href="collections.html">
+                            Collections <span class="material-symbols-outlined text-xs">expand_more</span>
                         </a>
-                        <div class="absolute top-full left-0 bg-white border border-outline-variant/30 shadow-2xl p-6 grid grid-cols-2 gap-x-8 gap-y-3 z-50 w-[300px] hidden group-hover:grid">
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=earrings">Earrings</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=necklaces">Necklaces</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=bangles">Bangles</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=rings">Rings</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=bracelets">Bracelets</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=anklets">Anklets</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1" href="collections.html?category=nosepins">Nose Pins</a>
+                        <div class="absolute top-full left-0 bg-[#FAF7F2] border border-[#E8E1D8]/60 shadow-2xl p-6 grid grid-cols-1 gap-y-3.5 z-50 w-[200px] hidden group-hover:grid">
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=temple">Temple Art</a>
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=kundan">Kundan Crafts</a>
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=ad">American Diamond</a>
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=oxidised">Oxidised Silver</a>
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=daily">Daily Wear</a>
+                            <a class="hover:text-[#A67C2E] transition-colors text-xs font-semibold uppercase tracking-wider" href="collections.html?collection=party">Party Wear</a>
                         </div>
                     </div>
-
-                    <!-- Collections Mega Menu -->
-                    <div class="relative group">
-                        <a class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-semibold flex items-center gap-1 cursor-pointer" href="collections.html">
-                            Collections <span class="material-symbols-outlined text-sm">expand_more</span>
-                        </a>
-                        <div class="absolute top-full left-0 bg-white border border-outline-variant/30 shadow-2xl p-6 grid grid-cols-2 gap-x-8 gap-y-3 z-50 w-[320px] hidden group-hover:grid">
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=bridal">Bridal Collection</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=temple">Temple Art</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=kundan">Kundan Crafts</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=ad">American Diamond</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=oxidised">Oxidised Silver</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=daily">Daily Wear</a>
-                            <a class="hover:text-primary transition-colors text-sm py-1 font-medium" href="collections.html?collection=party">Party Wear</a>
-                        </div>
-                    </div>
-
-                    <a class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-semibold" href="collections.html?tag=new">New Arrivals</a>
-                    <a class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors font-semibold" href="collections.html?tag=bestseller">Best Sellers</a>
-                    <a class="font-body-md text-xs uppercase tracking-widest text-primary hover:opacity-80 transition-opacity font-semibold" href="collections.html?tag=offers">Offers %</a>
+                    
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] hover:text-[#A67C2E] transition-colors font-semibold" href="collections.html?tag=new">New Arrivals</a>
                 </div>
             </nav>
         </header>
 
         <!-- Mobile Drawer Navigation Overlay -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[150] hidden" onclick="toggleMobileMenu()">
-            <div class="bg-white w-[280px] h-full p-6 flex flex-col gap-6 z-[160]" onclick="event.stopPropagation()">
-                <div class="flex justify-between items-center border-b border-outline-variant/30 pb-4">
-                    <span class="font-display-lg text-lg text-primary">Golden Heera</span>
-                    <button onclick="toggleMobileMenu()" class="text-primary">
+            <div class="bg-[#FAF7F2] w-[280px] h-full p-6 flex flex-col gap-6 z-[160]" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-center border-b border-[#E8E1D8]/60 pb-4">
+                    <span class="font-serif text-lg text-[#A67C2E] tracking-widest uppercase font-semibold">Golden Heera</span>
+                    <button onclick="toggleMobileMenu()" class="text-[#A67C2E]">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
-                <div class="flex flex-col gap-4 overflow-y-auto pr-2">
-                    <a class="font-body-md text-sm uppercase tracking-wider text-on-background font-semibold" href="collections.html">Shop All</a>
+                <div class="flex flex-col gap-5 overflow-y-auto pr-2">
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] font-bold" href="collections.html">Shop All</a>
                     
                     <div class="space-y-2">
-                        <span class="font-body-md text-xs uppercase tracking-wider text-on-surface-variant font-bold">Categories</span>
-                        <div class="grid grid-cols-2 gap-2 pl-2">
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?category=earrings">Earrings</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?category=necklaces">Necklaces</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?category=bangles">Bangles</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?category=rings">Rings</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?category=bracelets">Bracelets</a>
+                        <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] font-bold">Categories</span>
+                        <div class="flex flex-col gap-3 pl-2 border-l border-[#E8E1D8]">
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?category=earrings">Earrings</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?category=necklaces">Necklaces</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?category=bangles">Bangles</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?category=rings">Rings</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?category=bracelets">Bracelets</a>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <span class="font-body-md text-xs uppercase tracking-wider text-on-surface-variant font-bold">Collections</span>
-                        <div class="grid grid-cols-2 gap-2 pl-2">
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=bridal">Bridal</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=temple">Temple</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=kundan">Kundan</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=ad">AD Jewellery</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=oxidised">Oxidised</a>
-                            <a class="text-xs text-on-surface-variant hover:text-primary" href="collections.html?collection=daily">Daily Wear</a>
+                        <span class="font-sans text-[10px] uppercase tracking-widest text-[#666666] font-bold">Collections</span>
+                        <div class="flex flex-col gap-3 pl-2 border-l border-[#E8E1D8]">
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=bridal">Bridal Set</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=temple">Temple Art</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=kundan">Kundan Crafts</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=ad">American Diamond</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=oxidised">Oxidised</a>
+                            <a class="text-xs text-[#1A1A1A] hover:text-[#A67C2E] uppercase font-semibold" href="collections.html?collection=daily">Daily Wear</a>
                         </div>
                     </div>
 
-                    <a class="font-body-md text-sm uppercase tracking-wider text-on-background font-semibold" href="collections.html?tag=new">New Arrivals</a>
-                    <a class="font-body-md text-sm uppercase tracking-wider text-on-background font-semibold" href="collections.html?tag=bestseller">Best Sellers</a>
-                    <a class="font-body-md text-sm uppercase tracking-wider text-primary font-bold" href="collections.html?tag=offers">Offers %</a>
+                    <a class="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] font-bold" href="collections.html?tag=new">New Arrivals</a>
                 </div>
             </div>
         </div>
@@ -316,85 +300,105 @@ function renderFooter() {
     if (!footerPlaceholder) return;
 
     footerPlaceholder.innerHTML = `
-        <footer class="bg-surface-container border-t border-outline-variant/30 text-on-surface">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
-                <div class="space-y-6">
-                    <h3 class="font-display-lg text-headline-sm text-primary">Golden Heera</h3>
-                    <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">
-                        Redefining premium fashion & imitation jewellery in India. Stunning collections designed for everyday wear, weddings, and festivals.
+        <footer class="bg-[#F4EEE6] border-t border-[#E8E1D8] text-[#1A1A1A] font-sans">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 px-margin-mobile md:px-margin-desktop py-16 max-w-[1440px] mx-auto">
+                
+                <!-- Col 1: About -->
+                <div class="space-y-4 md:col-span-2 pr-4">
+                    <h3 class="font-serif text-xl text-[#A67C2E] uppercase tracking-widest font-semibold">Golden Heera</h3>
+                    <p class="text-xs text-[#666666] leading-relaxed max-w-sm">
+                        An elite destination for premium D2C fashion & imitation jewellery in India. We design masterpieces for weddings, grand celebrations, and modern everyday elegance.
                     </p>
-                    <div class="flex gap-4 text-primary">
+                    <div class="flex gap-4 text-[#A67C2E] pt-2">
                         <a href="https://wa.me/919844442225" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">forum</span></a>
                         <a href="#" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">share</span></a>
                         <a href="#" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">public</span></a>
                     </div>
                 </div>
+
+                <!-- Col 2: Shop -->
                 <div class="space-y-4">
-                    <h4 class="font-label-sm uppercase tracking-widest text-on-surface text-xs font-bold">Shop Categories</h4>
-                    <ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
-                        <li><a class="hover:text-primary transition-colors" href="collections.html?category=earrings">Earrings</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="collections.html?category=necklaces">Necklaces</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="collections.html?category=bangles">Bangles & Bracelets</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="collections.html?category=rings">Rings</a></li>
+                    <h4 class="text-[11px] uppercase tracking-widest text-[#1A1A1A] font-bold">Shop</h4>
+                    <ul class="space-y-2 text-xs text-[#666666]">
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="collections.html?category=earrings">Earrings</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="collections.html?category=necklaces">Necklaces</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="collections.html?category=bangles">Bangles & Kada</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="collections.html?collection=bridal">Bridal Wear</a></li>
                     </ul>
                 </div>
+
+                <!-- Col 3: Support & Contact -->
                 <div class="space-y-4">
-                    <h4 class="font-label-sm uppercase tracking-widest text-on-surface text-xs font-bold">Customer Support</h4>
-                    <ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
-                        <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Support details!')">Shipping Policy</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Easy returns policy details!')">Return Policy</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('FAQs page coming soon!')">FAQs</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Contact Form details!')">Contact Us</a></li>
+                    <h4 class="text-[11px] uppercase tracking-widest text-[#1A1A1A] font-bold">Support</h4>
+                    <ul class="space-y-2 text-xs text-[#666666]">
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="#" onclick="alert('Our standard delivery completes within 3-5 business days.')">Shipping & Delivery</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="#" onclick="alert('Easy 7-day returns with free reverse pick-up.')">Easy Returns</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="#" onclick="alert('Contact Form details!')">Contact Us</a></li>
+                        <li><a class="hover:text-[#A67C2E] transition-colors" href="#" onclick="alert('FAQs Page')">FAQs</a></li>
                     </ul>
                 </div>
+
+                <!-- Col 4: Newsletter -->
                 <div class="space-y-4">
-                    <h4 class="font-label-sm uppercase tracking-widest text-on-surface text-xs font-bold">Contact Info</h4>
-                    <p class="text-sm text-on-surface-variant leading-relaxed">
-                        <strong>Address:</strong> NO.212, 1ST FLOOR, SAFENA COMPLEX, OPP. TO FMC COMPLEX, KUMBARPET MAIN ROAD, BANGALORE-560002<br>
-                        <strong>Phone:</strong> +91 98444 42225, +91 98867 97356, 080-41529374<br>
-                        <strong>Email:</strong> VIJAYRAJ3543@GMAIL.COM
+                    <h4 class="text-[11px] uppercase tracking-widest text-[#1A1A1A] font-bold">Newsletter</h4>
+                    <p class="text-xs text-[#666666] leading-relaxed">
+                        Join our exclusive mailing list to receive early access to new collections and offers.
                     </p>
-                    <form onsubmit="event.preventDefault(); alert('Joined the newsletter circle!'); this.reset();" class="relative mt-4">
-                        <input class="w-full bg-transparent border-b border-on-background py-2 pr-10 focus:ring-0 focus:border-primary font-label-sm text-sm" placeholder="YOUR EMAIL" type="email" required/>
-                        <button class="absolute right-0 bottom-2 text-primary font-label-sm uppercase tracking-widest type-submit">Join</button>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed to the newsletter circle!'); this.reset();" class="relative mt-2">
+                        <input class="w-full bg-transparent border-b border-[#1A1A1A] py-1.5 pr-10 focus:ring-0 focus:border-[#A67C2E] text-xs outline-none" placeholder="YOUR EMAIL" type="email" required/>
+                        <button class="absolute right-0 bottom-2 text-[#A67C2E] text-[10px] uppercase font-bold tracking-widest">Join</button>
                     </form>
+                </div>
+            </div>
+
+            <!-- Shop Info Row -->
+            <div class="border-t border-[#E8E1D8] px-margin-mobile md:px-margin-desktop py-8 max-w-[1440px] mx-auto text-xs text-[#666666] grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <span class="block font-bold text-[#1A1A1A] mb-1">BANGALORE STORE ADDRESS</span>
+                    <span>NO.212, 1ST FLOOR, SAFENA COMPLEX, OPP. TO FMC COMPLEX, KUMBARPET MAIN ROAD, BANGALORE - 560002</span>
+                </div>
+                <div class="md:text-right">
+                    <span class="block font-bold text-[#1A1A1A] mb-1">CALL US</span>
+                    <span>+91 98444 42225, +91 98867 97356, 080-41529374 | Email: vijayraj3543@gmail.com</span>
                 </div>
             </div>
             
             <!-- Mobile Sticky Bottom Navigation -->
-            <div class="fixed bottom-0 w-full flex justify-around items-center py-2.5 bg-surface-bright border-t border-outline-variant/30 shadow-2xl z-[100] md:hidden">
-                <a class="flex flex-col items-center gap-0.5 text-secondary text-[10px] hover:text-primary transition-colors" href="index.html">
+            <div class="fixed bottom-0 w-full flex justify-around items-center py-2.5 bg-[#FAF7F2] border-t border-[#E8E1D8] shadow-2xl z-[100] md:hidden">
+                <a class="flex flex-col items-center gap-0.5 text-[#666666] text-[10px] hover:text-[#A67C2E] transition-colors" href="index.html">
                     <span class="material-symbols-outlined text-[22px]">storefront</span>
                     <span>Home</span>
                 </a>
-                <a class="flex flex-col items-center gap-0.5 text-secondary text-[10px] hover:text-primary transition-colors" href="collections.html">
+                <a class="flex flex-col items-center gap-0.5 text-[#666666] text-[10px] hover:text-[#A67C2E] transition-colors" href="collections.html">
                     <span class="material-symbols-outlined text-[22px]">widgets</span>
                     <span>Shop</span>
                 </a>
-                <button onclick="toggleMobileSearch()" class="flex flex-col items-center gap-0.5 text-secondary text-[10px] hover:text-primary transition-colors">
+                <button onclick="toggleMobileSearch()" class="flex flex-col items-center gap-0.5 text-[#666666] text-[10px] hover:text-[#A67C2E] transition-colors">
                     <span class="material-symbols-outlined text-[22px]">search</span>
                     <span>Search</span>
                 </button>
-                <a class="flex flex-col items-center gap-0.5 text-secondary text-[10px] hover:text-primary transition-colors relative" href="wishlist.html">
+                <a class="flex flex-col items-center gap-0.5 text-[#666666] text-[10px] hover:text-[#A67C2E] transition-colors relative" href="wishlist.html">
                     <span class="material-symbols-outlined text-[22px]">favorite</span>
                     <span>Wishlist</span>
-                    <span id="mob-wishlist-badge" class="absolute -top-1 right-2 bg-primary text-white text-[8px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold hidden">0</span>
+                    <span id="mob-wishlist-badge" class="absolute -top-1 right-2 bg-[#A67C2E] text-white text-[8px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold hidden">0</span>
                 </a>
-                <a class="flex flex-col items-center gap-0.5 text-secondary text-[10px] hover:text-primary transition-colors relative" href="cart.html">
+                <a class="flex flex-col items-center gap-0.5 text-[#666666] text-[10px] hover:text-[#A67C2E] transition-colors relative" href="cart.html">
                     <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
                     <span>Cart</span>
-                    <span id="mob-cart-badge-count" class="absolute -top-1 right-2 bg-primary text-white text-[8px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold hidden">0</span>
+                    <span id="mob-cart-badge-count" class="absolute -top-1 right-2 bg-[#A67C2E] text-white text-[8px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold hidden">0</span>
                 </a>
             </div>
 
-            <div class="px-margin-mobile md:px-margin-desktop py-6 border-t border-outline-variant/20 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant pb-20 md:pb-6">
-                <span>© 2026 Golden Heera Luxury Jewellery. All Rights Reserved.</span>
+            <div class="px-margin-mobile md:px-margin-desktop py-6 border-t border-[#E8E1D8] max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-[#666666] pb-20 md:pb-6">
+                <span>© 2026 Golden Heera Fashion Jewellery. All Rights Reserved.</span>
                 <div class="flex gap-4">
-                    <a class="hover:text-primary" href="#">Privacy Policy</a>
-                    <a class="hover:text-primary" href="#">Terms & Conditions</a>
+                    <a class="hover:text-[#A67C2E]" href="#">Privacy Policy</a>
+                    <a class="hover:text-[#A67C2E]" href="#">Terms & Conditions</a>
                 </div>
             </div>
         </footer>
+    `;
+}
     `;
 }
 

@@ -5,170 +5,117 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Collections | Golden Heera Premium D2C Fashion Jewellery</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     
     <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface-container": "#efeded",
-                    "tertiary-fixed": "#e5e2e1",
-                    "on-primary-fixed": "#261900",
-                    "secondary-fixed": "#e5e2dd",
-                    "surface-tint": "#7b5900",
-                    "on-tertiary-fixed-variant": "#474746",
-                    "on-primary": "#ffffff",
-                    "primary-fixed": "#ffdea4",
-                    "secondary": "#5f5e5b",
-                    "on-background": "#1b1c1c",
-                    "on-surface-variant": "#4e4637",
-                    "primary": "#7b5900",
-                    "surface-dim": "#dbdad9",
-                    "secondary-fixed-dim": "#c8c6c2",
-                    "error": "#ba1a1a",
-                    "on-secondary-fixed": "#1c1c19",
-                    "on-secondary-fixed-variant": "#474743",
-                    "surface-container-highest": "#e3e2e2",
-                    "surface-variant": "#e3e2e2",
-                    "inverse-on-surface": "#f2f0f0",
-                    "on-secondary": "#ffffff",
-                    "tertiary-container": "#a3a1a1",
-                    "primary-container": "#c89b3c",
-                    "inverse-primary": "#f0bf5c",
-                    "tertiary": "#5f5e5e",
-                    "on-error-container": "#93000a",
-                    "primary-fixed-dim": "#f0bf5c",
-                    "surface-container-high": "#e9e8e8",
-                    "inverse-surface": "#2f3031",
-                    "on-tertiary-container": "#383838",
-                    "on-error": "#ffffff",
-                    "on-secondary-container": "#656461",
-                    "on-primary-fixed-variant": "#5d4200",
-                    "outline-variant": "#d2c5b1",
-                    "secondary-container": "#e5e2dd",
-                    "on-surface": "#1b1c1c",
-                    "on-tertiary": "#ffffff",
-                    "on-primary-container": "#4b3500",
-                    "tertiary-fixed-dim": "#c8c6c5",
-                    "surface-bright": "#faf9f9",
-                    "surface-container-lowest": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "surface": "#faf9f9",
-                    "surface-container-low": "#f4f3f3",
-                    "outline": "#807665",
-                    "background": "#faf9f9"
+            colors: {
+              primary: '#A67C2E',
+              background: '#FAF7F2',
+              'surface-container': '#F4EEE6',
+              'on-surface': '#1A1A1A',
+              'on-surface-variant': '#666666',
+              'outline-variant': '#E8E1D8'
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Inter', 'sans-serif']
             },
-            "spacing": {
-                    "margin-mobile": "20px",
-                    "gutter": "24px",
-                    "container-max": "1440px",
-                    "margin-desktop": "80px",
-                    "section-gap": "120px"
-            },
-            "fontFamily": {
-                    "display-lg-mobile": ["Playfair Display"],
-                    "body-lg": ["Montserrat"],
-                    "headline-sm": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "label-sm": ["Montserrat"],
-                    "body-md": ["Montserrat"],
-                    "display-lg": ["Playfair Display"]
-            },
-            "fontSize": {
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            spacing: {
+              'margin-mobile': '20px',
+              'gutter': '24px',
+              'container-max': '1440px',
+              'margin-desktop': '80px'
             }
-          },
-        },
+          }
+        }
       }
     </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -15px rgba(166, 124, 46, 0.06);
+        }
     </style>
 </head>
-<body class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<body class="bg-background text-on-surface font-sans selection:bg-primary/20 pb-[60px] md:pb-0">
 
 <!-- Global Header placeholder -->
 <div id="global-header"></div>
 
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
     
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center space-x-2 mb-6 text-[10px] font-bold uppercase tracking-widest text-[#666666]">
+        <a class="hover:text-primary" href="index.html">Home</a>
+        <span class="material-symbols-outlined text-[9px] font-bold">chevron_right</span>
+        <span class="text-primary font-bold">Shop All Collections</span>
+    </nav>
+
     <!-- Page Header -->
     <header class="mb-10 text-center md:text-left">
-        <h1 id="collections-heading" class="font-display-lg text-headline-md md:text-3xl text-on-surface mb-2 font-bold">Curated Masterpieces</h1>
-        <p id="collections-subheading" class="text-on-surface-variant text-sm font-body-md">Explore premium artificial, wedding & daily wear jewellery styled for every occasion.</p>
+        <h1 id="collections-heading" class="font-serif text-3xl md:text-4xl text-on-surface mb-2 font-medium">Curated Masterpieces</h1>
+        <p id="collections-subheading" class="text-on-surface-variant text-xs font-sans max-w-2xl leading-relaxed">Explore premium artificial, kundan, temple & daily wear jewellery styled for wedding celebrations and everyday luxury.</p>
     </header>
 
     <div class="flex flex-col lg:flex-row gap-8 items-start">
         
         <!-- Left Sidebar Filter (Desktop) -->
-        <aside class="hidden lg:block w-64 bg-white border border-outline-variant/30 p-6 sticky top-24 shadow-xs">
-            <div class="flex justify-between items-center mb-6 border-b border-outline-variant/30 pb-3">
-                <span class="font-label-sm uppercase tracking-widest text-on-surface font-bold text-xs">Filters</span>
-                <button onclick="resetAllFilters()" class="text-primary text-xs font-semibold hover:opacity-80">Reset All</button>
+        <aside class="hidden lg:block w-64 bg-white border border-[#E8E1D8] p-6 sticky top-28 shadow-xs rounded-sm">
+            <div class="flex justify-between items-center mb-6 border-b border-[#E8E1D8]/60 pb-3">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Filters</span>
+                <button onclick="resetAllFilters()" class="text-primary text-[10px] font-bold uppercase tracking-widest hover:opacity-85">Reset All</button>
             </div>
             
             <div class="space-y-6">
                 <!-- Category Filter -->
                 <div>
-                    <h5 class="font-label-sm uppercase tracking-wider text-xs font-semibold text-on-surface mb-3">Category</h5>
-                    <div class="space-y-2" id="filter-categories">
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Category</h5>
+                    <div class="space-y-2.5" id="filter-categories">
                         <!-- Loaded dynamically -->
                     </div>
                 </div>
                 
                 <!-- Collections Filter -->
                 <div>
-                    <h5 class="font-label-sm uppercase tracking-wider text-xs font-semibold text-on-surface mb-3">Collection</h5>
-                    <div class="space-y-2" id="filter-collections">
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Collection</h5>
+                    <div class="space-y-2.5" id="filter-collections">
                         <!-- Loaded dynamically -->
                     </div>
                 </div>
 
                 <!-- Price Slider -->
                 <div>
-                    <h5 class="font-label-sm uppercase tracking-wider text-xs font-semibold text-on-surface mb-3">Max Price</h5>
-                    <input id="price-slider" type="range" min="199" max="7999" step="100" value="7999" oninput="updatePriceSliderVal(this.value)" class="w-full h-1 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary"/>
-                    <div class="flex justify-between text-xs text-on-surface-variant font-label-sm mt-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Max Price</h5>
+                    <input id="price-slider" type="range" min="199" max="7999" step="100" value="7999" oninput="updatePriceSliderVal(this.value)" class="w-full h-1 bg-[#E8E1D8] rounded-lg appearance-none cursor-pointer accent-primary"/>
+                    <div class="flex justify-between text-[10px] font-bold text-on-surface-variant mt-2">
                         <span>₹199</span>
-                        <span id="price-slider-display" class="font-bold text-primary">₹7,999</span>
+                        <span id="price-slider-display" class="text-primary">₹7,999</span>
                     </div>
                 </div>
             </div>
         </aside>
 
         <!-- Right Side: Product Area -->
-        <div class="flex-1 w-full">
+        <div class="flex-grow w-full">
             
             <!-- Filters Toggle Bar & Sort Options -->
-            <section class="flex items-center justify-between py-4 px-6 bg-surface-container-low border border-outline-variant/30 mb-8 gap-4">
+            <section class="flex items-center justify-between py-4 px-6 bg-[#F4EEE6]/50 border border-[#E8E1D8] mb-8 gap-4 rounded-sm">
                 <div class="flex items-center gap-4">
-                    <button onclick="toggleMobileFilters()" class="lg:hidden flex items-center gap-2 bg-white px-4 py-2 border border-outline-variant/60 text-xs font-semibold uppercase tracking-wider text-on-surface">
+                    <button onclick="toggleMobileFilters()" class="lg:hidden flex items-center gap-2 bg-white px-4 py-2 border border-[#E8E1D8] text-[10px] font-bold uppercase tracking-widest text-on-surface">
                         <span class="material-symbols-outlined text-sm">filter_list</span> Filters
                     </button>
-                    <span class="text-xs text-on-surface-variant italic font-body-md"><span id="filtered-count">0</span> products found</span>
+                    <span class="text-xs text-on-surface-variant italic font-sans"><span id="filtered-count" class="font-bold">0</span> products found</span>
                 </div>
                 
                 <div class="flex items-center gap-2">
-                    <label class="text-xs font-semibold uppercase tracking-wider text-on-surface hidden md:inline">Sort By:</label>
-                    <select id="sort-selector" onchange="handleSortChange(this.value)" class="bg-transparent border-none text-xs font-semibold uppercase tracking-widest cursor-pointer text-on-surface focus:ring-0">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface hidden md:inline">Sort By:</label>
+                    <select id="sort-selector" onchange="handleSortChange(this.value)" class="bg-transparent border-none text-[10px] font-bold uppercase tracking-widest cursor-pointer text-on-surface focus:ring-0">
                         <option value="featured">Featured</option>
                         <option value="new">New Arrivals</option>
                         <option value="low-high">Price: Low to High</option>
@@ -178,7 +125,7 @@
             </section>
 
             <!-- High Density D2C Grid: 4 columns desktop, 2 columns mobile -->
-            <section id="collections-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-gutter gap-y-12">
+            <section id="collections-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
                 <!-- Dynamically loaded products -->
             </section>
         </div>
@@ -187,9 +134,9 @@
 
 <!-- Mobile Filters Drawer Overlay -->
 <div id="mobile-filter-drawer" class="fixed inset-0 bg-black/50 z-[150] hidden" onclick="toggleMobileFilters()">
-    <div class="bg-white w-[280px] h-full p-6 flex flex-col gap-6 z-[160] overflow-y-auto" onclick="event.stopPropagation()">
-        <div class="flex justify-between items-center border-b border-outline-variant/30 pb-4">
-            <span class="font-label-sm uppercase tracking-widest text-on-surface font-bold text-sm">Refine Search</span>
+    <div class="bg-[#FAF7F2] w-[280px] h-full p-6 flex flex-col gap-6 z-[160] overflow-y-auto" onclick="event.stopPropagation()">
+        <div class="flex justify-between items-center border-b border-[#E8E1D8]/60 pb-4">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Refine Search</span>
             <button onclick="toggleMobileFilters()" class="text-primary">
                 <span class="material-symbols-outlined">close</span>
             </button>
@@ -197,25 +144,25 @@
         
         <div class="space-y-6">
             <div>
-                <h5 class="font-label-sm uppercase tracking-wider text-xs font-bold text-on-surface mb-3">Category</h5>
-                <div class="space-y-2" id="mob-filter-categories"></div>
+                <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Category</h5>
+                <div class="space-y-2.5" id="mob-filter-categories"></div>
             </div>
             
             <div>
-                <h5 class="font-label-sm uppercase tracking-wider text-xs font-bold text-on-surface mb-3">Collection</h5>
-                <div class="space-y-2" id="mob-filter-collections"></div>
+                <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Collection</h5>
+                <div class="space-y-2.5" id="mob-filter-collections"></div>
             </div>
 
             <div>
-                <h5 class="font-label-sm uppercase tracking-wider text-xs font-bold text-on-surface mb-3">Max Price</h5>
-                <input id="mob-price-slider" type="range" min="199" max="7999" step="100" value="7999" oninput="updatePriceSliderVal(this.value)" class="w-full h-1 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary"/>
-                <div class="flex justify-between text-xs text-on-surface-variant font-label-sm mt-2">
+                <h5 class="text-[10px] font-bold uppercase tracking-widest text-on-surface mb-3">Max Price</h5>
+                <input id="mob-price-slider" type="range" min="199" max="7999" step="100" value="7999" oninput="updatePriceSliderVal(this.value)" class="w-full h-1 bg-[#E8E1D8] rounded-lg appearance-none cursor-pointer accent-primary"/>
+                <div class="flex justify-between text-[10px] font-bold text-[#666666] mt-2">
                     <span>₹199</span>
-                    <span id="mob-price-slider-display" class="font-bold text-primary">₹7,999</span>
+                    <span id="mob-price-slider-display" class="text-primary">₹7,999</span>
                 </div>
             </div>
             
-            <button onclick="resetAllFilters(); toggleMobileFilters();" class="w-full border border-primary text-primary py-3 uppercase text-xs tracking-widest font-bold">Clear All Filters</button>
+            <button onclick="resetAllFilters(); toggleMobileFilters();" class="w-full border border-primary text-primary py-3 uppercase text-[10px] tracking-widest font-bold">Clear All Filters</button>
         </div>
     </div>
 </div>
@@ -296,13 +243,21 @@
         categories.forEach(cat => {
             const isChecked = selectedCategories.includes(cat);
             const html = `
-                <label class="flex items-center gap-3 text-sm text-on-surface-variant cursor-pointer group">
-                    <input type="checkbox" value="${cat}" ${isChecked ? 'checked' : ''} onchange="toggleCategoryFilter('${cat}')" class="rounded-none border-outline-variant/60 focus:ring-0 text-primary w-4.5 h-4.5"/>
-                    <span class="capitalize group-hover:text-primary transition-colors text-xs font-semibold">${cat}</span>
+                <label class="flex items-center gap-3 text-xs text-on-surface-variant cursor-pointer group">
+                    <input type="checkbox" value="${cat}" ${isChecked ? 'checked' : ''} onchange="toggleCategoryFilter('${cat}')" class="rounded-none border-[#E8E1D8] focus:ring-0 text-primary w-4 h-4"/>
+                    <span class="capitalize group-hover:text-primary transition-colors font-semibold">${cat}</span>
                 </label>
             `;
             catContainer.innerHTML += html;
-            mobCatContainer.innerHTML += html;
+            
+            // Build separate checkbox for mobile to avoid id conflicts
+            const mobHtml = `
+                <label class="flex items-center gap-3 text-xs text-on-surface-variant cursor-pointer group">
+                    <input type="checkbox" value="${cat}" ${isChecked ? 'checked' : ''} onchange="toggleCategoryFilter('${cat}')" class="rounded-none border-[#E8E1D8] focus:ring-0 text-primary w-4 h-4"/>
+                    <span class="capitalize group-hover:text-primary transition-colors font-semibold">${cat}</span>
+                </label>
+            `;
+            mobCatContainer.innerHTML += mobHtml;
         });
 
         const colContainer = document.getElementById('filter-collections');
@@ -313,13 +268,20 @@
         collections.forEach(col => {
             const isChecked = selectedCollections.includes(col);
             const html = `
-                <label class="flex items-center gap-3 text-sm text-on-surface-variant cursor-pointer group">
-                    <input type="checkbox" value="${col}" ${isChecked ? 'checked' : ''} onchange="toggleCollectionFilter('${col}')" class="rounded-none border-outline-variant/60 focus:ring-0 text-primary w-4.5 h-4.5"/>
-                    <span class="uppercase tracking-wider group-hover:text-primary transition-colors text-[10px] font-bold">${col}</span>
+                <label class="flex items-center gap-3 text-xs text-on-surface-variant cursor-pointer group">
+                    <input type="checkbox" value="${col}" ${isChecked ? 'checked' : ''} onchange="toggleCollectionFilter('${col}')" class="rounded-none border-[#E8E1D8] focus:ring-0 text-primary w-4 h-4"/>
+                    <span class="uppercase tracking-wider group-hover:text-primary transition-colors font-bold text-[10px]">${col}</span>
                 </label>
             `;
             colContainer.innerHTML += html;
-            mobColContainer.innerHTML += html;
+
+            const mobHtml = `
+                <label class="flex items-center gap-3 text-xs text-on-surface-variant cursor-pointer group">
+                    <input type="checkbox" value="${col}" ${isChecked ? 'checked' : ''} onchange="toggleCollectionFilter('${col}')" class="rounded-none border-[#E8E1D8] focus:ring-0 text-primary w-4 h-4"/>
+                    <span class="uppercase tracking-wider group-hover:text-primary transition-colors font-bold text-[10px]">${col}</span>
+                </label>
+            `;
+            mobColContainer.innerHTML += mobHtml;
         });
     }
 
@@ -397,8 +359,8 @@
             grid.innerHTML = `
                 <div class="col-span-full py-20 text-center">
                     <span class="material-symbols-outlined text-5xl text-primary mb-4">sentiment_dissatisfied</span>
-                    <p class="font-display-lg text-headline-sm text-on-surface-variant italic">No jewellery pieces match your current filters.</p>
-                    <button onclick="resetAllFilters()" class="mt-6 px-10 py-3.5 bg-primary text-white font-label-sm uppercase tracking-widest hover:opacity-90">Reset Filters</button>
+                    <p class="font-serif text-lg text-on-surface-variant italic">No jewellery pieces match your current filters.</p>
+                    <button onclick="resetAllFilters()" class="mt-6 px-10 py-3.5 bg-primary text-white text-[10px] uppercase font-bold tracking-widest hover:opacity-90">Reset Filters</button>
                 </div>
             `;
             return;
@@ -407,48 +369,44 @@
         filtered.forEach(p => {
             const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
             const card = document.createElement('div');
-            card.className = 'bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-all duration-300';
+            card.className = 'bg-white border border-[#E8E1D8] group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-all duration-300 rounded-sm';
             card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
             
-            // Render badging dynamically
             let badgeHtml = '';
             if (p.isBestseller) {
-                badgeHtml = `<span class="absolute top-2 left-2 bg-primary text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">Bestseller</span>`;
+                badgeHtml = `<span class="absolute top-2 left-2 bg-primary text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">Bestseller</span>`;
             } else if (p.isNew) {
-                badgeHtml = `<span class="absolute top-2 left-2 bg-on-background text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">New</span>`;
+                badgeHtml = `<span class="absolute top-2 left-2 bg-[#1A1A1A] text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">New</span>`;
             } else if (p.isLimited) {
-                badgeHtml = `<span class="absolute top-2 left-2 bg-error text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">Limited Stock</span>`;
+                badgeHtml = `<span class="absolute top-2 left-2 bg-red-600 text-white text-[8px] px-2 py-0.5 uppercase font-bold tracking-widest">Limited</span>`;
             }
 
             card.innerHTML = `
-                <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                <div class="relative w-full aspect-square overflow-hidden bg-surface-container mb-4">
                     <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
                     <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
                     
                     ${badgeHtml}
                     
                     <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
-                        <span class="material-symbols-outlined text-lg">favorite</span>
+                        <span class="material-symbols-outlined text-base">favorite</span>
                     </button>
                 </div>
                 <div>
-                    <div class="flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <div class="flex items-center gap-1 mb-1 text-[#A67C2E]">
+                        <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
                         <span class="text-[10px] font-bold text-on-surface-variant">${p.rating} (${p.reviewsCount})</span>
                     </div>
-                    <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                    <h4 class="font-serif text-sm font-bold text-on-surface line-clamp-1 mb-2">${p.name}</h4>
                     <div class="flex items-baseline gap-2 mb-3">
-                        <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
-                        <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
-                        <span class="text-[10px] text-primary font-bold">${discount}% OFF</span>
+                        <span class="text-xs font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                        <span class="text-[10px] text-[#666666]/60 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                        <span class="inline-block bg-[#A67C2E]/10 text-primary text-[8px] font-bold px-1.5 py-0.5 rounded-sm">${discount}% OFF</span>
                     </div>
                 </div>
                 <div class="space-y-2 mt-auto">
-                    <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-semibold">
-                        <span class="material-symbols-outlined text-xs">shopping_cart</span> Add
-                    </button>
-                    <button onclick="event.stopPropagation(); triggerQuickView(${p.id})" class="w-full border border-primary text-primary py-1.5 text-[10px] uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all text-center font-semibold">
-                        Quick View
+                    <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-[#A67C2E] text-white py-2.5 text-[10px] uppercase tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-bold">
+                        <span class="material-symbols-outlined text-sm">shopping_cart</span> Add to Bag
                     </button>
                 </div>
             `;
