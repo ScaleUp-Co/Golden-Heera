@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Golden Heera | The Noor Mahal Necklace</title>
+    <title>Golden Heera | Product Details</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -12,28 +12,7 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         .zoom-container:hover img {
-            transform: scale(1.5);
-        }
-        .luxury-tab.active {
-            border-bottom: 2px solid #7b5900;
-            color: #7b5900;
-        }
-        .nav-underline-hover {
-            position: relative;
-        }
-        .nav-underline-hover::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 50%;
-            background-color: #7b5900;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        .nav-underline-hover:hover::after {
-            width: 100%;
+            transform: scale(1.6);
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -47,410 +26,492 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[60px] md:pb-0">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 z-[100] w-full bg-surface/90 backdrop-blur-md transition-all duration-500 border-none">
-    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-        <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
-        <div class="hidden md:flex items-center space-x-10">
-            <a class="font-body-md text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-hover" href="collections.html?category=necklaces">Necklaces</a>
-            <a class="font-body-md text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-hover" href="collections.html?category=earrings">Earrings</a>
-            <a class="font-body-md text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-hover" href="collections.html?category=rings">Rings</a>
-            <a class="font-body-md text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-hover" href="collections.html?category=bracelets">Bracelets</a>
-            <a class="font-body-md text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-hover" href="collections.html">Collections</a>
-        </div>
-        <div class="flex items-center space-x-6 text-primary">
-            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Added to wishlist!')"><span class="material-symbols-outlined">favorite</span></button>
-            <a class="hover:scale-105 transition-transform duration-200 relative" href="cart.html">
-                <span class="material-symbols-outlined">shopping_bag</span>
-                <span id="cart-badge" class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
-            </a>
-            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Profile section coming soon!')"><span class="material-symbols-outlined">person</span></button>
-        </div>
-    </nav>
-</header>
 
-<main class="pt-32 pb-section-gap">
+<!-- Global Header placeholder -->
+<div id="global-header"></div>
+
+<main class="pt-8 pb-16">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <!-- Breadcrumbs -->
-        <nav class="flex items-center space-x-2 mb-12 text-label-sm font-label-sm text-secondary uppercase tracking-widest text-xs">
+        <nav class="flex items-center space-x-2 mb-8 text-[11px] font-label-sm text-secondary uppercase tracking-widest">
             <a class="hover:text-primary" href="index.html">Home</a>
-            <span class="material-symbols-outlined text-[12px]">chevron_right</span>
-            <a class="hover:text-primary" href="collections.html?category=necklaces">Necklaces</a>
-            <span class="material-symbols-outlined text-[12px]">chevron_right</span>
-            <span class="text-primary font-bold">The Noor Mahal Necklace</span>
+            <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+            <a class="hover:text-primary" href="collections.html" id="breadcrumb-category-link">Jewellery</a>
+            <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+            <span class="text-primary font-bold" id="breadcrumb-name">Product Name</span>
         </nav>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-            <!-- Image Gallery -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16 items-start">
+            <!-- Left Side: Image Gallery -->
             <div class="lg:col-span-7 flex flex-col md:flex-row gap-6">
                 <!-- Thumbnails -->
-                <div class="order-2 md:order-1 flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto custom-scrollbar md:h-[700px] flex-shrink-0">
-                    <div class="w-20 h-24 flex-shrink-0 cursor-pointer border border-primary p-1">
-                        <img class="w-full h-full object-cover" alt="Noor Mahal Close-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzrCk820eIXSoeW-mIi5q5oYLdfk-Z6SWxHJEF6wg1YPe0OS9G14hmhjPlyvhyIF31WSjveMrFaffg7E6ejZ78z0hCygVgy9SEHTBagGDcC4wTixoz29VV-ZdwTOqo7xPZGEuE-jbz5RdPpWNzUPurtJFjTMO-bjKlfJDXhFWEKBbn_cTWUx93SG6gHlifoROuy2GMPQdGQ8DGNtnx30sLYIeuk_YKOIf5nEMxLSpUExGa7Rkod4JNyg"/>
-                    </div>
-                    <div class="w-20 h-24 flex-shrink-0 cursor-pointer border border-transparent hover:border-outline p-1 transition-all">
-                        <img class="w-full h-full object-cover" alt="Noor Mahal Bridal view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBWRBlD1OBS_IpfWC-0ZkH3GL62Gvmbojt2x3qZOOzYZhjtCvliN9qil4WE7kxxs2W86lUkHyNmE4dmqSsN3ZEoBrreIShKoq-POE5wRi0QcGrSvC3MEdA9ytvk0kLZmol3uZPbGtIvFlWhdtRXvuMDyo06W7QiP2sC5NfGuYMHw3N5uOfJUtbEleYlXwvCXJ2CP4mHcgD9itstIMxGfIJnJBKOBuv1dYXDarNXeH2_IC-GyGW_4OfEw"/>
-                    </div>
-                    <div class="w-20 h-24 flex-shrink-0 cursor-pointer border border-transparent hover:border-outline p-1 transition-all">
-                        <img class="w-full h-full object-cover" alt="Noor Mahal Side profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuN2GVNow9ZK_YbHTw_pvHJ5N57V8eu3wu-BY0ox3gCnQiCVRa-3f16owcsm8__97McbeAT7Hf41f3ycqRoOyyOy3xmnEpszqwaVeHu7QPxsepcaEJaqBZmvRE2YZoW-I0DJkDWxNbpNEJVNTMWJTKCZ8AfqZuuRXQx5RFp_dBxD2DwboFHsTHtNgCAei8bhmAYbHuFc5UBZu4zbtFM-iJ9MpyzJCjoBYr9l5ESJcEUMWypHkWdaJk9A"/>
-                    </div>
-                    <div class="w-20 h-24 flex-shrink-0 cursor-pointer border border-transparent hover:border-outline p-1 transition-all">
-                        <img class="w-full h-full object-cover" alt="Noor Mahal Model view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjIteyLRpiYFcO16b-oqF8Zcr82wnAwR2n2wtZjD8El7fssy41kzGt8jijbagvJTKqHgVq3BIrujIEp-Ra7u049ir3vq9xh2LftlV9TzHwRS-k96jB_GW-U8_Fnicnxoqe_0BvQQYBAWK3owyb_W1a1X9N9zeYqvRa6LXieXqy6D7Z-tS_Gv5VMN9D9mYUVgVQ0wTnzNpH7mMPhzPlsqHKxIqFVAtPxJqO7VF9BYI92mbdhBvXaxq9q"/>
-                    </div>
+                <div class="order-2 md:order-1 flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto custom-scrollbar md:h-[600px] flex-shrink-0" id="detail-thumbnails">
+                    <!-- Dynamically Loaded -->
                 </div>
-                <!-- Main Image with Zoom -->
-                <div class="order-1 md:order-2 flex-grow overflow-hidden relative zoom-container group cursor-crosshair bg-surface-container h-[400px] md:h-[700px]">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-out" alt="The Noor Mahal Necklace" id="mainImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIIhJArFpnM_uH11TZgDOlNCKFMAlyN0F5L6RBhdQ-UEIJYpMUpbaoR9oaYyMel-EDSRlR3XUr-9Bkwnae4MEtnm3vToZLood8jy6CIGKEiUFTyZHp8_WPUu8TXuXwdNsZwCpD5F9zWqi_NiHCDMASNRJKyIx-uWWbyqy8EEEO_-wbXyum3Lu-EWEtI3P43ViblNFirKbuHlc_g7z3ofwseS7Z2FaqLvOFkekCHOXsjunFPuhDIMAm7g"/>
+                <!-- Main image Zoom container -->
+                <div class="order-1 md:order-2 flex-grow overflow-hidden relative zoom-container group cursor-crosshair bg-surface-container h-[350px] md:h-[600px] border border-outline-variant/30">
+                    <img class="w-full h-full object-cover transition-transform duration-500 ease-out" id="mainImage" src="" alt="Main Product Image"/>
                     <div class="absolute top-4 right-4 bg-surface/50 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                         <span class="material-symbols-outlined">zoom_in</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Product Details -->
+            <!-- Right Side: Details & Purchasing -->
             <div class="lg:col-span-5 flex flex-col pt-4">
-                <span class="text-label-sm font-label-sm text-primary uppercase tracking-[0.2em] mb-4">Limited Edition Heritage</span>
-                <h1 class="font-display-lg text-display-lg-mobile lg:text-headline-md mb-2 text-on-surface">The Noor Mahal Necklace</h1>
-                <p class="text-headline-sm font-headline-sm text-primary-container mb-8">₹1,45,000</p>
-                <p class="font-body-md text-on-surface-variant leading-relaxed mb-10 border-l-2 border-outline-variant pl-6">
-                    Inspired by the regal archives of the Mughal era, this handcrafted masterpiece features graded uncut diamonds (Polki) and deep-seated Zambian emeralds, all meticulously encased in 22k gold-plated silver using traditional Kundan techniques.
-                </p>
-                <div class="space-y-6 mb-10">
-                    <div class="flex items-center gap-4">
-                        <div class="w-4 h-4 rounded-full bg-[#f0bf5c]"></div>
-                        <span class="text-body-md text-on-surface">Finish: 22k Gold Antique Polish</span>
+                <div class="flex justify-between items-start">
+                    <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]" id="detail-category-collection">Limited Edition</span>
+                    <button id="share-btn" onclick="shareProduct()" class="text-primary hover:scale-105 transition-transform flex items-center gap-1 text-xs font-semibold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-base">share</span> Share
+                    </button>
+                </div>
+                
+                <h1 class="font-display-lg text-headline-sm md:text-3xl font-bold mt-2 mb-1 text-on-surface" id="detail-title">Product Name</h1>
+                
+                <!-- Ratings Summary -->
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="flex text-primary">
+                        <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="text-xs font-bold text-on-surface" id="detail-rating">4.8</span>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-secondary">verified_user</span>
-                        <span class="text-body-md text-on-surface">Includes Certificate of Authenticity</span>
-                    </div>
+                    <span class="text-xs text-on-surface-variant/70 font-semibold" id="detail-reviews-count">(342 Reviews)</span>
+                    <span class="text-xs text-on-surface-variant/30">|</span>
+                    <span class="text-xs text-primary font-bold bg-primary-fixed/20 px-2.5 py-0.5 rounded-full" id="detail-stock-badge">In Stock</span>
                 </div>
 
-                <!-- Actions -->
-                <div class="flex flex-col gap-4 mb-12">
-                    <button onclick="addToBag()" class="w-full bg-primary text-on-primary py-5 font-body-lg text-label-sm uppercase tracking-widest hover:bg-on-primary-container transition-all duration-300 flex items-center justify-center gap-3">
+                <!-- Price Area -->
+                <div class="flex items-baseline gap-4 mb-6 border-b border-outline-variant/20 pb-6">
+                    <span class="text-3xl font-bold text-primary" id="detail-price">₹0</span>
+                    <span class="text-base text-on-surface-variant/50 line-through" id="detail-original-price">₹0</span>
+                    <span class="text-sm text-primary font-bold bg-primary-fixed/30 px-3 py-1" id="detail-discount-percent">0% OFF</span>
+                </div>
+
+                <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6" id="detail-description">Description goes here...</p>
+                
+                <!-- Highlights / D2C specs -->
+                <div class="space-y-4 mb-8 bg-[#faf7f2] p-4 border border-outline-variant/30 text-xs text-on-surface-variant" id="detail-highlights">
+                    <!-- Loaded dynamically -->
+                </div>
+
+                <!-- Live Delivery Estimate Widget -->
+                <div class="mb-8 p-4 bg-surface-container-low border border-outline-variant/40">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Check Delivery Estimate</label>
+                    <div class="flex gap-2">
+                        <input id="pincode-input" class="flex-grow bg-white border border-outline-variant/60 focus:ring-0 focus:border-primary text-xs px-3 py-2 outline-none font-body-md" placeholder="Enter Pincode (e.g. 560038)"/>
+                        <button onclick="checkPincode()" class="bg-on-background text-white px-5 py-2 uppercase font-label-sm text-[10px] tracking-widest hover:bg-primary transition-colors">Check</button>
+                    </div>
+                    <p id="pincode-status" class="text-xs text-primary font-semibold mt-2 hidden"></p>
+                </div>
+
+                <!-- Action Triggers -->
+                <div class="flex flex-col gap-3 mb-10" id="detail-buy-block">
+                    <button onclick="addCurrentToCart()" class="w-full bg-primary text-white py-4.5 font-label-sm text-sm uppercase tracking-widest hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-3 font-semibold shadow-lg">
                         <span class="material-symbols-outlined">shopping_cart</span> Add to Cart
                     </button>
-                    <a href="checkout.html" class="w-full border border-primary text-primary py-5 font-body-lg text-label-sm uppercase tracking-widest hover:bg-primary/5 transition-all duration-300 block text-center">
-                        Buy Now
-                    </a>
+                    <button onclick="buyNow()" class="w-full border border-primary text-primary py-4.5 font-label-sm text-sm uppercase tracking-widest hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-3 font-semibold bg-white">
+                        <span class="material-symbols-outlined">flash_on</span> Buy Now
+                    </button>
                 </div>
 
-                <!-- Accordion Info -->
-                <div class="space-y-4 border-t border-outline-variant pt-8">
+                <!-- Accordion details -->
+                <div class="space-y-4 border-t border-outline-variant/30 pt-6">
                     <details class="group" open>
-                        <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-label-sm font-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors">
-                            Material Details
+                        <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-xs font-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors font-bold">
+                            Specifications
                             <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
                         </summary>
-                        <div class="pt-4 pb-6 text-body-md text-on-surface-variant leading-relaxed">
-                            <ul class="list-disc ml-4 space-y-2">
-                                <li>Metal: High-grade Sterling Silver Base</li>
-                                <li>Plating: 3-micron 22k Antique Yellow Gold</li>
-                                <li>Stones: AA-Grade Uncut Polki Diamonds, Synthetic Zambian Emeralds</li>
-                                <li>Setting: Traditional Kundan Jadau</li>
-                            </ul>
+                        <div class="pt-2 pb-4 text-xs text-on-surface-variant leading-relaxed" id="detail-specs">
+                            <!-- Dynamically loaded -->
                         </div>
                     </details>
                     <details class="group">
-                        <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-label-sm font-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors">
-                            Care Instructions
+                        <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-xs font-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors font-bold">
+                            Shipping & Returns
                             <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
                         </summary>
-                        <div class="pt-4 pb-6 text-body-md text-on-surface-variant leading-relaxed">
-                            <p>To maintain the luster of your Golden Heera piece:</p>
-                            <ul class="list-disc ml-4 mt-2 space-y-2">
-                                <li>Keep away from water, perfumes, and hairsprays.</li>
-                                <li>Store in the provided suede-lined box to avoid scratches.</li>
-                                <li>Clean with a soft, dry lint-free cloth after every wear.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <details class="group">
-                        <summary class="flex justify-between items-center cursor-pointer list-none py-2 text-label-sm font-label-sm uppercase tracking-widest text-on-surface hover:text-primary transition-colors">
-                            Delivery &amp; Returns
-                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                        </summary>
-                        <div class="pt-4 pb-6 text-body-md text-on-surface-variant leading-relaxed">
-                            <p>Complimentary Insured Shipping on all domestic orders. Expect delivery within 7-10 business days for bespoke orders. Returns accepted within 7 days of delivery for non-customized pieces.</p>
+                        <div class="pt-2 pb-4 text-xs text-on-surface-variant leading-relaxed">
+                            <p>We provide Free Insured Shipping across India for all orders above ₹999. Under ₹999, a flat shipping charge of ₹99 is applicable. COD is available.</p>
+                            <p class="mt-2">Easy 7-day hassle-free returns. Return reverse-pickups are organized automatically.</p>
                         </div>
                     </details>
                 </div>
             </div>
         </div>
 
-        <!-- Reviews Section -->
-        <section class="mt-section-gap">
+        <!-- Frequently Bought Together Bundle -->
+        <section class="mt-16 bg-surface-container-low p-8 border border-outline-variant/40 max-w-4xl">
+            <h3 class="font-display-lg text-headline-sm text-on-surface mb-6 font-bold">Frequently Bought Together</h3>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <!-- Current Product Thumbnail -->
+                    <div class="w-24 h-24 bg-white border border-outline-variant/40 p-1 relative flex-shrink-0">
+                        <img id="fbt-img-1" class="w-full h-full object-cover" src="" alt="Main Item"/>
+                    </div>
+                    <span class="text-2xl text-on-surface-variant font-semibold">+</span>
+                    <!-- Matching Item Thumbnail -->
+                    <div class="w-24 h-24 bg-white border border-outline-variant/40 p-1 relative flex-shrink-0">
+                        <img id="fbt-img-2" class="w-full h-full object-cover" src="" alt="Matching Item"/>
+                    </div>
+                </div>
+                <div class="flex-grow text-center md:text-left">
+                    <p class="text-sm font-semibold text-on-surface mb-1">Add matching set & save more!</p>
+                    <p class="text-xs text-on-surface-variant mb-4" id="fbt-combo-desc">Noor Mahal Necklace + Jhumkas Bundle</p>
+                    <div class="flex items-baseline gap-3 justify-center md:justify-start">
+                        <span class="text-lg font-bold text-primary" id="fbt-combo-price">₹0</span>
+                        <span class="text-xs text-on-surface-variant/50 line-through" id="fbt-combo-original">₹0</span>
+                    </div>
+                </div>
+                <button onclick="addBundleToCart()" class="bg-on-background text-white px-8 py-3.5 uppercase font-label-sm text-xs tracking-widest hover:bg-primary transition-colors font-bold shadow-xs">Add Combo To Bag</button>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="mt-16">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
-                    <h2 class="font-display-lg text-headline-md mb-2">The Golden Experience</h2>
-                    <p class="text-secondary font-body-md">4.9/5 based on 24 authentic reviews</p>
+                    <h2 class="font-display-lg text-headline-md font-bold mb-2">Customer Reviews</h2>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <span class="text-xs font-bold text-on-surface" id="detail-reviews-summary-rating">4.8 based on 342 reviews</span>
+                    </div>
                 </div>
-                <button onclick="alert('Review submissions will open soon!')" class="border-b-2 border-primary pb-2 text-label-sm font-label-sm uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors">Write a Review</button>
+                <button onclick="alert('Reviews are locked to verified buyers only.')" class="border-b-2 border-primary pb-2 text-xs font-label-sm uppercase tracking-widest text-primary hover:opacity-75 transition-opacity font-bold">Write a Review</button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                <!-- Review Card -->
-                <div class="bg-surface-container-low p-8 border border-transparent hover:border-outline-variant transition-all">
-                    <div class="flex text-primary mb-4">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                    <p class="italic text-on-surface mb-6 leading-relaxed">"The craftsmanship is absolutely divine. It feels like wearing a piece of history. The packaging was as luxurious as the necklace itself."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">AD</div>
-                        <div>
-                            <p class="font-bold text-label-sm uppercase">Amara D.</p>
-                            <p class="text-[12px] text-secondary">Verified Purchase</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Review Card 2 -->
-                <div class="bg-surface-container-low p-8 border border-transparent hover:border-outline-variant transition-all">
-                    <div class="flex text-primary mb-4">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                    <p class="italic text-on-surface mb-6 leading-relaxed">"Wore this for my engagement and received endless compliments. It has a very premium weight and the gold polish is perfect."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">RK</div>
-                        <div>
-                            <p class="font-bold text-label-sm uppercase">Riya K.</p>
-                            <p class="text-[12px] text-secondary">Verified Purchase</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Review Card 3 -->
-                <div class="bg-surface-container-low p-8 border border-transparent hover:border-outline-variant transition-all">
-                    <div class="flex text-primary mb-4">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
-                    </div>
-                    <p class="italic text-on-surface mb-6 leading-relaxed">"Beautiful piece. The emeralds are slightly darker than in photos but very elegant. Exceptional customer service throughout."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">SJ</div>
-                        <div>
-                            <p class="font-bold text-label-sm uppercase">Sana J.</p>
-                            <p class="text-[12px] text-secondary">Verified Purchase</p>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="reviews-grid">
+                <!-- Loaded dynamically -->
             </div>
         </section>
 
-        <!-- Related Products -->
-        <section class="mt-section-gap animate-complete-set">
-            <div class="flex items-baseline gap-4 mb-12">
-                <h2 class="font-display-lg text-headline-md">Complete the Set</h2>
-                <div class="h-[1px] flex-grow bg-outline-variant"></div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-                <!-- Product Card -->
-                <div class="group cursor-pointer" onclick="alert('Noor Mahal Jhumkas details coming soon!')">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Noor Mahal Jhumkas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbpa1GWiusXmGsbFjJWQXQ44NDOj8z0kXHmIjtinkQOHI1L8_XOkSIxGmE77--wSelFp83KwH5ciiJZ7y3N2zzBS1mJi6BMakCl0KMfgoR5wmyA8RDjYif0Y9mk4o_kWD50SkRImd6mFZr-i9gHBTvfcHD9_qe2liqg0fIpFTJDoNtLQEfaAulo9eMyb5U7Re5mUk-BYS5cXDjJvNDBA-9TB1EilRP4KIa0iwXMpP78mXxrWNOyt50Nw"/>
-                        <button class="absolute top-4 right-4 text-primary bg-surface/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Saved!');">
-                            <span class="material-symbols-outlined text-[20px]">favorite</span>
-                        </button>
-                    </div>
-                    <h3 class="font-display-lg text-center text-body-lg mb-1">Noor Mahal Jhumkas</h3>
-                    <p class="text-center text-primary-container text-label-sm font-bold">₹42,500</p>
-                </div>
-                <!-- Product Card -->
-                <div class="group cursor-pointer" onclick="alert('Darbar Emerald Ring details coming soon!')">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Darbar Emerald Ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDptO3dfPP9PkdGidsFD7an6jnNd_INV98kkM9HFPZN24s0VgVcJYEnIV8YxasGXeAHD3rEB6JZh7jyWcyWZFmG0dc2lG0Qas48DtIwrpkbjf4bjyZIEtD_VsNCuY42Ce90BvRMeElntRCEpIVbwV1jg7hZHJM1mduBjdByoT3CO2W5_YLkpHPKM26gSaiG72riX2B23OpGgnpwTeU-QVCNHXjz8BkQPa_iploCidaOKIiFGJbzIWdw4w"/>
-                        <button class="absolute top-4 right-4 text-primary bg-surface/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Saved!');">
-                            <span class="material-symbols-outlined text-[20px]">favorite</span>
-                        </button>
-                    </div>
-                    <h3 class="font-display-lg text-center text-body-lg mb-1">Darbar Emerald Ring</h3>
-                    <p class="text-center text-primary-container text-label-sm font-bold">₹28,000</p>
-                </div>
-                <!-- Product Card -->
-                <div class="group cursor-pointer" onclick="alert('Rajputana Bangles details coming soon!')">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Rajputana Bangles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEvCBEZT3sKzvYUZrktD9eB1aD-cvmYisseE4v9ror_bNWTHyWiRWshupdw9Q3D5s1tEAdgliDYNy08j9wt3sOUaQYZ5GStYjbsIsDI9PDQ-o1OF5rtd84QWn7GNp4jw2D7Cze_yo2Rn-LQSVqSPTP2nsAQ_y8dddVyXtu7kpM3V8uRDdCdIjXswHpIE4hEDDZMh9Ige-hGFTBTIeI4n7YvYpsnypVIH3zzBbcM-7O8f3IRPsKeAGMrQ"/>
-                        <button class="absolute top-4 right-4 text-primary bg-surface/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Saved!');">
-                            <span class="material-symbols-outlined text-[20px]">favorite</span>
-                        </button>
-                    </div>
-                    <h3 class="font-display-lg text-center text-body-lg mb-1">Rajputana Bangles</h3>
-                    <p class="text-center text-primary-container text-label-sm font-bold">₹65,000</p>
-                </div>
-                <!-- Product Card -->
-                <div class="group cursor-pointer" onclick="alert('Classic Motif Pendant details coming soon!')">
-                    <div class="aspect-[4/5] overflow-hidden mb-6 relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Classic Motif Pendant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfdCcBh6hEdJ0FgFQAjluUyxalYcZj8_JIAlOIYO1tMVE_GZFmyP8VuRvZdQsLsjPJU-OY-P6YbXqH29iCRk39F7kaGHcK3tYob6RmLzxdsLC6MWVHXdQnWyidWdS5lbGkOy9GXRhXe9quZx1I-tgRlNNSKnFb_GS9jCR11zNxdZyDIXnbisVDqMCDUykMOfjSn_0DrpvktJqgYXHM587DMbzTqCDV-BHxcd7i0UY8GByhydgCYfAeuA"/>
-                        <button class="absolute top-4 right-4 text-primary bg-surface/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Saved!');">
-                            <span class="material-symbols-outlined text-[20px]">favorite</span>
-                        </button>
-                    </div>
-                    <h3 class="font-display-lg text-center text-body-lg mb-1">Classic Motif Pendant</h3>
-                    <p class="text-center text-primary-container text-label-sm font-bold">₹18,500</p>
-                </div>
+        <!-- FAQ Accordion -->
+        <section class="mt-16 border-t border-outline-variant/30 pt-16 max-w-4xl">
+            <h2 class="font-display-lg text-headline-md text-center mb-12 font-bold">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="group bg-surface-container-lowest p-6 border border-outline-variant/30">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-sm font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-colors">
+                        Is this real gold/silver?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-xs text-on-surface-variant leading-relaxed">No, Golden Heera deals exclusively in premium artificial, imitation, and fashion jewellery. Our pieces are crafted using brass, alloy, copper bases with micro gold/silver plating and studded with synthetic Kundan glass and American Diamonds.</p>
+                </details>
+                <details class="group bg-surface-container-lowest p-6 border border-outline-variant/30">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-sm font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-colors">
+                        Will the gold polish fade or turn black?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-xs text-on-surface-variant leading-relaxed">Our pieces feature special anti-tarnish protective coatings to keep the luster alive for years. However, to ensure long life, avoid contact with perfumes, sweat, soap, and store them inside dry ziploc pouches.</p>
+                </details>
+                <details class="group bg-surface-container-lowest p-6 border border-outline-variant/30">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-sm font-bold uppercase tracking-wider text-on-surface hover:text-primary transition-colors">
+                        Do you offer Cash on Delivery (COD)?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-xs text-on-surface-variant leading-relaxed">Yes, COD is available across most pincodes in India. Select Cash on Delivery at checkout.</p>
+                </details>
             </div>
         </section>
 
-        <!-- Recently Viewed -->
-        <section class="mt-section-gap opacity-80">
-            <h3 class="text-label-sm font-label-sm text-secondary uppercase tracking-[0.2em] mb-12 text-center">Recently Viewed</h3>
-            <div class="flex justify-center gap-12 overflow-x-auto pb-8">
-                <div class="flex-shrink-0 w-32 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer text-center">
-                    <div class="aspect-square bg-surface-container-high mb-4">
-                        <img class="w-full h-full object-cover" alt="Viceroy Choker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhuKO7ceUIQlczRrGLyWRrGcA3k5RZEgNJ_g6OU9YxAf0AfqFTbK04vrfpKCwPSf_9pADiHfHnN1-cbpde4bC4ZxerPPrHzQkDF54FBYNZfTZeANmKeUEByqNNa_8_5eE7jBQ9ppVM5y_x5XrZYdiF2LPtuEEqFmW8m-GDMrWynR36gSDS00SrAdrkOIhtSlc2XRo3kCk64ibARPWqIL480qtbehgHxj7s-j76j3FIm2dzIDBwOpfIzA"/>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Viceroy Choker</p>
-                </div>
-                <div class="flex-shrink-0 w-32 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer text-center">
-                    <div class="aspect-square bg-surface-container-high mb-4">
-                        <img class="w-full h-full object-cover" alt="Temple Haar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn5h294hP-3ZkabK712wBgNCsG9Ko7c1b4BNXBM3yI_YD7NkjxwSxfo7yBBeVBA9g_Ru_KBquBe4EW22msMjjoWnr3nCdifXsvsutZMBeiLV7l47dG0OrTP8y0RBmsPgJm7IeCD52_Agn28fne_ZyIwp4BIS9WnzZvkcqd2wIfh4vniLbG2Xrd1QdNa_iGxrMnyXRnIBdoglWG3Qc4mUH0P9_nQzwyhUlPets8f6q70lF2IMRnwLJ7Cg"/>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Temple Haar</p>
-                </div>
+        <!-- Recently Viewed Section -->
+        <section class="mt-16 border-t border-outline-variant/30 pt-16">
+            <h3 class="text-xs font-label-sm text-secondary uppercase tracking-[0.2em] mb-12 text-center font-bold">Related Masterpieces</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter" id="related-grid">
+                <!-- Dynamically loaded related products -->
             </div>
         </section>
     </div>
 </main>
 
-<!-- Footer -->
-<footer class="bg-surface-container dark:bg-surface-container-low border-t border-outline-variant">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
-        <div class="col-span-1 md:col-span-1">
-            <a class="font-display-lg text-headline-sm text-primary mb-6 block" href="index.html">Golden Heera</a>
-            <p class="text-body-md text-on-surface-variant mb-8 leading-relaxed">Exquisite handcrafted luxury jewelry, blending timeless Indian heritage with contemporary digital precision.</p>
-            <div class="flex space-x-4 text-primary">
-                <a class="hover:scale-110 transition-transform" href="#">Instagram</a>
-                <a class="hover:scale-110 transition-transform" href="#">Facebook</a>
-                <a class="hover:scale-110 transition-transform" href="#">Pinterest</a>
-            </div>
-        </div>
-        <div class="flex flex-col space-y-4">
-            <h4 class="font-bold text-label-sm uppercase tracking-widest text-on-surface mb-4">Shop</h4>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="collections.html">Collections</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="collections.html">New Arrivals</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bespoke Design</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gifting</a>
-        </div>
-        <div class="flex flex-col space-y-4">
-            <h4 class="font-bold text-label-sm uppercase tracking-widest text-on-surface mb-4">Experience</h4>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Our Story</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Craftsmanship</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Store Locator</a>
-        </div>
-        <div class="flex flex-col space-y-4">
-            <h4 class="font-bold text-label-sm uppercase tracking-widest text-on-surface mb-4">Support</h4>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Jewelry Care</a>
-            <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<!-- Mobile Sticky Add to Cart (Slide in on scroll) -->
+<div id="mobile-sticky-cart" class="fixed bottom-[56px] left-0 w-full bg-white border-t border-outline-variant/30 p-3 shadow-2xl flex items-center justify-between z-[120] md:hidden transform translate-y-full transition-transform duration-300">
+    <div class="flex items-center gap-3">
+        <img id="sticky-cart-img" class="w-10 h-10 object-cover border" src="" alt="Sticky Thumbnail"/>
+        <div>
+            <h5 class="text-xs font-bold text-on-background line-clamp-1" id="sticky-cart-title">Product</h5>
+            <span class="text-xs font-semibold text-primary" id="sticky-cart-price">₹0</span>
         </div>
     </div>
-    <div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center text-label-sm text-secondary">
-        © 2024 Golden Heera Luxury Jewellery. All Rights Reserved.
-    </div>
-</footer>
+    <button onclick="addCurrentToCart()" class="bg-primary text-white px-6 py-2.5 uppercase font-label-sm text-xs tracking-widest font-bold">Add to Bag</button>
+</div>
 
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="fixed bottom-0 w-full flex justify-around items-center py-3 bg-white border-t border-outline-variant z-50 md:hidden shadow-lg">
-    <a class="flex flex-col items-center gap-1 text-secondary" href="index.html">
-        <span class="material-symbols-outlined">storefront</span>
-        <span class="font-label-sm text-label-sm">Shop</span>
-    </a>
-    <button class="flex flex-col items-center gap-1 text-secondary" onclick="alert('Wishlist page coming soon!')">
-        <span class="material-symbols-outlined">favorite</span>
-        <span class="font-label-sm text-label-sm">Wishlist</span>
-    </button>
-    <a class="flex flex-col items-center gap-1 text-secondary relative" href="cart.html">
-        <span class="material-symbols-outlined">shopping_cart</span>
-        <span class="font-label-sm text-label-sm">Cart</span>
-        <span id="cart-badge-mobile" class="absolute top-0 right-2 bg-primary text-white text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold">2</span>
-    </a>
-    <button class="flex flex-col items-center gap-1 text-secondary" onclick="alert('Profile section coming soon!')">
-        <span class="material-symbols-outlined">person</span>
-        <span class="font-label-sm text-label-sm">Profile</span>
-    </button>
-</nav>
+<!-- Global Footer placeholder -->
+<div id="global-footer"></div>
 
+<script src="products.js"></script>
+<script src="app.js"></script>
 <script>
-    // Image Zoom Micro-interaction
+    let activeProduct = null;
+    let matchingProduct = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        loadProduct();
+        setupStickyCartScroll();
+    });
+
+    function loadProduct() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const pid = parseInt(urlParams.get('product_id')) || 4; // Default to Bridal Kundan Necklace Set (₹3499)
+        
+        activeProduct = PRODUCTS_DATA.find(p => p.id === pid) || PRODUCTS_DATA[0];
+        
+        // Find a matching bundle product (e.g. if current is earrings, bundle with a necklace; or just choose next product in list)
+        matchingProduct = PRODUCTS_DATA.find(p => p.id !== activeProduct.id && p.category !== activeProduct.category) || PRODUCTS_DATA[0];
+
+        // Cache recently viewed
+        let recent = JSON.parse(localStorage.getItem('gh_recent')) || [];
+        if (!recent.includes(activeProduct.id)) {
+            recent.push(activeProduct.id);
+            if (recent.length > 4) recent.shift();
+            localStorage.setItem('gh_recent', JSON.stringify(recent));
+        }
+
+        // Set text content
+        document.getElementById('breadcrumb-name').innerText = activeProduct.name;
+        document.getElementById('breadcrumb-category-link').innerText = activeProduct.category;
+        document.getElementById('breadcrumb-category-link').href = `collections.html?category=${activeProduct.category}`;
+        document.getElementById('detail-title').innerText = activeProduct.name;
+        document.getElementById('detail-category-collection').innerText = `${activeProduct.collection} collection / ${activeProduct.category}`;
+        document.getElementById('detail-rating').innerText = activeProduct.rating;
+        document.getElementById('detail-reviews-count').innerText = `(${activeProduct.reviewsCount} Reviews)`;
+        document.getElementById('detail-reviews-summary-rating').innerText = `${activeProduct.rating} based on ${activeProduct.reviewsCount} reviews`;
+        document.getElementById('detail-price').innerText = `₹${activeProduct.price.toLocaleString()}`;
+        document.getElementById('detail-original-price').innerText = `₹${activeProduct.originalPrice.toLocaleString()}`;
+        
+        const discount = Math.round((activeProduct.originalPrice - activeProduct.price) / activeProduct.originalPrice * 100);
+        document.getElementById('detail-discount-percent').innerText = `${discount}% OFF`;
+        document.getElementById('detail-description').innerText = activeProduct.description;
+
+        // Render Specs
+        const specsContainer = document.getElementById('detail-specs');
+        specsContainer.innerHTML = `
+            <ul class="list-disc ml-4 space-y-2">
+                <li>Material: ${activeProduct.material}</li>
+                <li>Base Metal: Semi-precious alloy base</li>
+                <li>Design Style: Affordable Premium Heritage</li>
+                <li>Skin Friendly: 100% Anti-Allergy coating</li>
+            </ul>
+        `;
+
+        // Render Highlights
+        const highlightsContainer = document.getElementById('detail-highlights');
+        highlightsContainer.innerHTML = '';
+        activeProduct.details.forEach(detail => {
+            highlightsContainer.innerHTML += `
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-xs font-bold">check</span>
+                    <span>${detail}</span>
+                </div>
+            `;
+        });
+
+        // Set Images & Gallery Thumbnails
+        document.getElementById('mainImage').src = activeProduct.image;
+        const thumbnailsContainer = document.getElementById('detail-thumbnails');
+        thumbnailsContainer.innerHTML = `
+            <div class="w-16 h-20 md:w-20 md:h-24 flex-shrink-0 cursor-pointer border border-primary p-1">
+                <img class="w-full h-full object-cover" alt="Thumb 1" src="${activeProduct.image}"/>
+            </div>
+            <div class="w-16 h-20 md:w-20 md:h-24 flex-shrink-0 cursor-pointer border border-transparent p-1">
+                <img class="w-full h-full object-cover" alt="Thumb 2" src="${activeProduct.hoverImage}"/>
+            </div>
+        `;
+
+        // Set up thumbnail switching
+        const thumbs = thumbnailsContainer.querySelectorAll('img');
+        thumbs.forEach(thumb => {
+            thumb.parentElement.addEventListener('click', () => {
+                document.getElementById('mainImage').src = thumb.src;
+                thumbs.forEach(t => t.parentElement.classList.remove('border-primary'));
+                thumb.parentElement.classList.add('border-primary');
+            });
+        });
+
+        // Set FBT Bundle
+        document.getElementById('fbt-img-1').src = activeProduct.image;
+        document.getElementById('fbt-img-2').src = matchingProduct.image;
+        document.getElementById('fbt-combo-desc').innerText = `${activeProduct.name} + ${matchingProduct.name} Combo Set`;
+        
+        const comboOriginal = activeProduct.originalPrice + matchingProduct.originalPrice;
+        const comboPrice = Math.round((activeProduct.price + matchingProduct.price) * 0.90); // Extra 10% off combo
+        document.getElementById('fbt-combo-price').innerText = `₹${comboPrice.toLocaleString()}`;
+        document.getElementById('fbt-combo-original').innerText = `₹${comboOriginal.toLocaleString()}`;
+
+        // Set Sticky Cart
+        document.getElementById('sticky-cart-img').src = activeProduct.image;
+        document.getElementById('sticky-cart-title').innerText = activeProduct.name;
+        document.getElementById('sticky-cart-price').innerText = `₹${activeProduct.price.toLocaleString()}`;
+
+        // Render Mock Reviews
+        const reviewsContainer = document.getElementById('reviews-grid');
+        reviewsContainer.innerHTML = `
+            <div class="bg-white border border-outline-variant/30 p-8 shadow-xs">
+                <div class="flex text-primary mb-4">
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-xs text-on-surface-variant italic mb-6 leading-relaxed">
+                    "Exactly as pictured! Plating finish is exquisite and doesn't look cheap at all. Used it for a family wedding and received compliments all night."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">SV</div>
+                    <div>
+                        <span class="block font-bold text-xs uppercase text-on-surface">Shreya V.</span>
+                        <span class="text-[9px] text-on-surface-variant/70 uppercase">Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border border-outline-variant/30 p-8 shadow-xs">
+                <div class="flex text-primary mb-4">
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-xs text-on-surface-variant italic mb-6 leading-relaxed">
+                    "Awesome purchase. The stones shine beautifully under spotlights. The adjustable closure fits perfectly. Packaging box is very luxury."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">KR</div>
+                    <div>
+                        <span class="block font-bold text-xs uppercase text-on-surface">Komal R.</span>
+                        <span class="text-[9px] text-on-surface-variant/70 uppercase">Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border border-outline-variant/30 p-8 shadow-xs">
+                <div class="flex text-primary mb-4">
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 0;">star</span>
+                </div>
+                <p class="font-body-md text-xs text-on-surface-variant italic mb-6 leading-relaxed">
+                    "Beautiful design, worth the money. Took 3 days to deliver to Delhi. Plating is anti-tarnish as described, looks very premium."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">NL</div>
+                    <div>
+                        <span class="block font-bold text-xs uppercase text-on-surface">Neeta L.</span>
+                        <span class="text-[9px] text-on-surface-variant/70 uppercase">Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Render Related Products
+        const related = PRODUCTS_DATA.filter(p => p.id !== activeProduct.id && (p.category === activeProduct.category || p.collection === activeProduct.collection)).slice(0, 4);
+        const relatedGrid = document.getElementById('related-grid');
+        relatedGrid.innerHTML = '';
+        related.forEach(p => {
+            const disc = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+            relatedGrid.innerHTML += `
+                <div class="bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow" onclick="window.location.href='product-detail.html?product_id=${p.id}'">
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                        <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
+                    </div>
+                    <div>
+                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                            <span class="text-[10px] text-primary font-bold">${disc}% OFF</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    // Zoom interaction
     const mainImage = document.getElementById('mainImage');
     const container = mainImage.parentElement;
-
     container.addEventListener('mousemove', (e) => {
         const rect = container.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         mainImage.style.transformOrigin = `${x}px ${y}px`;
-        mainImage.style.transform = "scale(2.2)";
+        mainImage.style.transform = "scale(2)";
     });
-
     container.addEventListener('mouseleave', () => {
         mainImage.style.transformOrigin = "center center";
         mainImage.style.transform = "scale(1)";
     });
 
-    // Simple thumbnail switcher
-    const thumbs = document.querySelectorAll('.order-2.md\\:order-1 img');
-    thumbs.forEach(thumb => {
-        thumb.parentElement.addEventListener('click', () => {
-            mainImage.src = thumb.src;
-            mainImage.alt = thumb.alt;
-            
-            // Update active border
-            thumbs.forEach(t => t.parentElement.classList.remove('border-primary'));
-            thumbs.forEach(t => t.parentElement.classList.add('border-transparent'));
-            thumb.parentElement.classList.remove('border-transparent');
-            thumb.parentElement.classList.add('border-primary');
-        });
-    });
-
-    // Cart Logic
-    function getCart() {
-        return JSON.parse(localStorage.getItem('gh_cart')) || [
-            { id: 1, title: 'The Noor Mahal Necklace', price: 85000, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZg48N-oHGT_gF1UT4teb-Shhjdo3bc41o-eBLg6yeQAY9mys4TfZjWS0Fa6DwX3WTdTWRBmIXaaKVOg-MGdlRsjp6tMpPMIaTUQ5AfiSOZYVKcIZxYlR15Ti9FsMbCD2cOEYWBir4bc2eZG6y4ySjoHRZJugkTY4F3snut9c_6YOjBAxFjAluWwkdhG46CeGCa8gIygGBQlQbTTWLH6-2hl4mJM_VgqqX9bdbPEm64FiKE4sSc5YEuQ' },
-            { id: 2, title: 'Darbar Emerald Ring', price: 42500, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDL3fDWVecPLx2MPJ1XspCdeI8V76pxjvU1XgX4It_W5ZguCZYxaB6DmEPaiYgfaxVRVE6iraiQSP6_Uk8EFXvojLYIJXBrYOYuHUJu9VRm8_Qx07EjWiINp9lZdvgQd1UvI3bN-iD_pwBovRCbsqkjCa8Ox_-feayl3Wep63gADd4NvQG75upwN-7zcLqPuKy6CQVsNGHICQTVOaoI-B-7MvjsbKs0CXcOGr-WBABOVhMfBWpJzacy1Q' }
-        ];
-    }
-
-    function updateBadge() {
-        const cart = getCart();
-        const totalItems = cart.reduce((acc, curr) => acc + curr.qty, 0);
-        document.getElementById('cart-badge').innerText = totalItems;
-        document.getElementById('cart-badge-mobile').innerText = totalItems;
-    }
-
-    function addToBag() {
-        let cart = getCart();
-        // Check if Noor Mahal already exists
-        const existing = cart.find(item => item.id === 1);
-        if (existing) {
-            existing.qty += 1;
-        } else {
-            cart.push({
-                id: 1,
-                title: 'The Noor Mahal Necklace',
-                price: 145000, // Detailed page price is 1,45,000
-                qty: 1,
-                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZg48N-oHGT_gF1UT4teb-Shhjdo3bc41o-eBLg6yeQAY9mys4TfZjWS0Fa6DwX3WTdTWRBmIXaaKVOg-MGdlRsjp6tMpPMIaTUQ5AfiSOZYVKcIZxYlR15Ti9FsMbCD2cOEYWBir4bc2eZG6y4ySjoHRZJugkTY4F3snut9c_6YOjBAxFjAluWwkdhG46CeGCa8gIygGBQlQbTTWLH6-2hl4mJM_VgqqX9bdbPEm64FiKE4sSc5YEuQ'
-            });
+    function addCurrentToCart() {
+        if (activeProduct) {
+            addToCart(activeProduct.id);
         }
-        localStorage.setItem('gh_cart', JSON.stringify(cart));
-        updateBadge();
-        alert('The Noor Mahal Necklace has been added to your shopping bag!');
     }
 
-    // Initialize badge count
-    updateBadge();
+    function buyNow() {
+        if (activeProduct) {
+            // Direct buy adds to cart and redirects to checkout
+            addToCart(activeProduct.id);
+            setTimeout(() => {
+                window.location.href = 'checkout.html';
+            }, 500);
+        }
+    }
+
+    function checkPincode() {
+        const pincode = document.getElementById('pincode-input').value.trim();
+        const status = document.getElementById('pincode-status');
+        if (/^\d{6}$/.test(pincode)) {
+            status.innerText = `✓ Standard delivery to ${pincode} in 2-3 business days. COD available.`;
+            status.classList.remove('hidden', 'text-error');
+            status.classList.add('text-primary');
+        } else {
+            status.innerText = `✗ Please enter a valid 6-digit Pincode.`;
+            status.classList.remove('hidden', 'text-primary');
+            status.classList.add('text-error', 'text-xs');
+        }
+    }
+
+    function shareProduct() {
+        if (navigator.share) {
+            navigator.share({
+                title: activeProduct.name,
+                url: window.location.href
+            }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Product link copied to clipboard!');
+        }
+    }
+
+    function addBundleToCart() {
+        addToCart(activeProduct.id);
+        addToCart(matchingProduct.id);
+        showToast('Combo set added to cart! Save 10% automatically.');
+    }
+
+    function setupStickyCartScroll() {
+        const stickyCart = document.getElementById('mobile-sticky-cart');
+        const buyBlock = document.getElementById('detail-buy-block');
+        
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth >= 768) return; // Desktop doesn't need sticky bar
+            
+            const rect = buyBlock.getBoundingClientRect();
+            // If the buy block goes above/past viewport top
+            if (rect.bottom < 0) {
+                stickyCart.classList.remove('translate-y-full');
+            } else {
+                stickyCart.classList.add('translate-y-full');
+            }
+        });
+    }
 </script>
 </body>
 </html>

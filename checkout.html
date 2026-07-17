@@ -60,21 +60,12 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar (Simplified for Checkout focus) -->
-<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-500">
-    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-        <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
-        <div class="flex items-center gap-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
-                Secure Checkout
-            </span>
-        </div>
-    </div>
-</header>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[60px] md:pb-0">
 
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 lg:grid lg:grid-cols-12 lg:gap-gutter">
+<!-- Global Header placeholder -->
+<div id="global-header"></div>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 lg:grid lg:grid-cols-12 lg:gap-gutter">
     <!-- Left Column: Checkout Steps -->
     <form class="lg:col-span-7 space-y-12" id="checkout-form" onsubmit="handlePayment(event)">
         <!-- Step 1: Contact Information -->
@@ -216,7 +207,7 @@
                     </label>
                 </div>
                 <button type="submit" class="w-full bg-on-background text-white py-5 font-label-sm text-label-sm uppercase tracking-[0.2em] font-bold hover:bg-primary transition-all shadow-xl flex items-center justify-center gap-3">
-                    Pay <span id="pay-btn-amount">₹1,31,325</span>
+                    Pay <span id="pay-btn-amount">₹0</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
                 <div class="flex justify-center items-center gap-8 pt-4 grayscale opacity-60">
@@ -230,29 +221,33 @@
 
     <!-- Right Column: Order Summary -->
     <aside class="lg:col-span-5 mt-16 lg:mt-0">
-        <div class="bg-surface-container-lowest p-8 lg:p-12 sticky top-32 border border-outline-variant/30">
+        <div class="bg-surface-container-lowest p-8 lg:p-12 sticky top-24 border border-outline-variant/30">
             <h3 class="font-headline-sm text-headline-sm mb-10 pb-4 border-b border-outline-variant">Order Summary</h3>
             <div class="space-y-8 mb-10" id="summary-items-container">
                 <!-- Dynamically loaded -->
             </div>
             <div class="space-y-4 pt-8 border-t border-outline-variant">
-                <div class="flex justify-between text-on-surface-variant">
-                    <span class="font-body-md">Subtotal</span>
-                    <span class="font-body-md" id="summary-subtotal">₹ 2,45,000.00</span>
+                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">₹0</span>
                 </div>
-                <div class="flex justify-between text-on-surface-variant">
-                    <span class="font-body-md">Shipping</span>
-                    <span class="font-body-md text-primary font-semibold">Complimentary</span>
+                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+                    <span>Shipping</span>
+                    <span id="summary-shipping">FREE</span>
                 </div>
-                <div class="flex justify-between text-on-surface-variant">
-                    <span class="font-body-md">Taxes (GST 3%)</span>
-                    <span class="font-body-md" id="summary-tax">Included</span>
+                <div class="flex justify-between text-on-surface-variant text-xs font-semibold hidden" id="summary-discount-row">
+                    <span>Discount</span>
+                    <span id="summary-discount">-₹0</span>
+                </div>
+                <div class="flex justify-between text-on-surface-variant text-xs font-semibold">
+                    <span>Taxes (GST 3%)</span>
+                    <span id="summary-tax">₹0</span>
                 </div>
                 <div class="flex justify-between pt-6 mt-6 border-t border-on-background">
                     <span class="font-headline-sm text-headline-sm">Total</span>
                     <div class="text-right">
                         <span class="text-xs text-on-surface-variant uppercase tracking-widest block mb-1">INR</span>
-                        <span class="font-headline-sm text-headline-sm" id="summary-total">₹ 2,45,000.00</span>
+                        <span class="font-headline-sm text-headline-sm" id="summary-total">₹0</span>
                     </div>
                 </div>
             </div>
@@ -274,46 +269,18 @@
         <span class="material-symbols-outlined text-7xl text-primary mb-6 animate-bounce">verified</span>
         <h2 class="font-display-lg text-headline-md mb-4">Masterpiece Secured</h2>
         <p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">Thank you for choosing Golden Heera. Your payment was processed successfully. A confirmation email and certificate details have been sent to you.</p>
-        <button onclick="closeSuccessModal()" class="w-full bg-primary text-white py-4 uppercase font-body-md tracking-widest hover:opacity-90 transition-all">
+        <button onclick="closeSuccessModal()" class="w-full bg-primary text-white py-4 uppercase font-body-md tracking-widest hover:opacity-90 transition-all font-semibold">
             Return to Atelier
         </button>
     </div>
 </div>
 
-<!-- Footer (Simplified) -->
-<footer class="bg-surface-container border-t border-outline-variant mt-section-gap">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
-        <div class="col-span-1 md:col-span-2">
-            <h4 class="font-display-lg text-headline-sm text-primary mb-6">Golden Heera</h4>
-            <p class="text-body-md text-on-surface-variant max-w-md">Crafting timeless legacies since 1924. Our jewelry is more than an accessory; it is an heirloom of heritage and unparalleled craftsmanship.</p>
-        </div>
-        <div>
-            <h5 class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface mb-6">Support</h5>
-            <ul class="space-y-4">
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a></li>
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5 class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface mb-6">Legal</h5>
-            <ul class="space-y-4">
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Certificate Registry</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
-        <p class="text-label-sm text-on-surface-variant opacity-60">© 2024 Golden Heera Luxury Jewellery. All Rights Reserved.</p>
-    </div>
-</footer>
+<!-- Global Footer placeholder -->
+<div id="global-footer"></div>
 
+<script src="products.js"></script>
+<script src="app.js"></script>
 <script>
-    function getCart() {
-        return JSON.parse(localStorage.getItem('gh_cart')) || [];
-    }
-
     function renderSummary() {
         const cart = getCart();
         const container = document.getElementById('summary-items-container');
@@ -321,67 +288,67 @@
 
         if (cart.length === 0) {
             container.innerHTML = `<p class="italic text-on-surface-variant">Your shopping bag is empty.</p>`;
-            document.getElementById('summary-subtotal').innerText = '₹0';
-            document.getElementById('summary-tax').innerText = '₹0';
-            document.getElementById('summary-total').innerText = '₹0';
-            document.getElementById('pay-btn-amount').innerText = '₹0';
             return;
         }
 
         let subtotal = 0;
         cart.forEach(item => {
             subtotal += item.price * item.qty;
-            const row = document.createElement('div');
-            row.className = 'flex gap-6 group';
-            row.innerHTML = `
-                <div class="relative w-24 h-24 overflow-hidden border border-outline-variant/20">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="${item.title}" src="${item.image}"/>
-                    <span class="absolute -top-2 -right-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold">${item.qty}</span>
-                </div>
-                <div class="flex-1 flex flex-col justify-between py-1 text-sm">
-                    <div>
-                        <h4 class="font-body-lg text-body-md font-semibold text-on-background">${item.title}</h4>
-                        <p class="text-[11px] text-on-surface-variant mt-1 uppercase tracking-wider">Fine Gold Polish</p>
+            container.innerHTML += `
+                <div class="flex gap-6 group">
+                    <div class="relative w-20 h-20 overflow-hidden border border-outline-variant/20 flex-shrink-0">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="${item.name}" src="${item.image}"/>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold">${item.qty}</span>
                     </div>
-                    <span class="font-body-md text-on-background">₹ ${(item.price * item.qty).toLocaleString()}</span>
+                    <div class="flex-1 flex flex-col justify-between py-1 text-xs">
+                        <div>
+                            <h4 class="font-body-lg text-xs font-semibold text-on-background line-clamp-1">${item.name}</h4>
+                            <p class="text-[10px] text-on-surface-variant mt-1 uppercase tracking-wider">Premium Finish</p>
+                        </div>
+                        <span class="font-body-md text-on-background font-bold">₹ ${(item.price * item.qty).toLocaleString()}</span>
+                    </div>
                 </div>
             `;
-            container.appendChild(row);
         });
 
-        // Compute from local storage cache if promo was applied
-        const storedTotal = localStorage.getItem('gh_total');
+        // Load values calculated in cart.html
+        const total = localStorage.getItem('gh_total') || subtotal;
+        const sub = localStorage.getItem('gh_subtotal') || subtotal;
+        const shipping = localStorage.getItem('gh_shipping') || 0;
+        const discount = localStorage.getItem('gh_discount') || 0;
         const gst = Math.round(subtotal * 0.03);
-        let finalTotal = subtotal + gst;
 
-        if (storedTotal) {
-            finalTotal = parseInt(storedTotal);
+        document.getElementById('summary-subtotal').innerText = `₹${parseInt(sub).toLocaleString()}`;
+        document.getElementById('summary-shipping').innerText = parseInt(shipping) === 0 ? "FREE" : `₹${shipping}`;
+        document.getElementById('summary-tax').innerText = `₹${gst.toLocaleString()}`;
+        
+        if (parseInt(discount) > 0) {
+            document.getElementById('summary-discount-row').classList.remove('hidden');
+            document.getElementById('summary-discount').innerText = `-₹${parseInt(discount).toLocaleString()}`;
+        } else {
+            document.getElementById('summary-discount-row').classList.add('hidden');
         }
 
-        document.getElementById('summary-subtotal').innerText = `₹${subtotal.toLocaleString()}`;
-        document.getElementById('summary-tax').innerText = `₹${gst.toLocaleString()}`;
-        document.getElementById('summary-total').innerText = `₹${finalTotal.toLocaleString()}`;
-        document.getElementById('pay-btn-amount').innerText = `₹${finalTotal.toLocaleString()}`;
+        document.getElementById('summary-total').innerText = `₹${parseInt(total).toLocaleString()}`;
+        document.getElementById('pay-btn-amount').innerText = `₹${parseInt(total).toLocaleString()}`;
     }
 
     function toggleStep(stepNumber) {
-        // Toggle step validation visuals
         for (let i = 1; i <= 3; i++) {
             const section = document.getElementById('step-' + i);
+            if (!section) continue;
             const header = section.querySelector('h2');
             const badge = section.querySelector('h2 span');
             
             section.classList.remove('accordion-active');
             
             if (i < stepNumber) {
-                // Completed
                 header.classList.remove('text-on-surface-variant/50');
                 header.classList.add('text-on-background');
                 badge.classList.remove('border-outline-variant', 'text-outline');
                 badge.classList.add('border-primary', 'text-primary');
                 badge.innerHTML = '<span class="material-symbols-outlined text-xs">check</span>';
             } else if (i === stepNumber) {
-                // Current active
                 section.classList.add('accordion-active');
                 header.classList.remove('text-on-surface-variant/50');
                 header.classList.add('text-on-background');
@@ -389,7 +356,6 @@
                 badge.classList.add('border-primary', 'text-primary');
                 badge.innerText = i;
             } else {
-                // Future
                 header.classList.add('text-on-surface-variant/50');
                 badge.classList.remove('border-primary', 'text-primary');
                 badge.classList.add('border-outline-variant', 'text-outline');
@@ -441,15 +407,16 @@
 
     function handlePayment(e) {
         e.preventDefault();
-        // Trigger modal success
         document.getElementById('success-modal').classList.remove('hidden');
         document.getElementById('success-modal').classList.add('flex');
     }
 
     function closeSuccessModal() {
-        // Clear cart
         localStorage.removeItem('gh_cart');
         localStorage.removeItem('gh_total');
+        localStorage.removeItem('gh_shipping');
+        localStorage.removeItem('gh_subtotal');
+        localStorage.removeItem('gh_discount');
         window.location.href = 'index.html';
     }
 

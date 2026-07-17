@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Golden Heera | Luxury Jewellery That Completes Every Look</title>
+    <title>Golden Heera | Premium Fashion & Imitation Jewellery Online Store</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <!-- Tailwind Configuration -->
+    
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -101,26 +101,6 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .nav-underline-anim {
-            position: relative;
-        }
-        .nav-underline-anim::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -4px;
-            left: 50%;
-            background-color: #7b5900;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        .nav-underline-anim:hover::after {
-            width: 100%;
-        }
-        .luxury-card:hover .zoom-img {
-            transform: scale(1.05);
-        }
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -128,363 +108,441 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        .category-circle-img {
+            transition: transform 0.4s ease;
+        }
+        .category-circle:hover .category-circle-img {
+            transform: scale(1.08);
+        }
     </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed pb-[60px] md:pb-0">
-<!-- TopNavBar -->
-<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md transition-all duration-500">
-    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-        <div class="flex items-center space-x-12">
-            <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
-            <div class="hidden lg:flex space-x-8">
-                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=earrings">Earrings</a>
-                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=necklaces">Necklaces</a>
-                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=rings">Rings</a>
-                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=bracelets">Bracelets</a>
-                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html">Collections</a>
-            </div>
-        </div>
-        <div class="flex items-center space-x-6">
-            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" onclick="alert('Search functionality coming soon!')">search</button>
-            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" onclick="alert('Wishlist page coming soon!')">favorite</button>
-            <a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors relative" href="cart.html">
-                shopping_bag
-                <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
-            </a>
-            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" onclick="alert('Account feature coming soon!')">person</button>
-        </div>
-    </nav>
-</header>
+
+<!-- Global Header placeholder -->
+<div id="global-header"></div>
 
 <!-- Hero Section -->
-<section class="relative h-[600px] md:h-[921px] overflow-hidden">
+<section class="relative h-[480px] md:h-[620px] overflow-hidden bg-[#faf7f2]">
     <div class="absolute inset-0 z-0">
-        <img class="w-full h-full object-cover" alt="A high-fashion editorial wide shot of a regal South Asian woman wearing an intricate gold necklace and matching heirloom earrings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZEA3WxWN3CU-80JBn4AH6wYbf3p1zs1QmKAh81sr7rzStuy7nmxOMisCDn_yWaS3XpqmebH3cXUdiNh5fiOz4Ka7oIKL-KhoHLeF119IuX5OZBF9ZwAOoRTdunIXWm-S8UrHIOEgR7b_w7yh0P7I5KuT6I4IUboEo1o-H2wJ9soRdAroU0ZRjHuOkg0PE-6OOzbJo-OBmjJOi5vOLiqmpyrIRKYyQpCBGpdFONEdWUhdQDw56gYidQ"/>
-        <div class="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent"></div>
+        <img class="w-full h-full object-cover object-center md:object-right-top" alt="Golden Heera Premium Fashion Jewellery Hero" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZEA3WxWN3CU-80JBn4AH6wYbf3p1zs1QmKAh81sr7rzStuy7nmxOMisCDn_yWaS3XpqmebH3cXUdiNh5fiOz4Ka7oIKL-KhoHLeF119IuX5OZBF9ZwAOoRTdunIXWm-S8UrHIOEgR7b_w7yh0P7I5KuT6I4IUboEo1o-H2wJ9soRdAroU0ZRjHuOkg0PE-6OOzbJo-OBmjJOi5vOLiqmpyrIRKYyQpCBGpdFONEdWUhdQDw56gYidQ"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent"></div>
     </div>
     <div class="relative z-10 h-full flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg max-w-2xl mb-8 animate-fade-in-up">Jewellery That Completes Every Look</h1>
-        <p class="font-body-lg text-body-lg text-on-surface/80 max-w-lg mb-10">Discover the fusion of heritage and modern elegance with our curated gold collections designed for the discerning individual.</p>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-5xl max-w-xl mb-4 font-bold text-on-surface">Elevate Every Look with Golden Heera</h1>
+        <p class="font-body-md text-base md:text-lg text-on-surface-variant max-w-lg mb-8">Premium Fashion & Wedding Jewellery Designed for Every Occasion. Affordable Luxury Handcrafted for You.</p>
+        <div class="flex flex-wrap gap-4">
+            <a class="bg-primary text-white px-8 py-3.5 uppercase font-label-sm tracking-widest hover:opacity-90 transition-all inline-block shadow-lg" href="collections.html">Shop Now</a>
+            <a class="border border-primary text-primary px-8 py-3.5 uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all inline-block bg-white/40 backdrop-blur-xs" href="collections.html">Explore Collections</a>
+        </div>
+        
+        <!-- Trust Badges (Minimal/Elegant) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 mt-12 max-w-2xl border-t border-outline-variant/30 pt-4">
+            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
+                <span>Free Shipping above ₹999</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
+                <span>Easy 7-Day Returns</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
+                <span>Secure Payments</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-sm font-bold">check_circle</span>
+                <span>Trusted by Thousands</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Category Circles Horizontal Scroll (Inspired by Rubans) -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+    <div class="flex space-x-6 md:space-x-12 overflow-x-auto no-scrollbar pb-4 justify-start md:justify-center">
+        <!-- Category Item -->
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=earrings">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKADJtdQiqERuDX7Cne7wWvVHYuHi46nuZ2G1JDjsk3Z7Zs4qkrNcmRAqzAJ6ElJijjAtupUQBKzantfq2IpPr7bl9HmkqmYEuYLAIY3HsnIJd3DCq0JAOextZTxnT8_GMX9k5tEvY12e49ocsKmprN4tX7zBrYMq7lEZjxMaaeNgztLlESq7xsY0AfU6ATFVOZAPyuHcUd72U7-TrEZV2r-fSlsXV10un3q2YjL_zl3_6GfS0Ebie4w"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Earrings</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=necklaces">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Necklaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLdTCTvttsD3cRSlNb1Oygz19YGYniUWMJJYQ6v7_7KBsJgq8NXV4w-zmQ5-Tr1MslqqoTHNLA2dTGqr_RytR1hOZ4pwhLHliJ0OL1jDdZEMysUZeTwU5gS3O0DG_mH7UNjAKxvyMmNxkH41xKAfgCzqVdQ_cF1G6wn0joUka87IZTZYXqjAsLi_1LrurfzRNx3t9dGIPSUzcBmx-OKnl3kAQ4ZG5EXeUrXg1Jt_Uo0cSYrYMDjqQSQ"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Necklaces</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=rings">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Rings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1S7okuzyBArf0olVWM1ctL0WxI5amwQwAEtjw6bVcNqxIr3uEtmy2A5qY6d9WrUDeNPUVBPw4Dg8MI7uusHA3Fu5rEPesb9pSY3cY7LyPYNKdv0--QkXgpDsnbdwb1upUScSaUOdomaLwe4ogR5eVkaxKg7iSxh65jSzju2q8TYkue181sYiup3FawqTgBdpo-mrZBBzjfJtn5rbB2lXdON9ovBY968W_WO4qikfT9bGeP06J3wnJg"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Rings</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?category=bangles">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Bangles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXQgqJeMBw-vCDq3O1M-ix-rVeYlkN2pzSItppjGgpaZx6unZF6ZhChSLX8DfbUXyZHZIuJwAsvGckIcJOXshuxVcJgaJQ2rDBbGeFaPkySPpf-W1gxXlNWm0IbJsZH5VKvQHW9tvsWTbBk6Ux5nYs0C1qFx7SHU2KejJPNmp6V83Jjx-9Nkvz80v0tcmVnw54ZU5M3gOOnfDx4BIajqO3YtGDg7ssVe4j9NlB3nxeavuJQVEjU1wpw"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Bangles</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=bridal">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Bridal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Bridal</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=temple">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Temple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Temple</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?collection=kundan">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                <img class="category-circle-img w-full h-full object-cover rounded-full" alt="Kundan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw"/>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Kundan</span>
+        </a>
+        <a class="category-circle flex flex-col items-center gap-3 cursor-pointer min-w-[80px]" href="collections.html?tag=bestseller">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/20 p-1 bg-surface-container-high flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">star</span>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-on-surface">Best Sellers</span>
+        </a>
+    </div>
+</section>
+
+<!-- Offer Banner / Flash Sale -->
+<section class="py-8 bg-surface-container-high border-y border-outline-variant/30 px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div>
-            <a class="bg-on-background text-on-primary px-10 py-4 uppercase font-body-md tracking-widest hover:bg-primary transition-colors duration-300 inline-block" href="collections.html">Explore Collection</a>
+            <span class="inline-block bg-primary text-white text-[10px] uppercase tracking-widest px-3 py-1 font-semibold mb-2">Festive Flash Sale</span>
+            <h3 class="font-display-lg text-headline-sm text-on-surface">Flat 50% Off On Kundan & American Diamond Sets</h3>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="bg-white border border-outline-variant/50 px-4 py-2 text-center shadow-xs">
+                <span class="block font-bold text-primary">10% Off</span>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant font-semibold">Code: WELCOME10</span>
+            </div>
+            <a href="collections.html?tag=offers" class="bg-on-background text-white px-8 py-3 uppercase font-label-sm tracking-widest hover:bg-primary transition-colors text-sm font-semibold">Shop Flash Sale</a>
         </div>
     </div>
 </section>
 
-<!-- Shop By Category -->
-<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-    <div class="flex justify-between items-end mb-16">
+<!-- Best Seller Horizontal Carousel Section -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+    <div class="flex justify-between items-baseline mb-12">
         <div>
-            <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-4 block">Categories</span>
-            <h2 class="font-display-lg text-headline-md">Curated for Elegance</h2>
+            <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Top Rated</span>
+            <h2 class="font-display-lg text-headline-md">Our Best Sellers</h2>
         </div>
-        <a class="font-body-md text-primary border-b border-primary hover:text-on-surface-variant transition-colors" href="collections.html">View All Categories</a>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-        <!-- Earrings -->
-        <a class="luxury-card group cursor-pointer block" href="collections.html?category=earrings">
-            <div class="aspect-[3/4] overflow-hidden mb-6">
-                <img class="zoom-img w-full h-full object-cover transition-transform duration-700" alt="Close-up studio shot of exquisite 22k gold jhumka earrings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKADJtdQiqERuDX7Cne7wWvVHYuHi46nuZ2G1JDjsk3Z7Zs4qkrNcmRAqzAJ6ElJijjAtupUQBKzantfq2IpPr7bl9HmkqmYEuYLAIY3HsnIJd3DCq0JAOextZTxnT8_GMX9k5tEvY12e49ocsKmprN4tX7zBrYMq7lEZjxMaaeNgztLlESq7xsY0AfU6ATFVOZAPyuHcUd72U7-TrEZV2r-fSlsXV10un3q2YjL_zl3_6GfS0Ebie4w"/>
-            </div>
-            <h3 class="font-display-lg text-headline-sm text-center">Earrings</h3>
-        </a>
-        <!-- Necklaces -->
-        <a class="luxury-card group cursor-pointer block" href="collections.html?category=necklaces">
-            <div class="aspect-[3/4] overflow-hidden mb-6">
-                <img class="zoom-img w-full h-full object-cover transition-transform duration-700" alt="A luxurious gold necklace with intricate temple art motifs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLdTCTvttsD3cRSlNb1Oygz19YGYniUWMJJYQ6v7_7KBsJgq8NXV4w-zmQ5-Tr1MslqqoTHNLA2dTGqr_RytR1hOZ4pwhLHliJ0OL1jDdZEMysUZeTwU5gS3O0DG_mH7UNjAKxvyMmNxkH41xKAfgCzqVdQ_cF1G6wn0joUka87IZTZYXqjAsLi_1LrurfzRNx3t9dGIPSUzcBmx-OKnl3kAQ4ZG5EXeUrXg1Jt_Uo0cSYrYMDjqQSQ"/>
-            </div>
-            <h3 class="font-display-lg text-headline-sm text-center">Necklaces</h3>
-        </a>
-        <!-- Bangles -->
-        <a class="luxury-card group cursor-pointer block" href="collections.html?category=bangles">
-            <div class="aspect-[3/4] overflow-hidden mb-6">
-                <img class="zoom-img w-full h-full object-cover transition-transform duration-700" alt="A stack of traditional gold bangles with kundan settings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXQgqJeMBw-vCDq3O1M-ix-rVeYlkN2pzSItppjGgpaZx6unZF6ZhChSLX8DfbUXyZHZIuJwAsvGckIcJOXshuxVcJgaJQ2rDBbGeFaPkySPpf-W1gxXlNWm0IbJsZH5VKvQHW9tvsWTbBk6Ux5nYs0C1qFx7SHU2KejJPNmp6V83Jjx-9Nkvz80v0tcmVnw54ZU5M3gOOnfDx4BIajqO3YtGDg7ssVe4j9NlB3nxeavuJQVEjU1wpw"/>
-            </div>
-            <h3 class="font-display-lg text-headline-sm text-center">Bangles</h3>
-        </a>
-        <!-- Rings -->
-        <a class="luxury-card group cursor-pointer block" href="collections.html?category=rings">
-            <div class="aspect-[3/4] overflow-hidden mb-6">
-                <img class="zoom-img w-full h-full object-cover transition-transform duration-700" alt="A stunning statement gold ring with a central emerald and surrounding diamonds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1S7okuzyBArf0olVWM1ctL0WxI5amwQwAEtjw6bVcNqxIr3uEtmy2A5qY6d9WrUDeNPUVBPw4Dg8MI7uusHA3Fu5rEPesb9pSY3cY7LyPYNKdv0--QkXgpDsnbdwb1upUScSaUOdomaLwe4ogR5eVkaxKg7iSxh65jSzju2q8TYkue181sYiup3FawqTgBdpo-mrZBBzjfJtn5rbB2lXdON9ovBY968W_WO4qikfT9bGeP06J3wnJg"/>
-            </div>
-            <h3 class="font-display-lg text-headline-sm text-center">Rings</h3>
-        </a>
-    </div>
-</section>
-
-<!-- Trending Collections - Bento Grid -->
-<section class="bg-surface-container py-16 md:py-section-gap">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <h2 class="font-display-lg text-headline-md text-center mb-16">Trending Collections</h2>
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-gutter h-auto md:h-[800px]">
-            <!-- Bridal -->
-            <div class="md:col-span-3 md:row-span-2 relative group overflow-hidden cursor-pointer h-[400px] md:h-auto" onclick="window.location.href='collections.html?collection=bridal'">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="A grand bridal jewellery set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                <div class="absolute bottom-10 left-10 text-white">
-                    <h4 class="font-display-lg text-headline-md mb-2">The Bridal Edit</h4>
-                    <p class="font-body-md uppercase tracking-widest border-b border-white inline-block">Shop Now</p>
-                </div>
-            </div>
-            <!-- Temple -->
-            <div class="md:col-span-3 md:row-span-1 relative group overflow-hidden cursor-pointer h-[250px] md:h-auto" onclick="window.location.href='collections.html?collection=temple'">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Traditional South Indian temple jewellery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
-                <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors"></div>
-                <div class="absolute bottom-8 left-8 text-white">
-                    <h4 class="font-display-lg text-headline-sm">Temple Art</h4>
-                </div>
-            </div>
-            <!-- Kundan -->
-            <div class="md:col-span-3 md:row-span-1 relative group overflow-hidden cursor-pointer h-[250px] md:h-auto" onclick="window.location.href='collections.html?collection=kundan'">
-                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Close-up of Kundan jewellery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw"/>
-                <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors"></div>
-                <div class="absolute bottom-8 left-8 text-white">
-                    <h4 class="font-display-lg text-headline-sm">Kundan Crafts</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Best Sellers - Carousel -->
-<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-    <div class="flex justify-between items-center mb-16">
-        <h2 class="font-display-lg text-headline-md">Best Sellers</h2>
         <div class="flex space-x-4">
-            <button id="carousel-prev" class="w-12 h-12 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
-                <span class="material-symbols-outlined">chevron_left</span>
+            <button id="best-prev" class="w-10 h-10 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
+                <span class="material-symbols-outlined text-sm">chevron_left</span>
             </button>
-            <button id="carousel-next" class="w-12 h-12 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
-                <span class="material-symbols-outlined">chevron_right</span>
+            <button id="best-next" class="w-10 h-10 flex items-center justify-center border border-outline hover:bg-primary hover:text-white transition-colors duration-300">
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
             </button>
         </div>
     </div>
-    <div id="carousel-container" class="flex space-x-gutter overflow-x-auto no-scrollbar pb-10">
-        <!-- Product 1 ( Noor Mahal Link ) -->
-        <div class="min-w-[300px] md:min-w-[320px] flex-shrink-0 group cursor-pointer" onclick="window.location.href='product-detail.html'">
-            <div class="aspect-square bg-surface-container overflow-hidden mb-6 relative">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="The Noor Mahal Necklace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZg48N-oHGT_gF1UT4teb-Shhjdo3bc41o-eBLg6yeQAY9mys4TfZjWS0Fa6DwX3WTdTWRBmIXaaKVOg-MGdlRsjp6tMpPMIaTUQ5AfiSOZYVKcIZxYlR15Ti9FsMbCD2cOEYWBir4bc2eZG6y4ySjoHRZJugkTY4F3snut9c_6YOjBAxFjAluWwkdhG46CeGCa8gIygGBQlQbTTWLH6-2hl4mJM_VgqqX9bdbPEm64FiKE4sSc5YEuQ"/>
-                <button class="absolute bottom-4 right-4 bg-white/90 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Added to wishlist!');">
-                    <span class="material-symbols-outlined text-primary">favorite</span>
-                </button>
-            </div>
-            <h4 class="font-display-lg text-headline-sm text-center mb-2">The Noor Mahal Necklace</h4>
-            <p class="font-body-md text-primary text-center">₹1,45,000</p>
-        </div>
-        <!-- Product 2 -->
-        <div class="min-w-[300px] md:min-w-[320px] flex-shrink-0 group cursor-pointer" onclick="window.location.href='collections.html'">
-            <div class="aspect-square bg-surface-container overflow-hidden mb-6 relative">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modern Hoops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQhGv48nLePn7lHw-9FTKfw35TIKBvxCbGp8DYRDCpWMOtnnZ_n-xJ-4xfrhJLGgclEtXHsD2ORfhQtI-x2rHUJbaw-fxzTA_kh3I7H1dwnhilyWOjBW24zv3WgL5JdRt-VzBQ-JRR7pT4wtmS8_BSSfPVro1_bsNlJSXvhQTTMG6nihP5E2jkvxXOqCmNuo31w9exaB-XpqUWnzix7xm-sWttTUBRrrCWUCnJ92qp72rvl-lFBmrlA"/>
-                <button class="absolute bottom-4 right-4 bg-white/90 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Added to wishlist!');">
-                    <span class="material-symbols-outlined text-primary">favorite</span>
-                </button>
-            </div>
-            <h4 class="font-display-lg text-headline-sm text-center mb-2">Modern Hoops</h4>
-            <p class="font-body-md text-primary text-center">₹8,999</p>
-        </div>
-        <!-- Product 3 -->
-        <div class="min-w-[300px] md:min-w-[320px] flex-shrink-0 group cursor-pointer" onclick="window.location.href='collections.html'">
-            <div class="aspect-square bg-surface-container overflow-hidden mb-6 relative">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Geometric Gold Ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxFObu3E-g-KBzvVVy6EnT0qz6XIRFQjTwya3BK2m0Ewt1fsdlgYXoRAWUh0Z4_kya8nC2pSEckhDUf4T8D0P_OrPyab210HD2HNiHY4EybTXViTVayh0di_9mqb9qrGgu5g6OKCaOsWrq255z2HHFGMieZgmhpYzq4fdadALuAsCOg65zN6T_6GSEpHkdwJYn0pkh2mkYwmUmodo8o0hQciJlPAUB2ch1Q8ghfKhQvJpVV7Ag6qmTJg"/>
-                <button class="absolute bottom-4 right-4 bg-white/90 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Added to wishlist!');">
-                    <span class="material-symbols-outlined text-primary">favorite</span>
-                </button>
-            </div>
-            <h4 class="font-display-lg text-headline-sm text-center mb-2">Geometric Gold Ring</h4>
-            <p class="font-body-md text-primary text-center">₹15,200</p>
-        </div>
-        <!-- Product 4 -->
-        <div class="min-w-[300px] md:min-w-[320px] flex-shrink-0 group cursor-pointer" onclick="window.location.href='collections.html'">
-            <div class="aspect-square bg-surface-container overflow-hidden mb-6 relative">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Engraved Bangles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnT6j4g-8x2qIvmGZZckMtwyY5rwfMAjXd-YRQeSZby9nOoIrjuvujNbjeo7mImBnyLtvBLjYG-W3SAqm2q_q75faLtBZGN4iD32H_4WY7phe_3m4aThJ7bsXC4zLtX-43DMuB_72hwc4wjskJlw3figVSoS39BR5m9rSmT5OzqRkirNp6Gbj3nG-KEQYOI5ui3gVwoKlBmb-CpU8JVWX-EfovniPvZJdumDhbdeuU-6XZGB1ym5PxtA"/>
-                <button class="absolute bottom-4 right-4 bg-white/90 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" onclick="event.stopPropagation(); alert('Added to wishlist!');">
-                    <span class="material-symbols-outlined text-primary">favorite</span>
-                </button>
-            </div>
-            <h4 class="font-display-lg text-headline-sm text-center mb-2">Engraved Bangles</h4>
-            <p class="font-body-md text-primary text-center">₹42,000</p>
-        </div>
+    <!-- 4 products per row desktop, 2 per row mobile -->
+    <div id="best-sellers-carousel" class="flex space-x-gutter overflow-x-auto no-scrollbar pb-10">
+        <!-- Dynamically loaded bestsellers -->
     </div>
 </section>
 
 <!-- Shop By Budget -->
-<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-    <h2 class="font-display-lg text-headline-md text-center mb-16">Elegance in Every Budget</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
-        <div class="border border-outline-variant p-6 md:p-10 text-center hover:border-primary transition-colors cursor-pointer group" onclick="window.location.href='collections.html?price_max=10000'">
-            <p class="font-body-md uppercase tracking-[0.2em] mb-4 text-on-surface-variant">Under</p>
-            <h5 class="font-display-lg text-display-lg-mobile text-primary mb-6 group-hover:scale-105 transition-transform">₹10,000</h5>
-            <p class="font-body-md text-on-surface">Daily Chic</p>
-        </div>
-        <div class="border border-outline-variant p-6 md:p-10 text-center hover:border-primary transition-colors cursor-pointer group" onclick="window.location.href='collections.html?price_max=25000'">
-            <p class="font-body-md uppercase tracking-[0.2em] mb-4 text-on-surface-variant">Under</p>
-            <h5 class="font-display-lg text-display-lg-mobile text-primary mb-6 group-hover:scale-105 transition-transform">₹25,000</h5>
-            <p class="font-body-md text-on-surface">Gifting Favorites</p>
-        </div>
-        <div class="border border-outline-variant p-6 md:p-10 text-center hover:border-primary transition-colors cursor-pointer group" onclick="window.location.href='collections.html?price_max=50000'">
-            <p class="font-body-md uppercase tracking-[0.2em] mb-4 text-on-surface-variant">Under</p>
-            <h5 class="font-display-lg text-display-lg-mobile text-primary mb-6 group-hover:scale-105 transition-transform">₹50,000</h5>
-            <p class="font-body-md text-on-surface">Statement Pieces</p>
-        </div>
-        <div class="border border-outline-variant p-6 md:p-10 text-center hover:border-primary transition-colors cursor-pointer group" onclick="window.location.href='collections.html?price_min=50000'">
-            <p class="font-body-md uppercase tracking-[0.2em] mb-4 text-on-surface-variant">Over</p>
-            <h5 class="font-display-lg text-display-lg-mobile text-primary mb-6 group-hover:scale-105 transition-transform">₹50,000</h5>
-            <p class="font-body-md text-on-surface">Premium Heritage</p>
-        </div>
-    </div>
-</section>
-
-<!-- Why Golden Heera -->
-<section class="bg-surface-container-low py-16 md:py-section-gap">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
-        <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-primary mb-6">verified</span>
-            <h4 class="font-headline-sm mb-4">Premium Quality</h4>
-            <p class="font-body-md text-on-surface-variant">Crafted with 22k gold and hallmarked for absolute purity and trust.</p>
-        </div>
-        <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-primary mb-6">lock</span>
-            <h4 class="font-headline-sm mb-4">Secure Payments</h4>
-            <p class="font-body-md text-on-surface-variant">100% encrypted transactions for a safe and seamless shopping experience.</p>
-        </div>
-        <div class="text-center">
-            <span class="material-symbols-outlined text-5xl text-primary mb-6">local_shipping</span>
-            <h4 class="font-headline-sm mb-4">Insured Shipping</h4>
-            <p class="font-body-md text-on-surface-variant">Fully insured delivery right to your doorstep with tracking enabled.</p>
+<section class="py-16 bg-[#faf9f9] px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20">
+    <div class="max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-md text-center mb-16">Shop By Budget</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-gutter">
+            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=499">
+                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
+                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹499</h5>
+                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            </a>
+            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=999">
+                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
+                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹999</h5>
+                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            </a>
+            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=1499">
+                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
+                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹1,499</h5>
+                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            </a>
+            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_max=2499">
+                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
+                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹2,499</h5>
+                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            </a>
+            <a class="border border-outline-variant/60 bg-white p-6 text-center hover:border-primary transition-colors cursor-pointer group shadow-xs block" href="collections.html?price_min=2499">
+                <span class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Designs</span>
+                <h5 class="font-display-lg text-xl md:text-2xl text-primary mb-3 font-bold group-hover:scale-105 transition-transform">Under ₹4,999</h5>
+                <span class="text-[10px] uppercase font-semibold text-on-surface-variant border-b border-primary/20 pb-0.5">Explore</span>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- Instagram Gallery -->
-<section class="py-16 md:py-section-gap">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center mb-16">
-        <h2 class="font-display-lg text-headline-md mb-4">Follow Our Journey</h2>
-        <p class="font-body-md text-on-surface-variant">@GoldenHeeraLuxury</p>
+<!-- Just Dropped (New Arrivals) Section -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-16">
+        <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Just Dropped</span>
+        <h2 class="font-display-lg text-headline-md">New Arrivals</h2>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto md:h-72 lg:h-96">
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfFkJQLeEkQt7x3xaomYNAafZ24qE0aWfGnzrv9AOV-C57MzOch5ybKribHnfBvDX4QhOLAJcdo7n_iN9BWpJVzlvFhglVEn7ZvULqEm-EuGhZzQjDRe4l-DPRe15SadH8xrGth1ZjV4e625oVGxzK8PE0qTh3ZmPt-qchxIpb528xREvUrh1wanaVAFC2DzLZe4sKBk5RlB4BhOVzOeJE_2q-Mvd2NuDxf24xyPehnbEeJdsnOe0FKQ"/>
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP6llYXvDu87SfCrECyrlCcoKy5yQJNBVKKMqgddIFu-dq_MQHFnqQjDep-8hfkdsKC4QsnLwNW3RO8nk7tvEq81iQAl43YY8-WMpHS2dmJad0UTnE_s1MooqZGsUPnsm9rfFwhT62Rydd7UfCYbUNs7SrAy7s41e0NuCnKcpVafweatG7h3AkYl3e5fll6NFH7BXXjcvum2A0H-DYK1DA9bVdfgd-wLS1vdmRSvGxJ-apj6yvog3-pg"/>
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBghCZSNk1KpGSxO1jdz3dtWfIN3leBtLu8Gy17Yb7FseKZ2sJK_9Fnl3PepcdJPyZ1bNkKPrMICyBP8kGzhPHUA4Kuoxlowkm0SXxR3RmQv6GQ-8ywypNI7g-X74uiaaHGL-BYeTSsVbcCr0BvirydylHH8G4-2iAE2Yc-_Kpt2PfG7ymxHkh1JHgyEF_OwsdK1c-4s2d1piHE7x_HfDriQhsKjGA39lztBRgIhOd8IeVy4AUW2TMylw"/>
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbCCk3xSoaBzH3uz2MQ1r7wu9fnHROvN69Mk-0iiIf1nPAigxo5PRBRsH8s-tYzNP1nCVmnkUmuyqScrLPy3ctMQUbTOBBDXoz3xf6pTtu0uwfVzaG6TArK9EYNVuRs_gLhUXD0_eUfa7AA4HM_-I2a1-HHp0VswHKYVYcYGk98gq4rEhfjpl1-6rhbwFY_lwE5NCxzt0Q7fDVYRa9uDVLmg7W5DL-ySr746DYx_ZbkBZvKAqlr08FNw"/>
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCruKOO-x11I_NiytX2_QkhQVMbtv8977jWWx5zf_vqeK_NHIIZK3qnWxbL4ZWEIFdPFNBdK5hln-bam6d2Holq5aM_kUX-GE6oi_QMAzzP6U1QO9Wr2ZoSCLNQo4Rx-35qY8Du5ucirjh2R6LnEoqJObsb4SXqTXN8wAxrTa4tQ8T9Rke_fen2CmR1t3AyOPqTD_z9rrcl2FxI1n8bmSbE36zwzvK1IDR2Sag6mRfrAJeHFzECcfTKNg"/>
-        <img class="w-full h-48 md:h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Instagram post" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ4ZsTBHB6LCsUz7BxpAj8EpXleRJdzYWHd7ZlVMYNZ2Asv2MriaJgUFoDraGJYXMB4cwX_hgL8keVv2kPBJogTeLvrzT5QZXmk4sR0feKYJKZPGGXEcqc9iwG1ntogXql1p4onThPh3uurdyfFM2BKszTFPn4tATRhz_mRvyE-BzHJRlw2ugUIHDkS33BdtPTPnKsDNxxOwVKmmczvcrahw1u5M2rGnsRb7GjSlGOQx6xjHxm8F-CFQ"/>
+    <!-- 4 columns grid for high density -->
+    <div id="new-arrivals-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-gutter gap-y-16">
+        <!-- Dynamically loaded new arrivals -->
     </div>
-</section>
-
-<!-- Newsletter -->
-<section class="py-16 md:py-section-gap bg-on-background text-on-primary">
-    <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-        <h2 class="font-display-lg text-headline-md mb-6">Be the First to Know</h2>
-        <p class="font-body-lg text-body-lg mb-10 text-on-primary/70">Subscribe to receive updates on new collections and exclusive previews.</p>
-        <form class="max-w-xl mx-auto flex flex-col md:flex-row gap-4" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
-            <input class="flex-grow bg-transparent border-b border-white py-4 px-2 focus:outline-none focus:border-primary transition-colors text-white placeholder:text-white/40 font-body-md" placeholder="YOUR EMAIL ADDRESS" type="email" required/>
-            <button class="bg-primary text-white px-10 py-4 uppercase font-body-md tracking-widest hover:bg-white hover:text-on-background transition-colors" type="submit">Join Now</button>
-        </form>
+    <div class="text-center mt-16">
+        <a href="collections.html?tag=new" class="border border-primary text-primary px-10 py-4 uppercase font-label-sm tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block font-semibold">View All New Arrivals</a>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-surface-container border-t border-outline-variant">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
-        <div class="md:col-span-1">
-            <h3 class="font-display-lg text-headline-sm text-primary mb-6">Golden Heera</h3>
-            <p class="font-body-md text-on-surface-variant">Defining modern heritage through exquisite gold craftsmanship since 1984.</p>
+<!-- Collections Showcase - Visual Grid -->
+<section class="py-16 bg-surface-container/40 px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20">
+    <div class="max-w-container-max mx-auto">
+        <h2 class="font-display-lg text-headline-md text-center mb-16">Explore Curated Collections</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Bridal -->
+            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=bridal">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bridal Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlD7HIvSM8CTLilPKzCm3OTql9hDjX_GFiyFlnt5OWRDIw446CCiksXMim4vVKxMCkW9PkDZfdGTYuLn-BI1GqJ8SGpnuWyVVgIpIhDq3-qowJ5MaBeQQqQ5rOMwSRJEFw1eUnPZu0a3HGxFe2H4owRg5-toVbouKCnUwzjymItgJ4PnXWQEHhSs1njO0TLbfIcyfZDYXRJiE5KZ9V2CtBfE7AfZYMIsLOEk5GT-Zj934CXsT6I3yZQ"/>
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Bridal Collection</h4>
+                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
+                </div>
+            </a>
+            <!-- Temple -->
+            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=temple">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Temple Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVq7JarC1mMsqA7iGxhNQbc4SP3L2y5fUpcts0g4yOUrHLBQOhyLSDjCnzCdzCRI5JNo-F4O_ajOMljhUhE5nocgm7kFunG7Fn5PnjrV8OszBD6xA5CfOlDADud32U2lZT2prnGZ2d36pyzJEwQ5wXWD3WKpqRNaN40IP5LBBGxdc_uTB81o_xZGxnh0XdFeqbt2aLiK_XB_1Uq4Ni_p9EGZUhs15g-HbP83BcdlN0BEHGoQ87vXMXNw"/>
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Temple Art</h4>
+                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
+                </div>
+            </a>
+            <!-- Kundan -->
+            <a class="relative h-96 group overflow-hidden block" href="collections.html?collection=kundan">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Kundan Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiHBhrMYj2U4AiIaDFP0appsnfaDkuFq6tUSV_YoyNO-mjhqIrjN_Iq9olk9-BE4Pt2rG3O19l-NFNKrFME9zzFT8O8_psfxLTosx9ImIyOOs-KIx4L91TyDzo5JauXtGxSFDxx1WrRXunaY1fv3rPzhMMEutH_3PY-1ANSSwIuUsdr7XNn1l6XUzQydLmzJsNXenrfqpEgMWap-Eqa-4Ox_jXOAISrqzplq6tSowkVeqUdCxpexGIxw"/>
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <h4 class="font-display-lg text-headline-sm mb-1 font-bold">Kundan Crafts</h4>
+                    <span class="text-xs uppercase tracking-widest border-b border-white pb-0.5">Explore Atelier</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof / Customer Reviews Showcase -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-16">
+        <span class="text-primary font-label-sm uppercase tracking-[0.2em] mb-2 block">Our Customers Say</span>
+        <h2 class="font-display-lg text-headline-md">Trusted by 10,000+ Happy Buyers</h2>
+        <div class="flex items-center justify-center gap-1.5 mt-4 text-primary">
+            <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-base font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="text-xs font-bold text-on-surface ml-2">4.8 (1,247 Reviews)</span>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
+            <div class="flex text-primary mb-4">
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+                "Absolutely beautiful Kundan earrings! Looks exactly like real gold and the finish is premium. Can't believe the price was under ₹900. Recommending this to all my friends!"
+            </p>
+            <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Pooja Sharma</span>
+            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+        </div>
+        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
+            <div class="flex text-primary mb-4">
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+                "The American Diamond Choker was the highlight of my bridesmaid look. It glistens beautifully under lights and looks extremely expensive. Highly satisfied."
+            </p>
+            <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Anjali Menon</span>
+            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+        </div>
+        <div class="bg-white border border-outline-variant/40 p-8 shadow-xs">
+            <div class="flex text-primary mb-4">
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant italic mb-6 leading-relaxed">
+                "Got the Temple Jhumkas in Bangalore. The antique finish looks highly authentic. Packed very safely in a luxury box with double-wrap."
+            </p>
+            <span class="block font-bold text-xs uppercase tracking-wider text-on-surface">Deepika R.</span>
+            <span class="text-[10px] text-on-surface-variant/70 uppercase">Verified Purchase</span>
+        </div>
+    </div>
+</section>
+
+<!-- Homepage Trust Section -->
+<section class="py-12 bg-surface-container-low px-margin-mobile md:px-margin-desktop text-center border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div>
+            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">10,000+</h4>
+            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Happy Customers</span>
         </div>
         <div>
-            <h4 class="font-label-sm uppercase tracking-widest mb-6 text-on-surface">Shopping</h4>
-            <ul class="space-y-4 font-body-md text-on-surface-variant">
-                <li><a class="hover:text-primary transition-colors" href="collections.html?category=earrings">Earrings</a></li>
-                <li><a class="hover:text-primary transition-colors" href="collections.html?category=necklaces">Necklaces</a></li>
-                <li><a class="hover:text-primary transition-colors" href="collections.html?category=bangles">Bangles</a></li>
-                <li><a class="hover:text-primary transition-colors" href="collections.html?category=rings">Rings</a></li>
-            </ul>
+            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">5,000+</h4>
+            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Stunning Designs</span>
         </div>
         <div>
-            <h4 class="font-label-sm uppercase tracking-widest mb-6 text-on-surface">Company</h4>
-            <ul class="space-y-4 font-body-md text-on-surface-variant">
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Our story page coming soon!')">About Us</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Sustainability policy details coming soon!')">Sustainability</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Contact form coming soon!')">Contact Us</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Terms page coming soon!')">Terms of Service</a></li>
-            </ul>
+            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">100%</h4>
+            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Secure Payments</span>
         </div>
         <div>
-            <h4 class="font-label-sm uppercase tracking-widest mb-6 text-on-surface">Customer Care</h4>
-            <ul class="space-y-4 font-body-md text-on-surface-variant">
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Shipping policy details coming soon!')">Shipping &amp; Returns</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Privacy policy coming soon!')">Privacy Policy</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('FAQs coming soon!')">FAQ</a></li>
-                <li><a class="hover:text-primary transition-colors" href="#" onclick="alert('Store Locator map coming soon!')">Store Locator</a></li>
-            </ul>
+            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">Free</h4>
+            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">Shipping above ₹999</span>
+        </div>
+        <div>
+            <h4 class="font-display-lg text-2xl md:text-3xl text-primary font-bold">Easy</h4>
+            <span class="text-xs uppercase font-semibold text-on-surface-variant mt-1 block">7-Day Returns</span>
         </div>
     </div>
-    <div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="font-body-md text-on-surface-variant">© 2024 Golden Heera Luxury Jewellery. All Rights Reserved.</p>
-        <div class="flex space-x-6">
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">contact_support</span></a>
-        </div>
-    </div>
-</footer>
+</section>
 
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="fixed bottom-0 w-full flex justify-around items-center py-3 bg-white z-50 border-t border-outline-variant md:hidden shadow-lg">
-    <a class="flex flex-col items-center text-primary font-bold" href="index.html">
-        <span class="material-symbols-outlined">storefront</span>
-        <span class="font-label-sm text-label-sm">Shop</span>
-    </a>
-    <a class="flex flex-col items-center text-secondary" href="#" onclick="alert('Wishlist page coming soon!')">
-        <span class="material-symbols-outlined">favorite</span>
-        <span class="font-label-sm text-label-sm">Wishlist</span>
-    </a>
-    <a class="flex flex-col items-center text-secondary relative" href="cart.html">
-        <span class="material-symbols-outlined">shopping_cart</span>
-        <span class="font-label-sm text-label-sm">Cart</span>
-        <span class="absolute top-0 right-2 bg-primary text-white text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold">2</span>
-    </a>
-    <a class="flex flex-col items-center text-secondary" href="#" onclick="alert('Profile section coming soon!')">
-        <span class="material-symbols-outlined">person</span>
-        <span class="font-label-sm text-label-sm">Profile</span>
-    </a>
-</nav>
+<!-- Global Footer placeholder -->
+<div id="global-footer"></div>
 
-<!-- Floating WhatsApp Button -->
-<a class="fixed bottom-20 md:bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center" href="https://wa.me/1234567890" target="_blank">
-    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.852.449-1.271.608-1.445.159-.175.348-.218.463-.218.116 0 .231.001.334.005.109.004.254-.041.398.305.144.346.491 1.2.534 1.288.043.087.072.188.014.305-.058.116-.087.188-.173.289-.087.101-.183.226-.261.305-.087.087-.179.181-.077.355.101.174.451.743.968 1.203.665.592 1.226.776 1.399.863.174.087.276.072.376-.043.101-.116.434-.506.549-.68.116-.174.231-.144.39-.087.158.058 1.013.477 1.187.564.174.087.289.13.332.202.045.072.045.419-.099.824z"></path>
-        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.167c-1.808 0-3.531-.472-5.029-1.3l-5.304 1.392 1.417-5.176c-.902-1.503-1.384-3.235-1.384-5.083 0-5.349 4.351-9.7 9.7-9.7s9.7 4.351 9.7 9.7-4.351 9.7-9.7 9.7z"></path>
-    </svg>
-</a>
-
+<script src="products.js"></script>
+<script src="app.js"></script>
 <script>
-    // Subtle scroll effects for the TopAppBar
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('shadow-sm');
-            header.classList.remove('py-6');
-            header.classList.add('py-4');
-        } else {
-            header.classList.remove('shadow-sm');
-            header.classList.remove('py-4');
-            header.classList.add('py-6');
+    // Page specific loading logic
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load Bestsellers into horizontal carousel
+        const bestSellers = PRODUCTS_DATA.filter(p => p.isBestseller);
+        const bestContainer = document.getElementById('best-sellers-carousel');
+        if (bestContainer) {
+            bestSellers.forEach(p => {
+                const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+                const card = document.createElement('div');
+                card.className = 'min-w-[220px] md:min-w-[280px] flex-shrink-0 bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow';
+                card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
+                card.innerHTML = `
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                        <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
+                        
+                        <!-- Badges -->
+                        <span class="absolute top-2 left-2 bg-primary text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">Bestseller</span>
+                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1 mb-1">
+                            <span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="text-[10px] font-bold text-on-surface-variant">${p.rating} (${p.reviewsCount})</span>
+                        </div>
+                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                            <span class="text-[10px] text-primary font-bold">${discount}% OFF</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-semibold">
+                            <span class="material-symbols-outlined text-xs">shopping_cart</span> Add
+                        </button>
+                        <button onclick="event.stopPropagation(); triggerQuickView(${p.id})" class="w-full border border-primary text-primary py-1.5 text-[10px] uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all text-center font-semibold">
+                            Quick View
+                        </button>
+                    </div>
+                `;
+                bestContainer.appendChild(card);
+            });
+            
+            // Set up wishlist filled styles initially
+            const wishlist = getWishlist();
+            wishlist.forEach(id => {
+                const btn = document.querySelector(`[data-wishlist-id="${id}"]`);
+                if (btn) btn.querySelector('span').style.fontVariationSettings = "'FILL' 1";
+            });
+        }
+
+        // Bestsellers carousel navigation
+        const carousel = document.getElementById('best-sellers-carousel');
+        document.getElementById('best-next')?.addEventListener('click', () => {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        document.getElementById('best-prev')?.addEventListener('click', () => {
+            carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        // Load New Arrivals
+        const newArrivals = PRODUCTS_DATA.filter(p => p.isNew).slice(0, 8);
+        const newGrid = document.getElementById('new-arrivals-grid');
+        if (newGrid) {
+            newArrivals.forEach(p => {
+                const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+                const card = document.createElement('div');
+                card.className = 'bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow';
+                card.setAttribute('onclick', `window.location.href="product-detail.html?product_id=${p.id}"`);
+                card.innerHTML = `
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                        <img class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" src="${p.image}" alt="${p.name}"/>
+                        <img class="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" src="${p.hoverImage}" alt="${p.name} Alternate"/>
+                        
+                        <!-- Badges -->
+                        <span class="absolute top-2 left-2 bg-on-background text-white text-[9px] px-2 py-0.5 uppercase font-bold font-label-sm">New</span>
+                        <button data-wishlist-id="${p.id}" class="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full text-primary shadow-xs hover:scale-105 transition-transform" onclick="event.stopPropagation(); toggleWishlist(${p.id})">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1 mb-1">
+                            <span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="text-[10px] font-bold text-on-surface-variant">${p.rating} (${p.reviewsCount})</span>
+                        </div>
+                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                            <span class="text-[10px] text-primary font-bold">${discount}% OFF</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart(${p.id})" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm tracking-widest hover:opacity-90 flex items-center justify-center gap-1 font-semibold">
+                            <span class="material-symbols-outlined text-xs">shopping_cart</span> Add
+                        </button>
+                        <button onclick="event.stopPropagation(); triggerQuickView(${p.id})" class="w-full border border-primary text-primary py-1.5 text-[10px] uppercase font-label-sm tracking-widest hover:bg-primary/5 transition-all text-center font-semibold">
+                            Quick View
+                        </button>
+                    </div>
+                `;
+                newGrid.appendChild(card);
+            });
+            
+            // Set up wishlist filled styles initially for new arrivals too
+            const wishlist = getWishlist();
+            wishlist.forEach(id => {
+                const btn = document.querySelector(`[data-wishlist-id="${id}"]`);
+                if (btn) btn.querySelector('span').style.fontVariationSettings = "'FILL' 1";
+            });
         }
     });
-
-    // Simple carousel interaction logic
-    const carousel = document.getElementById('carousel-container');
-    const nextBtn = document.getElementById('carousel-next');
-    const prevBtn = document.getElementById('carousel-prev');
-
-    if (nextBtn && prevBtn && carousel) {
-        nextBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: 340, behavior: 'smooth' });
-        });
-        prevBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: -340, behavior: 'smooth' });
-        });
-    }
 </script>
 </body>
 </html>
