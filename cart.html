@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Shopping Cart | Golden Heera Premium Jewellery</title>
+    <title>Shopping Cart | Golden Heera Fashion Jewellery</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -12,124 +12,166 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         .luxury-shadow {
-            box-shadow: 0px 20px 40px rgba(28, 28, 28, 0.05);
+            box-shadow: 0 10px 30px -10px rgba(123, 89, 0, 0.08);
+        }
+        .progress-bar-shine {
+            background: linear-gradient(
+                90deg,
+                rgba(123, 89, 0, 1) 0%,
+                rgba(200, 155, 60, 1) 50%,
+                rgba(123, 89, 0, 1) 100__
+            );
+            background-size: 200% 100%;
+            animation: shine 2s linear infinite;
+        }
+        @keyframes shine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .coupon-chip {
+            transition: all 0.2s ease;
+        }
+        .coupon-chip:hover {
+            border-color: #7b5900;
+            background-color: rgba(123, 89, 0, 0.05);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[120px] md:pb-0">
 
 <!-- Global Header placeholder -->
 <div id="global-header"></div>
 
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<main class="max-w-[1400px] mx-auto px-margin-mobile md:px-margin-desktop py-10">
     
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center space-x-2 mb-6 text-[10px] font-label-sm text-secondary uppercase tracking-widest">
+        <a class="hover:text-primary" href="index.html">Home</a>
+        <span class="material-symbols-outlined text-[9px]">chevron_right</span>
+        <span class="text-primary font-bold">Shopping Cart</span>
+    </nav>
+
     <!-- Page Title -->
-    <header class="mb-10 text-center md:text-left">
-        <h1 class="font-headline-md text-headline-md font-bold mb-2">Your Curated Collection</h1>
-        <p class="text-on-surface-variant font-body-md text-sm">Refined imitation and fashion jewellery pieces selected for you.</p>
+    <header class="mb-8">
+        <h1 class="font-display-lg text-headline-md font-bold mb-1 text-on-surface">Your Curated Collection</h1>
+        <p class="text-on-surface-variant text-xs font-body-md">Refined fashion & imitation jewellery pieces selected for you.</p>
     </header>
 
-    <!-- Free Shipping Progress Bar -->
-    <div class="mb-8 bg-white border border-outline-variant/30 p-5 shadow-xs max-w-4xl">
-        <div class="flex justify-between items-center text-xs font-semibold mb-2">
-            <span id="shipping-progress-text" class="text-primary font-label-sm uppercase tracking-wider">Loading progress...</span>
-            <span class="material-symbols-outlined text-primary">local_shipping</span>
-        </div>
-        <div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
-            <div id="shipping-progress-bar" class="bg-primary h-full transition-all duration-500" style="width: 0%;"></div>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-12 items-start">
+    <!-- 65% / 35% Layout -->
+    <div class="flex flex-col lg:flex-row gap-8 items-start">
         
-        <!-- Left Side: Cart Items List -->
-        <div class="lg:col-span-8 space-y-8" id="cart-items-container">
-            <!-- Dynamic elements go here -->
+        <!-- Left Side: Cart Items & Progress (65%) -->
+        <div class="w-full lg:w-[65%] space-y-6">
+            
+            <!-- Free Shipping Progress Bar -->
+            <div class="bg-white border border-outline-variant/30 p-5 shadow-xs luxury-shadow rounded-sm">
+                <div class="flex justify-between items-center text-xs font-semibold mb-3">
+                    <span id="shipping-progress-text" class="text-primary font-label-sm uppercase tracking-wider">Spend ₹250 more to unlock FREE SHIPPING</span>
+                    <span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
+                </div>
+                <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+                    <div id="shipping-progress-bar" class="progress-bar-shine h-full transition-all duration-500 rounded-full" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div class="space-y-4" id="cart-items-container">
+                <!-- Loaded dynamically -->
+            </div>
+            
+            <!-- Cross-Sells Carousel (You May Also Like) -->
+            <section class="border border-outline-variant/20 bg-white p-6 rounded-sm luxury-shadow">
+                <h3 class="font-display-lg text-sm uppercase tracking-widest text-on-surface font-bold mb-6">You May Also Like</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="cart-cross-sells">
+                    <!-- Loaded dynamically -->
+                </div>
+            </section>
         </div>
 
-        <!-- Right Side: Order Summary -->
-        <aside class="lg:col-span-4 sticky top-24">
-            <div class="bg-white p-6 border border-outline-variant/30 shadow-md">
-                <h2 class="font-headline-sm text-headline-sm font-bold mb-6 pb-4 border-b border-outline-variant/20">Order Summary</h2>
+        <!-- Right Side: Order Summary Sticky Card (35%) -->
+        <aside class="w-full lg:w-[35%] sticky top-28">
+            <div class="bg-white p-6 border border-outline-variant/30 shadow-md luxury-shadow rounded-sm">
+                <h2 class="font-headline-sm text-sm uppercase tracking-widest font-bold mb-6 pb-3 border-b border-outline-variant/20">Order Summary</h2>
                 
-                <div class="space-y-4 mb-6">
-                    <div class="flex justify-between items-center text-xs text-on-surface-variant font-semibold">
-                        <span>Subtotal</span>
-                        <span id="summary-subtotal">₹0</span>
+                <div class="space-y-3.5 mb-6 text-xs font-semibold text-on-surface-variant">
+                    <div class="flex justify-between items-center">
+                        <span>Cart Subtotal</span>
+                        <span id="summary-subtotal" class="text-on-surface">₹0</span>
                     </div>
-                    <div class="flex justify-between items-center text-xs text-on-surface-variant font-semibold">
+                    <div class="flex justify-between items-center">
+                        <span>GST (3%)</span>
+                        <span id="summary-tax" class="text-on-surface">₹0</span>
+                    </div>
+                    <div class="flex justify-between items-center">
                         <span>Estimated Shipping</span>
                         <span id="summary-shipping">₹0</span>
                     </div>
-                    <div class="flex justify-between items-center text-xs text-on-surface-variant font-semibold">
-                        <span>GST (3%)</span>
-                        <span id="summary-tax">₹0</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs text-primary font-bold hidden animate-fade-in" id="summary-discount-row">
-                        <span id="applied-coupon-label">Promo Applied</span>
+                    <div class="flex justify-between items-center text-primary font-bold hidden" id="summary-discount-row">
+                        <span id="applied-coupon-label">Promo Discount</span>
                         <span id="summary-discount">-₹0</span>
                     </div>
                 </div>
-                
-                <!-- Coupon Suggestions Widget -->
-                <div class="mb-6 p-4 bg-[#faf7f2] border border-outline-variant/30 space-y-3">
-                    <span class="block text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Recommended Coupons</span>
-                    <div class="flex justify-between items-center bg-white border border-dashed border-primary p-2 text-xs">
-                        <div>
-                            <span class="font-bold text-primary block">GIFT10</span>
-                            <span class="text-[9px] text-on-surface-variant">Save 10% on your cart</span>
-                        </div>
-                        <button onclick="applyCouponCode('GIFT10')" class="text-xs uppercase font-bold text-primary border border-primary px-3 py-1 bg-primary-fixed/20 hover:bg-primary hover:text-white transition-colors">Apply</button>
+
+                <!-- Coupon Box -->
+                <div class="mb-6 border-t border-outline-variant/20 pt-6">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-on-surface-variant mb-2">Apply Coupon Code</label>
+                    <div class="flex gap-2 mb-4">
+                        <input id="promo-input" class="flex-grow bg-surface-container-low border border-outline-variant/60 focus:ring-0 focus:border-primary text-xs px-3 py-2 outline-none uppercase font-bold" placeholder="ENTER CODE"/>
+                        <button onclick="applyManualCoupon()" class="bg-on-background text-white px-6 py-2 uppercase font-label-sm text-xs tracking-widest hover:bg-primary transition-colors">Apply</button>
                     </div>
-                    <div class="flex justify-between items-center bg-white border border-dashed border-primary p-2 text-xs">
-                        <div>
-                            <span class="font-bold text-primary block">FESTIVE20</span>
-                            <span class="text-[9px] text-on-surface-variant">Save 20% on orders above ₹2,000</span>
-                        </div>
-                        <button onclick="applyCouponCode('FESTIVE20')" id="festive20-btn" class="text-xs uppercase font-bold text-primary border border-primary px-3 py-1 bg-primary-fixed/20 hover:bg-primary hover:text-white transition-colors">Apply</button>
+                    
+                    <span class="block text-[9px] font-bold uppercase tracking-widest text-on-surface-variant/70 mb-2">Available Offers</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="applyCouponCode('SAVE10')" class="coupon-chip border border-dashed border-primary/40 px-3 py-1.5 rounded-full text-[10px] font-bold text-primary bg-primary-fixed/10">SAVE10</button>
+                        <button onclick="applyCouponCode('FESTIVE20')" class="coupon-chip border border-dashed border-primary/40 px-3 py-1.5 rounded-full text-[10px] font-bold text-primary bg-primary-fixed/10">FESTIVE20</button>
+                        <button onclick="applyCouponCode('WELCOME15')" class="coupon-chip border border-dashed border-primary/40 px-3 py-1.5 rounded-full text-[10px] font-bold text-primary bg-primary-fixed/10">WELCOME15</button>
                     </div>
                 </div>
 
+                <!-- Total area -->
                 <div class="flex justify-between items-center mb-8 pt-4 border-t border-outline-variant/20">
-                    <span class="font-headline-sm text-headline-sm font-bold">Total</span>
-                    <span class="font-headline-sm text-headline-md text-primary font-bold" id="summary-total">₹0</span>
+                    <span class="text-sm uppercase tracking-wider font-bold">Estimated Total</span>
+                    <span class="text-xl font-bold text-primary" id="summary-total">₹0</span>
                 </div>
                 
-                <button onclick="proceedToCheckout()" class="w-full bg-primary text-white py-4.5 px-6 font-label-sm text-xs uppercase tracking-[0.2em] font-semibold hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg">
+                <button onclick="proceedToCheckout()" class="w-full bg-primary text-white py-4 px-6 font-label-sm text-xs uppercase tracking-[0.2em] font-semibold hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg">
                     Proceed to Checkout
                     <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
                 </button>
                 
-                <div class="mt-6 flex flex-col gap-4 border-t border-outline-variant/10 pt-6 text-xs text-on-surface-variant leading-relaxed">
-                    <div class="flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm font-bold">verified_user</span>
-                        <span>100% Encrypted Transactions. Safe payment via Razorpay.</span>
+                <div class="mt-6 flex flex-col gap-3.5 border-t border-outline-variant/10 pt-6 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant/80">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base font-bold">verified_user</span>
+                        <span>100% Secure SSL Payment</span>
                     </div>
-                    <div class="flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm font-bold">undo</span>
-                        <span>Easy 7-day returns with free reverse-pickup support.</span>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base font-bold">undo</span>
+                        <span>Easy 7-day returns</span>
                     </div>
                 </div>
             </div>
         </aside>
     </div>
 
-    <!-- Cross-Sells (Suggested Items) -->
-    <section class="mt-16 border-t border-outline-variant/20 pt-12">
-        <h3 class="font-display-lg text-headline-sm font-bold text-on-surface mb-8">Complete Your Ensemble (Add-ons)</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter" id="cart-cross-sells">
-            <!-- Loaded dynamically -->
-        </div>
-    </section>
-
     <!-- Recently Viewed Section -->
     <section class="mt-16 border-t border-outline-variant/20 pt-12" id="recent-view-section">
-        <h3 class="text-xs font-label-sm text-secondary uppercase tracking-[0.2em] mb-8 text-center font-bold">Recently Viewed</h3>
-        <div class="flex justify-center gap-8 overflow-x-auto pb-4" id="recent-view-grid">
+        <h3 class="font-display-lg text-sm uppercase tracking-widest text-on-surface font-bold mb-8 text-center">Recently Viewed Products</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter" id="recent-view-grid">
             <!-- Loaded dynamically -->
         </div>
     </section>
 </main>
+
+<!-- Mobile Sticky Checkout Bottom Bar -->
+<div class="fixed bottom-[56px] left-0 w-full bg-white border-t border-outline-variant/30 p-4 shadow-2xl flex items-center justify-between z-[120] md:hidden">
+    <div>
+        <span class="text-[9px] uppercase font-bold text-on-surface-variant block">Total Price</span>
+        <span class="text-base font-bold text-primary" id="mobile-summary-total">₹0</span>
+    </div>
+    <button onclick="proceedToCheckout()" class="bg-primary text-white px-8 py-3 uppercase font-label-sm text-xs tracking-widest font-bold shadow-md flex items-center gap-2">
+        Checkout <span class="material-symbols-outlined text-xs font-bold">arrow_forward</span>
+    </button>
+</div>
 
 <!-- Global Footer placeholder -->
 <div id="global-footer"></div>
@@ -152,10 +194,10 @@
 
         if (cart.length === 0) {
             container.innerHTML = `
-                <div class="py-20 text-center border border-outline-variant/30 bg-white">
-                    <span class="material-symbols-outlined text-5xl text-primary mb-4">shopping_bag</span>
+                <div class="py-20 text-center border border-outline-variant/30 bg-white luxury-shadow rounded-sm">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
                     <p class="font-display-lg text-headline-sm text-on-surface-variant italic mb-6">Your shopping bag is currently empty.</p>
-                    <a href="collections.html" class="bg-primary text-white px-10 py-4 uppercase font-label-sm tracking-widest hover:opacity-90 transition-all inline-block font-semibold">Explore Collections</a>
+                    <a href="collections.html" class="bg-primary text-white px-10 py-4 uppercase font-label-sm text-xs tracking-widest hover:opacity-90 transition-all inline-block font-semibold">Explore Collections</a>
                 </div>
             `;
             updateSummary(0);
@@ -166,21 +208,32 @@
         cart.forEach((item, index) => {
             // Find full details from catalog
             const details = PRODUCTS_DATA.find(p => p.id === item.id) || {};
-            const discount = Math.round((details.originalPrice - details.price) / details.originalPrice * 100);
+            
+            // Fallback Handling for Undefined Names
+            const productName = item.name || details.name || "Golden Heera Jewellery";
+            
+            // D2C pricing calculations
+            const originalPrice = details.originalPrice || (item.price * 2);
+            const discount = Math.round((originalPrice - item.price) / originalPrice * 100);
 
-            const row = document.createElement('div');
-            row.className = 'flex flex-col md:flex-row gap-6 p-6 bg-white border border-outline-variant/30 group shadow-xs';
-            row.innerHTML = `
-                <div class="w-full md:w-36 aspect-square overflow-hidden bg-surface-container border border-outline-variant/30 flex-shrink-0">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${item.name}" src="${item.image}"/>
+            const card = document.createElement('div');
+            card.className = 'bg-white border border-outline-variant/30 p-5 shadow-xs luxury-shadow rounded-sm flex gap-4 md:gap-6 relative group';
+            card.innerHTML = `
+                <!-- Product Image -->
+                <div class="w-24 h-24 md:w-32 md:h-32 overflow-hidden bg-surface-container border border-outline-variant/20 flex-shrink-0">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="${productName}" src="${item.image}"/>
                 </div>
+                
+                <!-- Product Details -->
                 <div class="flex-grow flex flex-col justify-between">
-                    <div class="flex justify-between items-start gap-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-2">
                         <div>
-                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest">${details.collection || 'Fashion'} jewellery</span>
-                            <h3 class="font-headline-sm text-sm font-bold text-on-surface mt-1 mb-2">${item.name}</h3>
-                            <p class="text-on-surface-variant text-[11px] font-semibold mb-4">${details.material || 'Premium Polish'}</p>
-                            <div class="flex items-center gap-4 border border-outline-variant/60 w-fit px-3 py-1.5">
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest">${details.collection || 'Fashion'} Collection</span>
+                            <h3 class="font-display-lg text-xs md:text-sm font-bold text-on-surface mt-0.5 mb-1 cursor-pointer hover:text-primary transition-colors" onclick="window.location.href='product-detail.html?product_id=${item.id}'">${productName}</h3>
+                            <p class="text-on-surface-variant text-[10px] font-semibold mb-3">Attributes: ${details.material || 'Gold Plating, CZ Stones'}</p>
+                            
+                            <!-- Quantity Controls -->
+                            <div class="flex items-center gap-3 border border-outline-variant/60 w-fit px-2.5 py-1">
                                 <button class="text-primary hover:text-on-surface transition-colors" onclick="changeQty(${item.id}, -1)">
                                     <span class="material-symbols-outlined text-xs font-bold">remove</span>
                                 </button>
@@ -190,18 +243,22 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="text-right">
-                            <p class="font-bold text-sm text-primary">₹${(item.price * item.qty).toLocaleString()}</p>
-                            <p class="text-[10px] text-on-surface-variant/40 line-through">₹${(details.originalPrice * item.qty).toLocaleString()}</p>
-                            <p class="text-[10px] text-primary font-bold">${discount}% OFF</p>
+                        
+                        <!-- Price Details -->
+                        <div class="text-left md:text-right mt-1">
+                            <span class="block text-sm font-bold text-primary">₹${(item.price * item.qty).toLocaleString()}</span>
+                            <span class="text-[10px] text-on-surface-variant/40 line-through">₹${(originalPrice * item.qty).toLocaleString()}</span>
+                            <span class="inline-block bg-primary-fixed/20 text-primary text-[9px] font-bold px-1.5 py-0.5 rounded-sm mt-1">${discount}% OFF</span>
                         </div>
                     </div>
-                    <div class="flex gap-6 mt-6 border-t border-outline-variant/10 pt-4 text-xs">
-                        <button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" onclick="toggleWishlist(${item.id})">
-                            <span class="material-symbols-outlined text-base">favorite</span> Wishlist
+                    
+                    <!-- Action Triggers -->
+                    <div class="flex gap-4 mt-4 border-t border-outline-variant/10 pt-3 text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">
+                        <button class="hover:text-primary transition-colors flex items-center gap-1" onclick="moveToWishlist(${item.id})">
+                            <span class="material-symbols-outlined text-sm font-bold">favorite</span> Save to Wishlist
                         </button>
-                        <button class="text-error hover:opacity-85 transition-opacity flex items-center gap-1.5" onclick="removeFromCart(${item.id})">
-                            <span class="material-symbols-outlined text-base">delete</span> Remove
+                        <button class="text-error hover:opacity-85 transition-opacity flex items-center gap-1" onclick="removeFromCart(${item.id})">
+                            <span class="material-symbols-outlined text-sm font-bold">delete</span> Remove
                         </button>
                     </div>
                 </div>
@@ -226,12 +283,12 @@
         }
 
         if (subtotal >= target) {
-            progressText.innerText = "🎉 CONGRATULATIONS! YOUR ORDER QUALIFIES FOR FREE SHIPPING!";
+            progressText.innerText = "✓ Free Shipping Unlocked";
             progressBar.style.width = "100%";
         } else {
             const diff = target - subtotal;
             const pct = Math.min(100, (subtotal / target) * 100);
-            progressText.innerText = `₹${diff} AWAY FROM FREE SHIPPING`;
+            progressText.innerText = `Spend ₹${diff} more to unlock FREE SHIPPING`;
             progressBar.style.width = `${pct}%`;
         }
     }
@@ -243,15 +300,20 @@
         let discount = 0;
         const discountRow = document.getElementById('summary-discount-row');
         if (appliedCoupon) {
-            if (appliedCoupon === 'GIFT10') {
+            if (appliedCoupon === 'SAVE10') {
                 discount = Math.round(subtotal * 0.10);
                 discountRow.classList.remove('hidden');
-                document.getElementById('applied-coupon-label').innerText = "Coupon GIFT10 (10% OFF)";
+                document.getElementById('applied-coupon-label').innerText = "Coupon SAVE10 Applied (10% OFF)";
                 document.getElementById('summary-discount').innerText = `-₹${discount.toLocaleString()}`;
             } else if (appliedCoupon === 'FESTIVE20' && subtotal >= 2000) {
                 discount = Math.round(subtotal * 0.20);
                 discountRow.classList.remove('hidden');
-                document.getElementById('applied-coupon-label').innerText = "Coupon FESTIVE20 (20% OFF)";
+                document.getElementById('applied-coupon-label').innerText = "Coupon FESTIVE20 Applied (20% OFF)";
+                document.getElementById('summary-discount').innerText = `-₹${discount.toLocaleString()}`;
+            } else if (appliedCoupon === 'WELCOME15') {
+                discount = Math.round(subtotal * 0.15);
+                discountRow.classList.remove('hidden');
+                document.getElementById('applied-coupon-label').innerText = "Coupon WELCOME15 Applied (15% OFF)";
                 document.getElementById('summary-discount').innerText = `-₹${discount.toLocaleString()}`;
             } else {
                 appliedCoupon = null;
@@ -267,11 +329,25 @@
         document.getElementById('summary-shipping').innerText = shipping === 0 ? "FREE" : `₹${shipping}`;
         document.getElementById('summary-tax').innerText = `₹${gst.toLocaleString()}`;
         document.getElementById('summary-total').innerText = `₹${total.toLocaleString()}`;
+        
+        // Mobile bottom sticky bar
+        document.getElementById('mobile-summary-total').innerText = `₹${total.toLocaleString()}`;
 
         localStorage.setItem('gh_total', total);
         localStorage.setItem('gh_shipping', shipping);
         localStorage.setItem('gh_subtotal', subtotal);
         localStorage.setItem('gh_discount', discount);
+    }
+
+    function applyManualCoupon() {
+        const input = document.getElementById('promo-input').value.trim().toUpperCase();
+        if (['SAVE10', 'FESTIVE20', 'WELCOME15'].includes(input)) {
+            applyCouponCode(input);
+        } else if (input === '') {
+            alert('Please enter a coupon code.');
+        } else {
+            alert('Invalid coupon code. Try SAVE10, FESTIVE20, or WELCOME15.');
+        }
     }
 
     function applyCouponCode(code) {
@@ -284,34 +360,40 @@
         }
 
         appliedCoupon = code;
-        alert(`Coupon "${code}" applied successfully!`);
+        showToast(`Coupon "${code}" applied successfully!`);
+        renderCart();
+    }
+
+    function moveToWishlist(productId) {
+        toggleWishlist(productId);
+        removeFromCart(productId);
         renderCart();
     }
 
     function renderCrossSells() {
-        const cart = getCart();
-        const cartIds = cart.map(item => item.id);
-        
-        // Find 4 items not in cart
-        const pool = PRODUCTS_DATA.filter(p => !cartIds.includes(p.id)).slice(0, 4);
+        // Suggested Items: Temple Jhumka (3), AD Studs (1), Antique Kada (10), Kundan Choker (e.g. 6 or 4)
+        const crossSellIds = [3, 1, 10, 6];
         const container = document.getElementById('cart-cross-sells');
         container.innerHTML = '';
 
-        pool.forEach(p => {
-            const disc = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+        crossSellIds.forEach(id => {
+            const p = PRODUCTS_DATA.find(x => x.id === id);
+            if (!p) return;
+            const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+
             container.innerHTML += `
-                <div class="bg-white border border-outline-variant/30 p-4 shadow-xs relative flex flex-col justify-between group cursor-pointer" onclick="window.location.href='product-detail.html?product_id=${p.id}'">
-                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                <div class="bg-white border border-outline-variant/30 p-3 shadow-xs rounded-sm relative flex flex-col justify-between group cursor-pointer" onclick="window.location.href='product-detail.html?product_id=${p.id}'">
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-3">
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="${p.image}" alt="${p.name}"/>
                     </div>
                     <div>
-                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-1">${p.name}</h4>
-                        <div class="flex items-baseline gap-2 mb-4">
-                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                        <h4 class="font-body-md text-[11px] font-semibold text-on-background line-clamp-1 mb-1">${p.name}</h4>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-xs font-bold text-primary">₹${p.price.toLocaleString()}</span>
                             <span class="text-[9px] text-on-surface-variant/40 line-through">₹${p.originalPrice.toLocaleString()}</span>
                         </div>
                     </div>
-                    <button onclick="event.stopPropagation(); addToCart(${p.id}); renderCart();" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm font-semibold hover:opacity-90">
+                    <button onclick="event.stopPropagation(); addToCart(${p.id}); renderCart();" class="w-full bg-primary text-white py-1.5 text-[10px] uppercase font-label-sm font-semibold hover:opacity-90">
                         + Add To Bag
                     </button>
                 </div>
@@ -324,34 +406,40 @@
         const container = document.getElementById('recent-view-grid');
         const section = document.getElementById('recent-view-section');
 
-        if (recents.length === 0) {
+        // Filter out items that are already in the cart
+        const cartIds = getCart().map(item => item.id);
+        const filteredRecents = recents.filter(id => !cartIds.includes(id)).slice(0, 4);
+
+        if (filteredRecents.length === 0) {
             section.classList.add('hidden');
             return;
         }
+        section.classList.remove('hidden');
 
         container.innerHTML = '';
-        recents.forEach(id => {
+        filteredRecents.forEach(id => {
             const p = PRODUCTS_DATA.find(x => x.id === id);
             if (!p) return;
+            const discount = Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
 
             container.innerHTML += `
-                <div onclick="window.location.href='product-detail.html?product_id=${p.id}'" class="flex-shrink-0 w-24 text-center cursor-pointer group">
-                    <div class="aspect-square w-full overflow-hidden bg-surface-container border mb-2">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="${p.image}" alt="${p.name}"/>
+                <div class="bg-white border border-outline-variant/30 group relative flex flex-col justify-between cursor-pointer p-4 hover:shadow-lg transition-shadow" onclick="window.location.href='product-detail.html?product_id=${p.id}'">
+                    <div class="relative w-full aspect-square overflow-hidden bg-surface-container-lowest mb-4">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="${p.image}" alt="${p.name}"/>
                     </div>
-                    <p class="text-[9px] font-bold uppercase tracking-widest text-on-surface-variant line-clamp-1">${p.name}</p>
+                    <div>
+                        <h4 class="font-body-md text-xs font-semibold text-on-background line-clamp-1 mb-2">${p.name}</h4>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-sm font-bold text-primary">₹${p.price.toLocaleString()}</span>
+                            <span class="text-[10px] text-on-surface-variant/50 line-through">₹${p.originalPrice.toLocaleString()}</span>
+                        </div>
+                    </div>
+                    <button onclick="event.stopPropagation(); addToCart(${p.id}); renderCart();" class="w-full bg-primary text-white py-2 text-xs uppercase font-label-sm font-semibold hover:opacity-90">
+                        + Add To Bag
+                    </button>
                 </div>
             `;
         });
-    }
-
-    function proceedToCheckout() {
-        const cart = getCart();
-        if (cart.length === 0) {
-            alert('Your bag is empty.');
-            return;
-        }
-        window.location.href = 'checkout.html';
     }
 </script>
 </body>
