@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Checkout | Golden Heera Luxury Jewellery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Refined Input Fields: Bottom-Border Only */
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            border: none !important;
+            border-bottom: 1px solid #1b1c1c !important;
+            background-color: transparent !important;
+            border-radius: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            outline: none !important;
+            box-shadow: none !important;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus {
+            border-bottom-color: #7b5900 !important;
+        }
+
+        .step-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .accordion-active .accordion-content {
+            max-height: 800px;
+        }
+        
+        .gold-underline-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #7b5900;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .gold-underline-hover:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Simplified for Checkout focus) -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-500">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
+        <div class="flex items-center gap-6">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+                Secure Checkout
+            </span>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 lg:grid lg:grid-cols-12 lg:gap-gutter">
+    <!-- Left Column: Checkout Steps -->
+    <form class="lg:col-span-7 space-y-12" id="checkout-form" onsubmit="handlePayment(event)">
+        <!-- Step 1: Contact Information -->
+        <section class="accordion-active" id="step-1">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
+                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary text-sm font-bold">1</span>
+                    Contact Information
+                </h2>
+                <button type="button" class="text-primary font-label-sm text-label-sm uppercase tracking-widest hover:opacity-70 transition-opacity" onclick="toggleStep(1)">Edit</button>
+            </div>
+            <div class="accordion-content space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Email Address</label>
+                        <input id="email-field" class="w-full py-2" placeholder="email@example.com" type="email" required/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Phone Number</label>
+                        <input id="phone-field" class="w-full py-2" placeholder="+91 98765 43210" type="tel" required/>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input class="rounded-none border-on-background focus:ring-0 text-primary" id="marketing" type="checkbox"/>
+                    <label class="text-body-md text-on-surface-variant" for="marketing">Email me with exclusive offers and personalized news.</label>
+                </div>
+                <button type="button" class="bg-on-background text-white px-12 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors" onclick="validateStep1()">Continue to Shipping</button>
+            </div>
+        </section>
+
+        <!-- Step 2: Shipping Address -->
+        <section id="step-2">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
+                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4 text-on-surface-variant/50">
+                    <span class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline text-sm font-bold">2</span>
+                    Shipping Address
+                </h2>
+                <button type="button" class="text-primary font-label-sm text-label-sm uppercase tracking-widest hover:opacity-70 transition-opacity hidden" id="edit-step-2" onclick="toggleStep(2)">Edit</button>
+            </div>
+            <div class="accordion-content space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">First Name</label>
+                        <input id="fname" class="w-full py-2" placeholder="Enter first name" type="text"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Last Name</label>
+                        <input id="lname" class="w-full py-2" placeholder="Enter last name" type="text"/>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Address Line 1</label>
+                    <input id="address" class="w-full py-2" placeholder="Suite, House No, Building" type="text"/>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">City</label>
+                        <input id="city" class="w-full py-2" placeholder="Mumbai" type="text"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">State</label>
+                        <select id="state" class="w-full py-2 bg-transparent border-none">
+                            <option>Maharashtra</option>
+                            <option>Delhi</option>
+                            <option>Karnataka</option>
+                            <option>Tamil Nadu</option>
+                            <option>Uttar Pradesh</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">PIN Code</label>
+                        <input id="pincode" class="w-full py-2" placeholder="400001" type="text"/>
+                    </div>
+                </div>
+                <button type="button" class="bg-on-background text-white px-12 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-colors" onclick="validateStep2()">Continue to Payment</button>
+            </div>
+        </section>
+
+        <!-- Step 3: Payment Method -->
+        <section id="step-3">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-4 mb-8">
+                <h2 class="font-headline-sm text-headline-sm flex items-center gap-4 text-on-surface-variant/50">
+                    <span class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline text-sm font-bold">3</span>
+                    Payment Method
+                </h2>
+            </div>
+            <div class="accordion-content space-y-10">
+                <p class="text-body-md text-on-surface-variant">All transactions are secure and encrypted. Powered by <span class="font-bold text-[#3395FF]">Razorpay</span>.</p>
+                <div class="space-y-4">
+                    <!-- UPI -->
+                    <label class="group cursor-pointer block border border-outline-variant p-6 transition-all hover:border-primary">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <input class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="upi" onchange="switchPaymentTab('upi')"/>
+                                <span class="font-body-lg text-body-lg font-medium">UPI (GPay, PhonePe, Paytm)</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="material-symbols-outlined text-on-surface-variant/50">payments</span>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Credit/Debit -->
+                    <label class="group cursor-pointer block border border-primary p-6 bg-surface-container-low" id="card-label">
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="flex items-center gap-4">
+                                <input checked class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="card" onchange="switchPaymentTab('card')"/>
+                                <span class="font-body-lg text-body-lg font-medium">Credit / Debit Card</span>
+                            </div>
+                            <div class="flex gap-2 grayscale">
+                                <span class="material-symbols-outlined">credit_card</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6 animate-in fade-in duration-500" id="card-inputs">
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Card Number</label>
+                                <input class="w-full py-2" placeholder="0000 0000 0000 0000" type="text" id="card-num"/>
+                            </div>
+                            <div class="grid grid-cols-2 gap-8">
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Expiry Date</label>
+                                    <input class="w-full py-2" placeholder="MM / YY" type="text" id="card-exp"/>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">CVV</label>
+                                    <input class="w-full py-2" placeholder="***" type="text" id="card-cvv"/>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Net Banking -->
+                    <label class="group cursor-pointer block border border-outline-variant p-6 transition-all hover:border-primary">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <input class="w-5 h-5 text-primary focus:ring-0" name="payment" type="radio" value="netbanking" onchange="switchPaymentTab('netbanking')"/>
+                                <span class="font-body-lg text-body-lg font-medium">Net Banking</span>
+                            </div>
+                            <span class="material-symbols-outlined text-on-surface-variant/50">account_balance</span>
+                        </div>
+                    </label>
+                </div>
+                <button type="submit" class="w-full bg-on-background text-white py-5 font-label-sm text-label-sm uppercase tracking-[0.2em] font-bold hover:bg-primary transition-all shadow-xl flex items-center justify-center gap-3">
+                    Pay <span id="pay-btn-amount">₹1,31,325</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <div class="flex justify-center items-center gap-8 pt-4 grayscale opacity-60">
+                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">verified</span> SECURE</div>
+                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">diamond</span> AUTHENTIC</div>
+                    <div class="flex items-center gap-1 text-label-sm font-semibold"><span class="material-symbols-outlined text-sm">local_shipping</span> INSURED</div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- Right Column: Order Summary -->
+    <aside class="lg:col-span-5 mt-16 lg:mt-0">
+        <div class="bg-surface-container-lowest p-8 lg:p-12 sticky top-32 border border-outline-variant/30">
+            <h3 class="font-headline-sm text-headline-sm mb-10 pb-4 border-b border-outline-variant">Order Summary</h3>
+            <div class="space-y-8 mb-10" id="summary-items-container">
+                <!-- Dynamically loaded -->
+            </div>
+            <div class="space-y-4 pt-8 border-t border-outline-variant">
+                <div class="flex justify-between text-on-surface-variant">
+                    <span class="font-body-md">Subtotal</span>
+                    <span class="font-body-md" id="summary-subtotal">₹ 2,45,000.00</span>
+                </div>
+                <div class="flex justify-between text-on-surface-variant">
+                    <span class="font-body-md">Shipping</span>
+                    <span class="font-body-md text-primary font-semibold">Complimentary</span>
+                </div>
+                <div class="flex justify-between text-on-surface-variant">
+                    <span class="font-body-md">Taxes (GST 3%)</span>
+                    <span class="font-body-md" id="summary-tax">Included</span>
+                </div>
+                <div class="flex justify-between pt-6 mt-6 border-t border-on-background">
+                    <span class="font-headline-sm text-headline-sm">Total</span>
+                    <div class="text-right">
+                        <span class="text-xs text-on-surface-variant uppercase tracking-widest block mb-1">INR</span>
+                        <span class="font-headline-sm text-headline-sm" id="summary-total">₹ 2,45,000.00</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Loyalty / Trust -->
+            <div class="mt-12 p-6 bg-surface-container-low flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                <div>
+                    <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-1">Elite Concierge</p>
+                    <p class="text-[13px] text-on-surface-variant leading-relaxed">As a valued client, your order will be delivered via our secure white-glove service within 3-5 business days.</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<!-- Success Modal -->
+<div id="success-modal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+    <div class="bg-white max-w-lg w-full p-12 text-center border border-primary relative luxury-shadow">
+        <span class="material-symbols-outlined text-7xl text-primary mb-6 animate-bounce">verified</span>
+        <h2 class="font-display-lg text-headline-md mb-4">Masterpiece Secured</h2>
+        <p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">Thank you for choosing Golden Heera. Your payment was processed successfully. A confirmation email and certificate details have been sent to you.</p>
+        <button onclick="closeSuccessModal()" class="w-full bg-primary text-white py-4 uppercase font-body-md tracking-widest hover:opacity-90 transition-all">
+            Return to Atelier
+        </button>
+    </div>
+</div>
+
+<!-- Footer (Simplified) -->
+<footer class="bg-surface-container border-t border-outline-variant mt-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+        <div class="col-span-1 md:col-span-2">
+            <h4 class="font-display-lg text-headline-sm text-primary mb-6">Golden Heera</h4>
+            <p class="text-body-md text-on-surface-variant max-w-md">Crafting timeless legacies since 1924. Our jewelry is more than an accessory; it is an heirloom of heritage and unparalleled craftsmanship.</p>
+        </div>
+        <div>
+            <h5 class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface mb-6">Support</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface mb-6">Legal</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Certificate Registry</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+        <p class="text-label-sm text-on-surface-variant opacity-60">© 2024 Golden Heera Luxury Jewellery. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function getCart() {
+        return JSON.parse(localStorage.getItem('gh_cart')) || [];
+    }
+
+    function renderSummary() {
+        const cart = getCart();
+        const container = document.getElementById('summary-items-container');
+        container.innerHTML = '';
+
+        if (cart.length === 0) {
+            container.innerHTML = `<p class="italic text-on-surface-variant">Your shopping bag is empty.</p>`;
+            document.getElementById('summary-subtotal').innerText = '₹0';
+            document.getElementById('summary-tax').innerText = '₹0';
+            document.getElementById('summary-total').innerText = '₹0';
+            document.getElementById('pay-btn-amount').innerText = '₹0';
+            return;
+        }
+
+        let subtotal = 0;
+        cart.forEach(item => {
+            subtotal += item.price * item.qty;
+            const row = document.createElement('div');
+            row.className = 'flex gap-6 group';
+            row.innerHTML = `
+                <div class="relative w-24 h-24 overflow-hidden border border-outline-variant/20">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="${item.title}" src="${item.image}"/>
+                    <span class="absolute -top-2 -right-2 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold">${item.qty}</span>
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-1 text-sm">
+                    <div>
+                        <h4 class="font-body-lg text-body-md font-semibold text-on-background">${item.title}</h4>
+                        <p class="text-[11px] text-on-surface-variant mt-1 uppercase tracking-wider">Fine Gold Polish</p>
+                    </div>
+                    <span class="font-body-md text-on-background">₹ ${(item.price * item.qty).toLocaleString()}</span>
+                </div>
+            `;
+            container.appendChild(row);
+        });
+
+        // Compute from local storage cache if promo was applied
+        const storedTotal = localStorage.getItem('gh_total');
+        const gst = Math.round(subtotal * 0.03);
+        let finalTotal = subtotal + gst;
+
+        if (storedTotal) {
+            finalTotal = parseInt(storedTotal);
+        }
+
+        document.getElementById('summary-subtotal').innerText = `₹${subtotal.toLocaleString()}`;
+        document.getElementById('summary-tax').innerText = `₹${gst.toLocaleString()}`;
+        document.getElementById('summary-total').innerText = `₹${finalTotal.toLocaleString()}`;
+        document.getElementById('pay-btn-amount').innerText = `₹${finalTotal.toLocaleString()}`;
+    }
+
+    function toggleStep(stepNumber) {
+        // Toggle step validation visuals
+        for (let i = 1; i <= 3; i++) {
+            const section = document.getElementById('step-' + i);
+            const header = section.querySelector('h2');
+            const badge = section.querySelector('h2 span');
+            
+            section.classList.remove('accordion-active');
+            
+            if (i < stepNumber) {
+                // Completed
+                header.classList.remove('text-on-surface-variant/50');
+                header.classList.add('text-on-background');
+                badge.classList.remove('border-outline-variant', 'text-outline');
+                badge.classList.add('border-primary', 'text-primary');
+                badge.innerHTML = '<span class="material-symbols-outlined text-xs">check</span>';
+            } else if (i === stepNumber) {
+                // Current active
+                section.classList.add('accordion-active');
+                header.classList.remove('text-on-surface-variant/50');
+                header.classList.add('text-on-background');
+                badge.classList.remove('border-outline-variant', 'text-outline');
+                badge.classList.add('border-primary', 'text-primary');
+                badge.innerText = i;
+            } else {
+                // Future
+                header.classList.add('text-on-surface-variant/50');
+                badge.classList.remove('border-primary', 'text-primary');
+                badge.classList.add('border-outline-variant', 'text-outline');
+                badge.innerText = i;
+            }
+        }
+        
+        document.getElementById('step-' + stepNumber).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function validateStep1() {
+        const email = document.getElementById('email-field').value;
+        const phone = document.getElementById('phone-field').value;
+        if (!email || !phone) {
+            alert('Please fill in your contact information.');
+            return;
+        }
+        toggleStep(2);
+        document.getElementById('edit-step-2').classList.remove('hidden');
+    }
+
+    function validateStep2() {
+        const fname = document.getElementById('fname').value;
+        const lname = document.getElementById('lname').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const pincode = document.getElementById('pincode').value;
+        if (!fname || !lname || !address || !city || !pincode) {
+            alert('Please fill in all shipping details.');
+            return;
+        }
+        toggleStep(3);
+    }
+
+    function switchPaymentTab(type) {
+        const cardLabel = document.getElementById('card-label');
+        const cardInputs = document.getElementById('card-inputs');
+
+        if (type === 'card') {
+            cardLabel.classList.add('bg-surface-container-low', 'border-primary');
+            cardLabel.classList.remove('border-outline-variant');
+            cardInputs.classList.remove('hidden');
+        } else {
+            cardLabel.classList.remove('bg-surface-container-low', 'border-primary');
+            cardLabel.classList.add('border-outline-variant');
+            cardInputs.classList.add('hidden');
+        }
+    }
+
+    function handlePayment(e) {
+        e.preventDefault();
+        // Trigger modal success
+        document.getElementById('success-modal').classList.remove('hidden');
+        document.getElementById('success-modal').classList.add('flex');
+    }
+
+    function closeSuccessModal() {
+        // Clear cart
+        localStorage.removeItem('gh_cart');
+        localStorage.removeItem('gh_total');
+        window.location.href = 'index.html';
+    }
+
+    // Input highlight effects
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.querySelector('label')?.classList.add('text-primary');
+        });
+        input.addEventListener('blur', () => {
+            input.parentElement.querySelector('label')?.classList.remove('text-primary');
+        });
+    });
+
+    renderSummary();
+</script>
+</body>
+</html>

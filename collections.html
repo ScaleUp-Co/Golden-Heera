@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Collections | Golden Heera Luxury Jewellery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#efeded",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-primary-fixed": "#261900",
+                    "secondary-fixed": "#e5e2dd",
+                    "surface-tint": "#7b5900",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#ffdea4",
+                    "secondary": "#5f5e5b",
+                    "on-background": "#1b1c1c",
+                    "on-surface-variant": "#4e4637",
+                    "primary": "#7b5900",
+                    "surface-dim": "#dbdad9",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#1c1c19",
+                    "on-secondary-fixed-variant": "#474743",
+                    "surface-container-highest": "#e3e2e2",
+                    "surface-variant": "#e3e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#a3a1a1",
+                    "primary-container": "#c89b3c",
+                    "inverse-primary": "#f0bf5c",
+                    "tertiary": "#5f5e5e",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#f0bf5c",
+                    "surface-container-high": "#e9e8e8",
+                    "inverse-surface": "#2f3031",
+                    "on-tertiary-container": "#383838",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#656461",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "outline-variant": "#d2c5b1",
+                    "secondary-container": "#e5e2dd",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#4b3500",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-bright": "#faf9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface": "#faf9f9",
+                    "surface-container-low": "#f4f3f3",
+                    "outline": "#807665",
+                    "background": "#faf9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-desktop": "80px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-card:hover .quick-view-btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .filter-border {
+            border-bottom: 1px solid #1b1c1c;
+        }
+        .gold-hover:hover {
+            color: #7b5900;
+            border-bottom-color: #7b5900;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md transition-all duration-500">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <div class="flex items-center space-x-12">
+            <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
+            <div class="hidden lg:flex space-x-8">
+                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=earrings">Earrings</a>
+                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim animate-nav-active" href="collections.html?category=necklaces" id="nav-necklaces">Necklaces</a>
+                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=rings">Rings</a>
+                <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 nav-underline-anim" href="collections.html?category=bracelets">Bracelets</a>
+                <a class="font-body-md text-body-md uppercase tracking-widest text-primary font-bold border-b-2 border-primary pb-1" href="collections.html">Collections</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-6">
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Search coming soon!')">
+                <span class="material-symbols-outlined text-primary">search</span>
+            </button>
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Wishlist page coming soon!')">
+                <span class="material-symbols-outlined text-primary">favorite</span>
+            </button>
+            <a class="hover:scale-105 transition-transform duration-200 relative" href="cart.html">
+                <span class="material-symbols-outlined text-primary">shopping_bag</span>
+                <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
+            </a>
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Account page coming soon!')">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+    <!-- Page Header & Hero Intro -->
+    <section class="py-16 text-center">
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 text-on-surface">The Signature Collection</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">
+            A curation of timeless masterpieces, where traditional craftsmanship meets avant-garde design. Every piece tells a story of heritage and light.
+        </p>
+    </section>
+
+    <!-- Filters & Sorting Bar -->
+    <section class="flex flex-col md:flex-row justify-between items-center py-8 mb-12 border-y border-outline-variant gap-4">
+        <div class="flex flex-wrap gap-8 items-center">
+            <!-- Type Dropdown -->
+            <div class="group relative cursor-pointer">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-2">
+                    Type <span class="material-symbols-outlined text-sm">expand_more</span>
+                </span>
+                <div class="absolute hidden group-hover:block top-full left-0 w-48 bg-white shadow-xl z-20 p-4 border border-outline-variant mt-2">
+                    <ul class="space-y-3 font-body-md text-sm">
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterType('all')">All Categories</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterType('necklaces')">Necklaces</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterType('earrings')">Earrings</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterType('rings')">Rings</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterType('bangles')">Bangles</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Material Dropdown -->
+            <div class="group relative cursor-pointer">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-2">
+                    Material <span class="material-symbols-outlined text-sm">expand_more</span>
+                </span>
+                <div class="absolute hidden group-hover:block top-full left-0 w-48 bg-white shadow-xl z-20 p-4 border border-outline-variant mt-2">
+                    <ul class="space-y-3 font-body-md text-sm">
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterMaterial('all')">All Materials</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterMaterial('gold')">22K Yellow Gold</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterMaterial('platinum')">Platinum</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterMaterial('rose')">18K Rose Gold</li>
+                        <li class="hover:text-primary transition-colors cursor-pointer" onclick="filterMaterial('white')">18K White Gold</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Price Slider -->
+            <div class="group relative cursor-pointer">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-2">
+                    Price Range <span class="material-symbols-outlined text-sm">expand_more</span>
+                </span>
+                <div class="absolute hidden group-hover:block top-full left-0 w-64 bg-white shadow-xl z-20 p-6 border border-outline-variant mt-2">
+                    <div class="space-y-4">
+                        <label for="price-range" class="text-xs uppercase tracking-wider text-on-surface-variant font-label-sm">Max Price: <span id="price-val">$25,000</span></label>
+                        <input id="price-range" min="3000" max="30000" step="1000" value="25000" class="w-full h-1 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" type="range" oninput="updatePriceLimit(this.value)"/>
+                        <div class="flex justify-between text-xs font-label-sm text-on-surface-variant">
+                            <span>$3,000</span>
+                            <span>$30,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+            <span class="font-body-md text-on-surface-variant italic text-sm"><span id="product-count">6</span> masterpieces found</span>
+            <select id="sort-select" onchange="sortProducts(this.value)" class="bg-transparent border-none focus:ring-0 font-label-sm text-label-sm uppercase tracking-widest cursor-pointer text-on-surface">
+                <option value="featured">Sort By: Featured</option>
+                <option value="new">New Arrivals</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-20">
+        <!-- Products will be dynamically populated/filtered below -->
+    </section>
+
+    <!-- Pagination -->
+    <section class="flex justify-center items-center py-20 gap-8">
+        <button class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest opacity-50 cursor-not-allowed">
+            <span class="material-symbols-outlined">chevron_left</span> Previous
+        </button>
+        <div class="flex items-center gap-6">
+            <span class="text-primary font-bold border-b-2 border-primary pb-1">1</span>
+            <span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" onclick="alert('Page 2 is empty in this demo')">2</span>
+            <span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" onclick="alert('Page 3 is empty in this demo')">3</span>
+            <span class="text-on-surface-variant">...</span>
+            <span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer" onclick="alert('Page 12 is empty in this demo')">12</span>
+        </div>
+        <button class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest hover:text-primary transition-colors" onclick="alert('Page 2 is empty in this demo')">
+            Next <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </section>
+</main>
+
+<!-- Bespoke Banner -->
+<section class="bg-surface-container py-section-gap mb-section-gap">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+        <div class="order-2 md:order-1">
+            <h2 class="font-display-lg text-headline-md mb-6">Create Your Own Legacy</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                Collaborate with our master artisans to design a bespoke piece that reflects your unique narrative. From sketch to final polish, we ensure every detail is perfection.
+            </p>
+            <button class="px-10 py-4 bg-on-background text-white font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary transition-all duration-300" onclick="alert('Bespoke consultation booking feature coming soon!')">
+                Consult Our Designer
+            </button>
+        </div>
+        <div class="order-1 md:order-2 aspect-video overflow-hidden">
+            <img class="w-full h-full object-cover" alt="A jeweler's workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJhi1f6x-V4e1y-HMiP6t-YSXpGBTf0PK2e8nKkIZFwbQnhjgfNAEe3Z1L1ZulmJz9rEMtuU5jofje_21yWwGoZrKEhTP82W9fVHxRoY1pma2uh7CVWK0PFSAH4c_iMAxBQCzm_qd0AC2vGddIuh7FSoe41Rqx3PvdWZYPgke90PlxkkXCwHWRVoKAdD3QintcJQNu4qkWt_lZtD9bXuwCZeU8zccRlmpk9fG-mVeGl34pmSFBMG7dbA"/>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-low">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+        <div class="space-y-6">
+            <div class="font-display-lg text-headline-sm text-primary">Golden Heera</div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">Crafting the world's finest jewellery since 1924. Our heritage is your future.</p>
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" onclick="alert('Social link!')">public</span>
+                <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" onclick="alert('Social link!')">share</span>
+                <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" onclick="alert('Social link!')">contact_support</span>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Experience</h4>
+            <ul class="space-y-2 font-body-md text-on-surface-variant">
+                <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Bespoke Design</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">The Atelier</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Client Care</h4>
+            <ul class="space-y-2 font-body-md text-on-surface-variant">
+                <li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+                <li><a class="hover:text-primary transition-colors" href="#">Warranty</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Newsletter</h4>
+            <p class="font-body-md text-on-surface-variant italic">Join our world for exclusive previews.</p>
+            <form class="relative" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                <input class="w-full bg-transparent border-b border-on-background py-2 focus:ring-0 focus:border-primary font-label-sm outline-none transition-all duration-300 text-sm" placeholder="YOUR EMAIL" type="email" required/>
+                <button class="absolute right-0 bottom-2 text-primary font-label-sm uppercase tracking-widest type-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="px-margin-mobile md:px-margin-desktop py-6 border-t border-outline-variant max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="font-body-md text-on-surface-variant text-sm">© 2024 Golden Heera Luxury Jewellery. All Rights Reserved.</span>
+        <div class="flex gap-6 font-body-md text-on-surface-variant text-sm">
+            <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center py-3 bg-white bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant shadow-lg z-50 md:hidden">
+    <a class="flex flex-col items-center gap-1 text-secondary transition-transform scale-95 active:scale-90" href="index.html">
+        <span class="material-symbols-outlined">storefront</span>
+        <span class="font-label-sm text-label-sm">Shop</span>
+    </a>
+    <button class="flex flex-col items-center gap-1 text-secondary transition-transform scale-95 active:scale-90" onclick="alert('Wishlist page coming soon!')">
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="font-label-sm text-label-sm">Wishlist</span>
+    </button>
+    <a class="flex flex-col items-center gap-1 text-secondary transition-transform scale-95 active:scale-90 relative" href="cart.html">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="font-label-sm text-label-sm">Cart</span>
+        <span class="absolute top-0 right-2 bg-primary text-white text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold">2</span>
+    </a>
+    <button class="flex flex-col items-center gap-1 text-secondary transition-transform scale-95 active:scale-90" onclick="alert('Profile section coming soon!')">
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-label-sm text-label-sm">Profile</span>
+    </button>
+</nav>
+
+<script>
+    // Product Database
+    const products = [
+        {
+            id: 1,
+            title: "Celestial Solitaire",
+            material: "white",
+            materialLabel: "18K White Gold & VVS Diamonds",
+            price: 12400,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD3tElvkQRVMTdajCQZ38Zhn19w5d9uxPfpGaT791cBV2Ifx0bgdPqoDM9z-Bp_jO0t12Cbc2rCq5u99Z67Fmlpiyw_KAlKZRNgwDeT65are75H7WFPsDJvAlr3Mg2U-NrJG0gp8YxyvgZeIk97kiHceH_yws8I-_8udUBJiuOULa_NJ0J5aGQ_sftW0yIXTEZ5Q-pEMsdr4KyOtOl2fjPJFG6XFOC8hPedI5aioFwYUV_mxAWa-jIjDw",
+            type: "rings",
+            isNew: false
+        },
+        {
+            id: 2,
+            title: "Heritage Garland",
+            material: "gold",
+            materialLabel: "Handcrafted 22K Yellow Gold",
+            price: 8950,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBP8-TfLdKyt5Qcj3sNv1TXjXIbMTMRmr2YmN99atBc66wYberhM4zaammkdLHtCeUTlya3F6OQA0B4yt7PvD9excY6DLPD-APEgqE2VMyYagOZRh4COOR4LzvK5xgh7Ffnw6gcxbI4VCLhFmYkQRpBu6ksAgfkzmtYR1TXbubffcJshn9pcDouJEUs_xOHPzwWEo5XK-alA-w06Z7-f60hXlqOWSb9pG1mHhRwdh0lKKVS2n83PASnSg",
+            type: "necklaces",
+            isNew: true
+        },
+        {
+            id: 3,
+            title: "Emerald Whisper",
+            material: "rose",
+            materialLabel: "18K Rose Gold & Colombian Emeralds",
+            price: 5200,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuChflheDeviyQ6zXYQ9X8MXGsoJ9i4e32gWN6wMsfCinLit6z55zPJ_MjzKNdTxy2MFc-TwJfOqQojE4pyZcdUQU9YvIB4HMV60ECwhY52COFugm5KYM6CQau8QNgXAJ7GXT-NAW0YxD8cXNShNvfWx_Xl0AE38c230uS9S7eXiIZJFGOPGQry890gA3hKRQP_xYCGt-h4l0XG18Le3t3QTcRThpo-u3rIJ3sw9XE_AmEfnkRsI4zWl6A",
+            type: "earrings",
+            isNew: false
+        },
+        {
+            id: 4,
+            title: "Infinity Orbit",
+            material: "platinum",
+            materialLabel: "Platinum & Brilliant Cut Diamonds",
+            price: 21000,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBycTOvNM8tQdsw2ITc-XkFKWnZRfiqz2HCaa4dWN5QyHJdks7FzKsjbeRChkWzh1TI7IvhRobnqYXo4Xd74hvxfcbKrCmx3TZbozZ2jU32b7I0kGU-7MPSOn_tEPnESTOzEWPZIRegIWewJp99w3GbNncpXyPoqUnbz-z_ThnjuILZxclyqxMsTYwDWqYn748IN3bHgF4E7uuZrH9HWh97NnLLPwT1mZMbv-tIoKuvZsrav8IyGTJTAw",
+            type: "bracelets",
+            isNew: true
+        },
+        {
+            id: 5,
+            title: "Nocturne Pendulum",
+            material: "white",
+            materialLabel: "White Gold & Sapphire",
+            price: 9800,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBFsCZi2EIeCkEAW1myc-uI464NEVsrqkl5y-7xmg8LSBa2rdWbp8e4eP9qKi9ZT3f3oiIvC-R_4r6_LIIKIjXVQ0Ntvmqmv8G-FJdTg8dmy4kfDJEWdYvdaQL9Zc48aNhpTG0ayYhYA1vj19IZVhhPhUQWra_YRH3TbjiCEQhLoTM2gyWQnjHN6xHBCpo4tHsqZ3R7XDZ7kyYjU8_MFdeIk5E20gVXjLZ9LnskJMmFiN80DV4RfsIo0A",
+            type: "necklaces",
+            isNew: false
+        },
+        {
+            id: 6,
+            title: "Architectural Aurum",
+            material: "gold",
+            materialLabel: "Solid 24K Gold",
+            price: 15500,
+            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCv5iRzKY0qyByko37tI0lv3Km8d3IX8GdPGjKfQ4OnK22FsrElqKYVZZg5xlyOQaD0KH_Y3J6TfprkZ_NO7nRlF8IPl0Yvm-NS91-D2ey-97rw2QM7YrhojDmwSyak0sVmsnxu7YUhCdBSevmJljGsFTK2pfi3kCror6uIOJqC1IrwpQrWTInk6YeBxqIp8P7H5T_wmpRHDmvKe5FQygTtOOozqpM06RTznXJAhb4QPbWpnPM-i1NvEA",
+            type: "bracelets",
+            isNew: false
+        }
+    ];
+
+    let currentFilterType = 'all';
+    let currentFilterMaterial = 'all';
+    let currentMaxPrice = 25000;
+    let currentSort = 'featured';
+
+    // Parse URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+        currentFilterType = categoryParam;
+    }
+    const collectionParam = urlParams.get('collection');
+    if (collectionParam) {
+        // Just general styling
+        if (collectionParam === 'bridal') {
+            currentFilterType = 'all';
+            currentFilterMaterial = 'platinum'; // bridal often uses platinum/diamonds
+        }
+    }
+    const priceMaxParam = urlParams.get('price_max');
+    if (priceMaxParam) {
+        // Map to equivalent dollars roughly for this demo
+        currentMaxPrice = parseInt(priceMaxParam) / 3; // e.g. 50000 INR roughly ~ 15000 USD for range matching
+        if (currentMaxPrice > 30000) currentMaxPrice = 30000;
+        if (currentMaxPrice < 3000) currentMaxPrice = 3000;
+        document.getElementById('price-range').value = currentMaxPrice;
+        document.getElementById('price-val').innerText = '$' + currentMaxPrice.toLocaleString();
+    }
+
+    function renderProducts() {
+        const grid = document.getElementById('product-grid');
+        grid.innerHTML = '';
+
+        let filtered = products.filter(p => {
+            const matchesType = currentFilterType === 'all' || p.type === currentFilterType;
+            const matchesMaterial = currentFilterMaterial === 'all' || p.material === currentFilterMaterial;
+            const matchesPrice = p.price <= currentMaxPrice;
+            return matchesType && matchesMaterial && matchesPrice;
+        });
+
+        // Sort products
+        if (currentSort === 'low-high') {
+            filtered.sort((a, b) => a.price - b.price);
+        } else if (currentSort === 'high-low') {
+            filtered.sort((a, b) => b.price - a.price);
+        } else if (currentSort === 'new') {
+            filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+        }
+
+        document.getElementById('product-count').innerText = filtered.length;
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div class="col-span-full py-20 text-center">
+                    <p class="font-display-lg text-headline-sm text-on-surface-variant italic">No masterpieces found matching your exact curation.</p>
+                    <button onclick="resetFilters()" class="mt-6 px-8 py-3 bg-primary text-white font-label-sm uppercase tracking-widest hover:opacity-90">Reset Filters</button>
+                </div>
+            `;
+            return;
+        }
+
+        filtered.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'luxury-card group flex flex-col items-center cursor-pointer';
+            card.onclick = () => {
+                // Link Noor Mahal Necklace (or any necklaces) to the Noor Mahal product page for premium experience
+                if (p.type === 'necklaces' || p.id === 2 || p.id === 5) {
+                    window.location.href = 'product-detail.html';
+                } else {
+                    window.location.href = `product-detail.html?product_id=${p.id}`;
+                }
+            };
+            card.innerHTML = `
+                <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container-low mb-6">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${p.title}" src="${p.image}"/>
+                    <button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-white transition-colors duration-300" onclick="event.stopPropagation(); alert('Saved to wishlist!');">
+                        <span class="material-symbols-outlined text-primary text-xl">favorite</span>
+                    </button>
+                    <div class="quick-view-btn absolute bottom-0 left-0 w-full py-4 bg-primary text-white font-label-sm text-center uppercase tracking-widest translate-y-full opacity-0 transition-all duration-300 cursor-pointer">
+                        Quick View
+                    </div>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">${p.title}</h3>
+                <p class="font-body-md text-on-surface-variant uppercase tracking-widest text-xs mb-2">${p.materialLabel}</p>
+                <p class="font-body-lg text-primary font-semibold">$${p.price.toLocaleString()}</p>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function filterType(type) {
+        currentFilterType = type;
+        renderProducts();
+    }
+
+    function filterMaterial(material) {
+        currentFilterMaterial = material;
+        renderProducts();
+    }
+
+    function updatePriceLimit(val) {
+        currentMaxPrice = parseInt(val);
+        document.getElementById('price-val').innerText = '$' + currentMaxPrice.toLocaleString();
+        renderProducts();
+    }
+
+    function sortProducts(sortType) {
+        currentSort = sortType;
+        renderProducts();
+    }
+
+    function resetFilters() {
+        currentFilterType = 'all';
+        currentFilterMaterial = 'all';
+        currentMaxPrice = 30000;
+        document.getElementById('price-range').value = 30000;
+        document.getElementById('price-val').innerText = '$30,000';
+        renderProducts();
+    }
+
+    // Scroll effects for TopAppBar
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-md', 'py-4');
+            header.classList.remove('py-6');
+        } else {
+            header.classList.remove('shadow-md', 'py-4');
+            header.classList.add('py-6');
+        }
+    });
+
+    // Initial load
+    renderProducts();
+</script>
+</body>
+</html>

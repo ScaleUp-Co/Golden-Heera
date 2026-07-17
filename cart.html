@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Your Shopping Bag | Golden Heera Luxury Jewellery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-shadow {
+            box-shadow: 0px 20px 40px rgba(28, 28, 28, 0.05);
+        }
+        .underline-animate {
+            position: relative;
+        }
+        .underline-animate::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 50%;
+            background-color: #7b5900;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .underline-animate:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pb-[60px] md:pb-0">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md transition-all duration-500 docked full-width top-0 sticky z-50">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">Golden Heera</a>
+        <div class="hidden md:flex gap-8">
+            <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 underline-animate" href="collections.html?category=earrings">Earrings</a>
+            <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 underline-animate" href="collections.html?category=necklaces">Necklaces</a>
+            <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 underline-animate" href="collections.html?category=rings">Rings</a>
+            <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 underline-animate" href="collections.html?category=bracelets">Bracelets</a>
+            <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 underline-animate" href="collections.html">Collections</a>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Search coming soon!')">
+                <span class="material-symbols-outlined text-primary">search</span>
+            </button>
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Wishlist page coming soon!')">
+                <span class="material-symbols-outlined text-primary">favorite</span>
+            </button>
+            <a class="hover:scale-105 transition-transform duration-200 relative" href="cart.html">
+                <span class="material-symbols-outlined text-primary">shopping_bag</span>
+                <span id="cart-badge" class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
+            </a>
+            <button class="hover:scale-105 transition-transform duration-200" onclick="alert('Profile section coming soon!')">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
+    <header class="mb-16 text-center md:text-left">
+        <h1 class="font-headline-md text-headline-md mb-4">Your Curated Collection</h1>
+        <p class="text-on-surface-variant font-body-md tracking-wide">Refined pieces selected for your enduring style.</p>
+        <div class="mt-6 inline-block bg-primary-fixed/30 px-6 py-2 rounded-full border border-outline-variant/30">
+            <span class="text-primary font-label-sm uppercase tracking-widest">Free shipping on orders over ₹10,000</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16 items-start">
+        <!-- Cart Items List -->
+        <div class="lg:col-span-8 space-y-12" id="cart-items-container">
+            <!-- Dynamic elements go here -->
+        </div>
+
+        <!-- Order Summary -->
+        <aside class="lg:col-span-4 sticky top-32">
+            <div class="bg-surface-container-low p-8 luxury-shadow border border-outline-variant/10">
+                <h2 class="font-headline-sm text-headline-sm mb-8 pb-4 border-b border-outline-variant">Order Summary</h2>
+                <div class="space-y-6 mb-8">
+                    <div class="flex justify-between items-center text-on-surface-variant">
+                        <span class="font-body-md">Subtotal</span>
+                        <span class="font-body-md" id="summary-subtotal">₹1,27,500</span>
+                    </div>
+                    <div class="flex justify-between items-center text-on-surface-variant">
+                        <span class="font-body-md">Shipping</span>
+                        <span class="font-body-md text-primary">FREE</span>
+                    </div>
+                    <div class="flex justify-between items-center text-on-surface-variant">
+                        <span class="font-body-md">GST (3%)</span>
+                        <span class="font-body-md" id="summary-tax">₹3,825</span>
+                    </div>
+                    <div class="flex justify-between items-center text-on-surface-variant hidden" id="discount-row">
+                        <span class="font-body-md text-primary">Promo Discount (10%)</span>
+                        <span class="font-body-md text-primary" id="summary-discount">-₹12,750</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-label-sm uppercase tracking-widest text-on-surface-variant mb-3">Promo Code</label>
+                    <div class="flex gap-0">
+                        <input id="promo-input" class="flex-grow bg-transparent border-b border-on-surface focus:ring-0 focus:border-primary px-0 py-2 font-body-md placeholder:text-outline-variant uppercase outline-none" placeholder="GIFT10" type="text"/>
+                        <button onclick="applyPromo()" class="border-b border-on-surface px-4 py-2 font-label-sm uppercase tracking-widest text-primary hover:bg-primary-fixed/20 transition-colors">Apply</button>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mb-10 pt-6 border-t border-outline-variant">
+                    <span class="font-headline-sm text-headline-sm">Total</span>
+                    <span class="font-headline-sm text-headline-md text-primary" id="summary-total">₹1,31,325</span>
+                </div>
+                <button onclick="proceedToCheckout()" class="w-full bg-on-background text-white py-5 px-8 font-label-sm uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300 flex items-center justify-center gap-3">
+                    Proceed to Checkout
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <div class="mt-8 flex flex-col gap-4">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+                        <p class="text-xs text-on-surface-variant leading-relaxed">Secure payment gateway with 256-bit SSL encryption. All transactions are private and safe.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">local_shipping</span>
+                        <p class="text-xs text-on-surface-variant leading-relaxed">Complimentary insured shipping on all orders over ₹10,000 across India.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Complete Your Ensemble -->
+    <section class="mt-section-gap">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="font-headline-md text-headline-md mb-2">Complete Your Ensemble</h2>
+                <p class="text-on-surface-variant">Selected to complement your current choices.</p>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="alert('Carousel prev!')" class="w-12 h-12 flex items-center justify-center border border-outline-variant text-primary hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button onclick="alert('Carousel next!')" class="w-12 h-12 flex items-center justify-center border border-outline-variant text-primary hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Suggestion Card 1 -->
+            <div class="group cursor-pointer" onclick="window.location.href='collections.html'">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container-high mb-6 luxury-shadow">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Glimmer Solitaire Studs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpt1V-5wXNXXtugP9Embqk2zSX_1aNmdK9Dex0ZURGgOKrhaxoy0Jf-l5AhMYUZlVKA6LlpFmvA8wxcmi2yeHy7to6UWQkfo7mldhk-IxUFIYC273jXyw2yjo5fezo_YyAR2rJqUJ-cY58k-awjaSWEQ2qbiMbfIvxFIf4QEGJeFT889if5tpNmoV_P1TDdeQp_WwE1nlP39W9MKvMRYyX9divHj6OsEjfatdsFsj-LU_8x9EpmSUxJw"/>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-lg mb-2">Glimmer Solitaire Studs</h4>
+                    <p class="text-primary font-body-md">₹24,000</p>
+                </div>
+            </div>
+            <!-- Suggestion Card 2 -->
+            <div class="group cursor-pointer" onclick="window.location.href='collections.html'">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container-high mb-6 luxury-shadow">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Ruby Heritage Bracelet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBytmX6cZ1gkwoKE-dOVrAU8PWXVL49ajMyvGNQm0Bs3Hnr0QG1SD2qX3AP1qQ2ei-X7TWgF3P9rbx_SUyZiURVjviqGtTYaoSNbdAkV2hUbcDnd6Zw_Q-ZBRBc6AQLiFJIR1eZCecbDtHCtSpcVEDt1mX8P5ZuHSnlD2bJS3BLrqhjQFm_SxDKvjqeljwiJkiqW6wh9VYR8WDF4hEf77WVBJG2ZWrqlwl7Y8sucAB_5ZhOm_kaQr5Ssw"/>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-lg mb-2">Ruby Heritage Bracelet</h4>
+                    <p class="text-primary font-body-md">₹58,000</p>
+                </div>
+            </div>
+            <!-- Suggestion Card 3 -->
+            <div class="group cursor-pointer" onclick="window.location.href='collections.html'">
+                <div class="aspect-[4/5] overflow-hidden bg-surface-container-high mb-6 luxury-shadow">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Lotus Pearl Pendant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjvomMWykSotzMZUAwoMC-JaJtSSIwGaupqnJtvkTjX70txOHZRD3nO48s4Qx04Uld6vb4oxzuSFTy-hMTwiYIfzdr3ZmIXAeElbX6J5xmelhTs4ruz2JMQczVDgn1k7hgC8GLxa0SH0Pl1ip_60fldQiLnaPSF2Mebwe6aYxw2FI5Qg6xZNRXGveZILWb6I1OZMLIUdByrqpA4kRE1jfPLAaQBLqQ5ZMe072AbQ8-_9vt1YovOb09dA"/>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-lg mb-2">Lotus Pearl Pendant</h4>
+                    <p class="text-primary font-body-md">₹36,500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-low border-t border-outline-variant mt-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+        <div class="md:col-span-1">
+            <a class="font-display-lg text-headline-sm text-primary mb-6 block" href="index.html">Golden Heera</a>
+            <p class="text-on-surface-variant font-body-md text-sm leading-relaxed max-w-xs">
+                Curating the finest heritage jewellery for the modern connoisseur. Every piece tells a story of royalty and craftsmanship.
+            </p>
+        </div>
+        <div>
+            <h5 class="font-label-sm uppercase tracking-widest mb-8 text-on-surface">Client Services</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">About Us</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Sustainability</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Shipping &amp; Returns</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-label-sm uppercase tracking-widest mb-8 text-on-surface">Information</h5>
+            <ul class="space-y-4">
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Privacy Policy</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Terms of Service</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Store Locator</a></li>
+                <li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md text-sm" href="#">Care Guide</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-label-sm uppercase tracking-widest mb-8 text-on-surface">Newsletter</h5>
+            <p class="text-on-surface-variant text-sm mb-6">Join our circle for exclusive collection previews and heritage stories.</p>
+            <form class="relative" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                <input class="w-full bg-transparent border-b border-outline py-3 pr-10 focus:outline-none focus:border-primary transition-colors text-sm" placeholder="Your email address" type="email" required/>
+                <button class="absolute right-0 bottom-3 text-primary hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined">east</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+        <p class="text-on-surface-variant text-[10px] uppercase tracking-widest">
+            © 2024 Golden Heera Luxury Jewellery. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center py-3 bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant z-50 md:hidden shadow-lg">
+    <a class="flex flex-col items-center gap-1 text-secondary animate-nav-shop" href="index.html">
+        <span class="material-symbols-outlined">storefront</span>
+        <span class="font-label-sm text-label-sm">Shop</span>
+    </a>
+    <button class="flex flex-col items-center gap-1 text-secondary" onclick="alert('Wishlist page coming soon!')">
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="font-label-sm text-label-sm">Wishlist</span>
+    </button>
+    <a class="flex flex-col items-center gap-1 text-primary font-bold relative" href="cart.html">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="font-label-sm text-label-sm">Cart</span>
+        <span id="cart-badge-mobile" class="absolute top-0 right-2 bg-primary text-white text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-bold">2</span>
+    </a>
+    <button class="flex flex-col items-center gap-1 text-secondary" onclick="alert('Profile section coming soon!')">
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-label-sm text-label-sm">Profile</span>
+    </button>
+</nav>
+
+<script>
+    let discountPercent = 0;
+
+    function getCart() {
+        let cart = localStorage.getItem('gh_cart');
+        if (!cart) {
+            // Default design data if empty
+            const defaultCart = [
+                { id: 1, title: 'The Noor Mahal Necklace', price: 85000, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZg48N-oHGT_gF1UT4teb-Shhjdo3bc41o-eBLg6yeQAY9mys4TfZjWS0Fa6DwX3WTdTWRBmIXaaKVOg-MGdlRsjp6tMpPMIaTUQ5AfiSOZYVKcIZxYlR15Ti9FsMbCD2cOEYWBir4bc2eZG6y4ySjoHRZJugkTY4F3snut9c_6YOjBAxFjAluWwkdhG46CeGCa8gIygGBQlQbTTWLH6-2hl4mJM_VgqqX9bdbPEm64FiKE4sSc5YEuQ' },
+                { id: 2, title: 'Darbar Emerald Ring', price: 42500, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDL3fDWVecPLx2MPJ1XspCdeI8V76pxjvU1XgX4It_W5ZguCZYxaB6DmEPaiYgfaxVRVE6iraiQSP6_Uk8EFXvojLYIJXBrYOYuHUJu9VRm8_Qx07EjWiINp9lZdvgQd1UvI3bN-iD_pwBovRCbsqkjCa8Ox_-feayl3Wep63gADd4NvQG75upwN-7zcLqPuKy6CQVsNGHICQTVOaoI-B-7MvjsbKs0CXcOGr-WBABOVhMfBWpJzacy1Q' }
+            ];
+            localStorage.setItem('gh_cart', JSON.stringify(defaultCart));
+            return defaultCart;
+        }
+        return JSON.parse(cart);
+    }
+
+    function renderCart() {
+        const cart = getCart();
+        const container = document.getElementById('cart-items-container');
+        container.innerHTML = '';
+
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="py-20 text-center">
+                    <p class="font-display-lg text-headline-sm text-on-surface-variant italic mb-8">Your curated collection is currently empty.</p>
+                    <a href="collections.html" class="bg-primary text-white px-10 py-4 uppercase font-body-md tracking-widest hover:opacity-90 transition-all inline-block">Explore Collections</a>
+                </div>
+            `;
+            updateSummary(0);
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            const row = document.createElement('div');
+            row.className = 'flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/30 group';
+            row.innerHTML = `
+                <div class="w-full md:w-48 aspect-square overflow-hidden bg-surface-container luxury-shadow">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${item.title}" src="${item.image}"/>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm mb-1">${item.title}</h3>
+                            <p class="text-on-surface-variant font-body-md text-sm mb-4">18K Polished Gold • Ethically Sourced Diamonds</p>
+                            <div class="flex items-center gap-4 border border-outline-variant w-fit px-4 py-2">
+                                <button class="text-primary hover:text-on-surface transition-colors" onclick="changeQty(${index}, -1)">
+                                    <span class="material-symbols-outlined text-sm">remove</span>
+                                </button>
+                                <span class="font-body-md text-sm w-4 text-center">${item.qty}</span>
+                                <button class="text-primary hover:text-on-surface transition-colors" onclick="changeQty(${index}, 1)">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="font-headline-sm text-headline-sm text-primary">₹${(item.price * item.qty).toLocaleString()}</p>
+                    </div>
+                    <div class="flex gap-6 mt-6">
+                        <button class="text-label-sm uppercase tracking-widest text-secondary hover:text-primary transition-colors flex items-center gap-2" onclick="alert('Saved to wishlist!')">
+                            <span class="material-symbols-outlined text-base">favorite</span> Save to wishlist
+                        </button>
+                        <button class="text-label-sm uppercase tracking-widest text-error hover:opacity-80 transition-opacity flex items-center gap-2" onclick="removeItem(${index})">
+                            <span class="material-symbols-outlined text-base">delete</span> Remove
+                        </button>
+                    </div>
+                </div>
+            `;
+            container.appendChild(row);
+        });
+
+        const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+        updateSummary(subtotal);
+    }
+
+    function changeQty(index, dir) {
+        let cart = getCart();
+        cart[index].qty = Math.max(1, cart[index].qty + dir);
+        localStorage.setItem('gh_cart', JSON.stringify(cart));
+        renderCart();
+        updateBadge();
+    }
+
+    function removeItem(index) {
+        let cart = getCart();
+        cart.splice(index, 1);
+        localStorage.setItem('gh_cart', JSON.stringify(cart));
+        renderCart();
+        updateBadge();
+    }
+
+    function updateSummary(subtotal) {
+        const gst = Math.round(subtotal * 0.03);
+        let discount = 0;
+        if (discountPercent > 0) {
+            discount = Math.round(subtotal * discountPercent);
+            document.getElementById('discount-row').classList.remove('hidden');
+            document.getElementById('summary-discount').innerText = `-₹${discount.toLocaleString()}`;
+        } else {
+            document.getElementById('discount-row').classList.add('hidden');
+        }
+
+        const total = subtotal + gst - discount;
+
+        document.getElementById('summary-subtotal').innerText = `₹${subtotal.toLocaleString()}`;
+        document.getElementById('summary-tax').innerText = `₹${gst.toLocaleString()}`;
+        document.getElementById('summary-total').innerText = `₹${total.toLocaleString()}`;
+        
+        // Cache total for checkout
+        localStorage.setItem('gh_total', total);
+    }
+
+    function applyPromo() {
+        const code = document.getElementById('promo-input').value.toUpperCase().trim();
+        if (code === 'GIFT10') {
+            discountPercent = 0.10;
+            alert('Promo code GIFT10 applied! 10% discount subtracted.');
+            renderCart();
+        } else if (code === '') {
+            alert('Please enter a promo code.');
+        } else {
+            alert('Invalid promo code. Try "GIFT10".');
+        }
+    }
+
+    function updateBadge() {
+        const cart = getCart();
+        const totalItems = cart.reduce((acc, curr) => acc + curr.qty, 0);
+        document.getElementById('cart-badge').innerText = totalItems;
+        document.getElementById('cart-badge-mobile').innerText = totalItems;
+    }
+
+    function proceedToCheckout() {
+        const cart = getCart();
+        if (cart.length === 0) {
+            alert('Your bag is empty.');
+            return;
+        }
+        window.location.href = 'checkout.html';
+    }
+
+    // Scroll shadow effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('luxury-shadow');
+        } else {
+            nav.classList.remove('luxury-shadow');
+        }
+    });
+
+    // Initial render
+    renderCart();
+    updateBadge();
+</script>
+</body>
+</html>
