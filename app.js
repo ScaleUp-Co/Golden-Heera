@@ -399,8 +399,6 @@ function renderFooter() {
         </footer>
     `;
 }
-    `;
-}
 
 // Quick View Modal
 function triggerQuickView(productId) {
