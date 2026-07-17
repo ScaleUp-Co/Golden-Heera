@@ -324,7 +324,7 @@ function renderFooter() {
                         Redefining premium fashion & imitation jewellery in India. Stunning collections designed for everyday wear, weddings, and festivals.
                     </p>
                     <div class="flex gap-4 text-primary">
-                        <a href="https://wa.me/919876543210" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">forum</span></a>
+                        <a href="https://wa.me/919844442225" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">forum</span></a>
                         <a href="#" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">share</span></a>
                         <a href="#" class="hover:scale-110 transition-transform"><span class="material-symbols-outlined">public</span></a>
                     </div>
@@ -350,9 +350,9 @@ function renderFooter() {
                 <div class="space-y-4">
                     <h4 class="font-label-sm uppercase tracking-widest text-on-surface text-xs font-bold">Contact Info</h4>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        <strong>Address:</strong> Bangalore Atelier, 102 Luxury D2C Lane, Indiranagar, Bangalore - 560038<br>
-                        <strong>Phone:</strong> +91 98765 43210<br>
-                        <strong>Email:</strong> atelier@goldenheera.com
+                        <strong>Address:</strong> NO.212, 1ST FLOOR, SAFENA COMPLEX, OPP. TO FMC COMPLEX, KUMBARPET MAIN ROAD, BANGALORE-560002<br>
+                        <strong>Phone:</strong> +91 98444 42225, +91 98867 97356, 080-41529374<br>
+                        <strong>Email:</strong> VIJAYRAJ3543@GMAIL.COM
                     </p>
                     <form onsubmit="event.preventDefault(); alert('Joined the newsletter circle!'); this.reset();" class="relative mt-4">
                         <input class="w-full bg-transparent border-b border-on-background py-2 pr-10 focus:ring-0 focus:border-primary font-label-sm text-sm" placeholder="YOUR EMAIL" type="email" required/>
